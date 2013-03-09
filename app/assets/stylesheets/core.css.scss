@@ -56,6 +56,7 @@ $watermark: rgb(112, 111, 111);
 $base_font: lighter 13pt 'Gill Sans', 'Helvetica Neue', sans-serif;
 $heading_font: SamarkanNormal;
 $default_letter_spacing: 1px;
+$banner_height: 40px;
 
 h1 {
   color: #f00;
@@ -118,7 +119,7 @@ body, html {
 #banner {
   padding: 5px;
   background: $champagne5_50;
-  height: 40px;
+  height: $banner_height;
   z-index: 5;
   width: 100%;
   position: relative;
@@ -612,6 +613,12 @@ ul.recipeList {
 .parallaxSubtitle {
   @include carouselText;
   font-size: 150%;
+}
+
+.parallaxAnchor {
+  top: -100px;
+  height: 1px;
+  position: relative;
 }
 
 #contactPanel {
