@@ -247,6 +247,10 @@ input[type='text'], input[type='email'], input[type='password'] {
   letter-spacing: $default_letter_spacing;
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
 .formActions {
 	padding: 17px 20px 18px 0px;
 	margin-top: 18px;
