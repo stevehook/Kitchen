@@ -599,11 +599,11 @@ ul.recipeList {
   background-attachment: fixed;
   background-size: cover;
   color: $white;
+  min-height: 800px;
 }
 
 .parallaxPanel .container{
   padding: 50px 0 0;
-  min-height: 800px;
 }
 
 .parallaxPanelLight {
@@ -611,14 +611,26 @@ ul.recipeList {
   color: #444;
 }
 
+.parallaxHeader {
+  padding: 50px 0 20px 0;
+	min-height: 100%;
+  background: $champagne5_50;
+}
+
 .parallaxTitle {
+	width: 1200px;
+	margin: 0 auto;
   @include carouselText;
   font-size: 200%;
+  font-weight: normal;
 }
 
 .parallaxSubtitle {
+	width: 1200px;
+	margin: 0 auto;
   @include carouselText;
   font-size: 150%;
+  font-weight: normal;
 }
 
 .parallaxAnchor {

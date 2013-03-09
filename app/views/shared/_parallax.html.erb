@@ -8,17 +8,21 @@
     </div>
   </div>
   <div id='recipesPanel' class='parallaxPanel parallaxPanelLight' data-content='recipes'>
-    <div class='container'>
+    <div class='parallaxHeader'>
       <div class='parallaxTitle'><%= t('copy.home.recipes_panel.title') %></div>
       <div class='parallaxSubtitle'><%= t('copy.home.recipes_panel.subtitle') %></div>
+    </div>
+    <div class='container'>
       <%= render :partial => 'shared/carousel' %>
     </div>
   </div>
-  <div id='classesPanel' class='parallaxPanel parallaxPanelLight' data-content='classes' data-background='wheat.jpg'>
+  <div id='classesPanel' class='parallaxPanel' data-content='classes' data-background='wheat.jpg'>
     <a id='classes' class='parallaxAnchor'></a>
-    <div class='container'>
+    <div class='parallaxHeader'>
       <div class='parallaxTitle'><%= t('copy.home.classes_panel.title') %></div>
       <div class='parallaxSubtitle'><%= t('copy.home.classes_panel.subtitle') %></div>
+    </div>
+    <div class='container'>
       <% 3.times do |n| %>
         <div class='classesContent'>
           <h1><%= t("copy.home.classes_panel.class#{n}.title") %></h1>
@@ -29,9 +33,11 @@
   </div>
   <div id='contactPanel' class='parallaxPanel' data-content='contact'>
     <a id='contact' class='parallaxAnchor'></a>
-    <div class='container'>
+    <div class='parallaxHeader'>
       <div class='parallaxTitle'><%= t('copy.home.contact_panel.title') %></div>
       <div class='parallaxSubtitle'><%= t('copy.home.contact_panel.subtitle') %></div>
+    </div>
+    <div class='container'>
       <div id='newsletterSignUp'>
         <article class='title'>Still want to hear more from us? Sign up for our monthly newsletter:</article>
         <article id='subscriptionFormContainer'>
