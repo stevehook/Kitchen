@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
 $white: rgb(255,255,255);
 
 $lightgrey: rgb(244,244,244);
@@ -55,6 +57,7 @@ $contactUsTitle2: rgb(213, 195, 153);
 $watermark: rgb(112, 111, 111);
 $base_font: lighter 13pt 'Gill Sans', 'Helvetica Neue', sans-serif;
 $heading_font: SamarkanNormal;
+$input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 $default_letter_spacing: 1px;
 $banner_height: 40px;
 
@@ -216,17 +219,16 @@ label > span {
 }
 
 input:not([type=submit]), textarea {
-  font: $base_font;
+  font: $input_font;
+  color: $darkgrey;
   border: 1px solid #CCC;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   letter-spacing: $default_letter_spacing
 }
 
 textarea {
 	height: 100px;
 	width: 800px;
+  padding: 15px;
 }
 
 textarea.medium {
@@ -242,7 +244,7 @@ textarea.extraLarge {
 }
 
 input[type='text'], input[type='email'], input[type='password'] {
-  padding: 10px;
+  padding: 15px;
   width: 500px;
   letter-spacing: $default_letter_spacing;
 }
