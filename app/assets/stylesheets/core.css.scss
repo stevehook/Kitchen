@@ -648,7 +648,8 @@ ul.recipeList {
   text-decoration: none;
 }
 
-#social > a:first-child {
+#social > div.separator {
+  height: 26px;
   border-bottom: 1px dashed $salmon6;
 }
 
