@@ -42,12 +42,28 @@ $champagne5_50: rgba(103, 82, 65, 0.5);
 $champagne5_80: rgba(103, 82, 65, 0.8);
 $champagne4_80: rgba(166, 133, 105, 0.8);
 
+// salmon
 $salmon3: rgb(213, 101, 64);
 $salmon4: rgb(168, 78, 51);
 $salmon5: rgb(152, 70, 47);
 $salmon6: rgb(135, 64, 42);
 $salmon7: rgb(105, 46, 29);
 $salmon8: rgb(72, 34, 22);
+
+$salmon5_30: rgba(152, 70, 47, 0.3);
+$salmon5_50: rgba(152, 70, 47, 0.5);
+$salmon5_80: rgba(152, 70, 47, 0.8);
+$salmon7_30: rgba(105, 46, 29, 0.3);
+$salmon7_50: rgba(105, 46, 29, 0.5);
+$salmon7_80: rgba(105, 46, 29, 0.8);
+
+// sheepu
+$sheepu4_80: rgba(60, 88, 10, 0.8);
+$sheepu5_80: rgba(45, 67, 10, 0.8);
+$sheepu6_80: rgba(32, 48, 8, 0.8);
+$sheepu7_80: rgba(20, 30, 1, 0.8);
+
+$sheepu6_50: rgba(32, 48, 8, 0.5);
 
 $maroon: rgb(89, 15, 15);
 $lightMaroon: rgb(162, 66, 66);
@@ -345,6 +361,13 @@ textarea:focus, input:focus {
   position: absolute;
   height: 700px;
   width: 1000px;
+  margin: 25px 0 0 0;
+}
+
+#recipesPanel {
+  .carouselItem {
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .carouselItem .content {
@@ -377,8 +400,8 @@ textarea:focus, input:focus {
 }
 
 .carouselItem .recipeSecondaryImage {
-  top: 320px;
-  left: 390px;
+  top: 250px;
+  left: 480px;
   position: absolute;
 }
 
@@ -422,7 +445,7 @@ textarea:focus, input:focus {
 	height: 55px;
 	font-size: 150%;
 	color: $white;
-	background-color: $champagne5_20;
+	background-color: $sheepu6_50;
   color: $white;
 	line-height: 63px;
 	text-align: center;
@@ -443,7 +466,7 @@ textarea:focus, input:focus {
 .recipeMoreLink:hover, .carouselButton:hover {
 	// background-color: $orange;
   color: $white;
-	background-color: $champagne5_50;
+	background-color: $sheepu6_80;
 }
 
 .left {
@@ -607,19 +630,13 @@ ul.recipeList {
 }
 
 .parallaxPanelLight {
-  background-color: $cream;
+  background-color: $white;
   color: #444;
-}
-
-.parallaxHeader {
-  padding: 50px 0 20px 0;
-	min-height: 100%;
-  background: $champagne5_50;
 }
 
 .parallaxTitle {
 	width: 1200px;
-	margin: 0 auto;
+	margin: 8px auto;
   @include carouselText;
   font-size: 200%;
   font-weight: normal;
@@ -627,11 +644,32 @@ ul.recipeList {
 
 .parallaxSubtitle {
 	width: 1200px;
-	margin: 0 auto;
+	margin: 4px auto;
   @include carouselText;
   font-size: 150%;
   font-weight: normal;
 }
+
+span.parallaxTitleText {
+  background: $salmon7_50;
+  padding: 6px 10px;
+  color: $white;
+}
+
+
+#recipesPanel {
+  span.parallaxTitleText {
+    background: $sheepu6_50;
+  }
+}
+
+#contactPanel {
+  margin: -5px 0 0 0;
+  span.parallaxTitleText {
+    background: none;
+  }
+}
+
 
 .parallaxAnchor {
   top: -100px;

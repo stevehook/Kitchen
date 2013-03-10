@@ -7,22 +7,18 @@
       </div>
     </div>
   </div>
-  <div id='recipesPanel' class='parallaxPanel parallaxPanelLight' data-content='recipes'>
-    <div class='parallaxHeader'>
-      <div class='parallaxTitle'><%= t('copy.home.recipes_panel.title') %></div>
-      <div class='parallaxSubtitle'><%= t('copy.home.recipes_panel.subtitle') %></div>
-    </div>
+  <div id='recipesPanel' class='parallaxPanel parallaxPanelLight' data-content='recipes' data-background='dill_wallpaper.jpg'>
     <div class='container'>
+      <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.recipes_panel.title') %></span></div>
+        <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.recipes_panel.subtitle') %></span></div>
       <%= render :partial => 'shared/carousel' %>
     </div>
   </div>
   <div id='classesPanel' class='parallaxPanel' data-content='classes' data-background='wheat.jpg'>
-    <a id='classes' class='parallaxAnchor'></a>
-    <div class='parallaxHeader'>
-      <div class='parallaxTitle'><%= t('copy.home.classes_panel.title') %></div>
-      <div class='parallaxSubtitle'><%= t('copy.home.classes_panel.subtitle') %></div>
-    </div>
+    <a id='classes'></a>
     <div class='container'>
+      <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.classes_panel.title') %></span></div>
+      <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.classes_panel.subtitle') %></span></div>
       <% 3.times do |n| %>
         <div class='classesContent'>
           <h1><%= t("copy.home.classes_panel.class#{n}.title") %></h1>
@@ -32,12 +28,10 @@
     </div>
   </div>
   <div id='contactPanel' class='parallaxPanel' data-content='contact'>
-    <a id='contact' class='parallaxAnchor'></a>
-    <div class='parallaxHeader'>
-      <div class='parallaxTitle'><%= t('copy.home.contact_panel.title') %></div>
-      <div class='parallaxSubtitle'><%= t('copy.home.contact_panel.subtitle') %></div>
-    </div>
+    <a id='contact'></a>
     <div class='container'>
+      <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.contact_panel.title') %></span></div>
+      <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.contact_panel.subtitle') %></span></div>
       <div id='newsletterSignUp'>
         <article class='title'>Still want to hear more from us? Sign up for our monthly newsletter:</article>
         <article id='subscriptionFormContainer'>
@@ -54,7 +48,6 @@
             <% end %>
           </ul>
         </a>
-        <div class='separator'></div>
         <a id='email' href='mailto:info@zanzaneet.com'>
           <h2 class='title'>Email us</h2>
           <%= image_tag('email_logo.png', :size => '100x100', :alt => 'Email us') %>
