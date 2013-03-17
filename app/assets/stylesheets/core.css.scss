@@ -77,6 +77,12 @@ $input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 $default_letter_spacing: 1px;
 $banner_height: 40px;
 
+/** {*/
+  /*-webkit-box-sizing: border-box;*/
+  /*-moz-box-sizing: border-box;*/
+  /*box-sizing: border-box;*/
+/*}*/
+
 h1 {
   color: #f00;
 }
@@ -92,21 +98,22 @@ h1, h2, h3, h4 {
 #container, .container {
 	width: 1200px;
 	margin: 0 auto;
-	min-height: 100%;
+  height: 100%;
 }
 
 #main {
-  padding: 60px 0 0 0;
+  padding: 60px 10px;
 }
 
 .mainSection {
-	height: 100%;
+  height: 100%;
 }
 
 //TODO : Common style for the content of the page
 .content {
   // word-spacing: -1px;
   // Give line-height and font-size here;
+  height: 100%;
 }
 
 .contentMain {
@@ -126,8 +133,11 @@ body {
   letter-spacing: $default_letter_spacing;
 }
 
-body, html {
-	height: 100%;
+html {
+}
+
+body {
+  height: 100%;
 }
 
 #header {
@@ -880,6 +890,8 @@ menu {
 
 .sidePanelMenu {
   position: relative;
+  background-color: $lightgrey;
+  padding: 0 0 10px;
 }
 
 .sidePanelMenu a {
@@ -902,6 +914,17 @@ menu {
 .sidePanelMenu .label {
   position: absolute;
   left: 40px;
+}
+
+.sidePanelMenu h3 {
+  padding: 8px 10px;
+  margin: 10px 0;
+  background-color: $grey;
+  color: $white;
+}
+
+#recipeAtAGlance {
+  padding: 0 0 20px;
 }
 
 .flash {
@@ -969,4 +992,8 @@ menu {
 
 .rating li:hover:before {
   content: "\f005";
+}
+
+body[data-section='recipes'] section.mainSection {
+  background-color: $champagne1;
 }

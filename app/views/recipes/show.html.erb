@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class='contentSidePanel'>
-    <menu class='sidePanelMenu'>
+    <menu id='recipeActions' class='sidePanelMenu'>
       <% if user_signed_in? %>
         <%= link_to edit_recipe_path(@recipe) do %>
           <span class='icon-pencil icon'></span>
@@ -55,7 +55,8 @@
         <span class='label'>Back to recipe list</span>
       <% end %>
     </menu>
-    <menu class='sidePanelMenu'>
+    <menu id='recipeAtAGlance' class='sidePanelMenu'>
+      <h3>At a glance</h3>
       <a>
         <span class='icon-leaf icon'></span>
         <span class='label'><%= @recipe.category.humanize %></span>
@@ -73,11 +74,11 @@
       similar_recipes = @recipe.similar_recipes
       if similar_recipes.present?
     %>
-    <menu class='sidePanelMenu'>
+    <menu id='recipeRating' class='sidePanelMenu'>
       <h3>Rating</h3>
       <%= render :partial => 'rating' %>
     </menu>
-    <menu class='sidePanelMenu'>
+    <menu id='recipeSimilar' class='sidePanelMenu'>
       <h3>You might also like to try</h3>
       <% similar_recipes.each do |similar_recipe| %>
         <%= link_to recipe_path(similar_recipe) do %>
@@ -91,4 +92,5 @@
         description: @recipe.title %>
     </div>
   </div>
+  <div class='clear'/>
 </div>
