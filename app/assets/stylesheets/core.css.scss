@@ -874,6 +874,14 @@ input[type='submit'], input[type='button'] {
   background-color: $orange;
 }
 
+menu {
+  padding: 0px;
+}
+
+.sidePanelMenu {
+  position: relative;
+}
+
 .sidePanelMenu a {
   display: block;
   margin: 3px 0;
@@ -882,7 +890,7 @@ input[type='submit'], input[type='button'] {
   color: #000;
 }
 
-.sidePanelMenu a:hover {
+.sidePanelMenu a[href]:hover {
   background-color: $champagne4;
   color: white;
 }
@@ -892,6 +900,8 @@ input[type='submit'], input[type='button'] {
 }
 
 .sidePanelMenu .label {
+  position: absolute;
+  left: 40px;
 }
 
 .flash {
@@ -921,4 +931,42 @@ input[type='submit'], input[type='button'] {
 
 .helpText {
   font-size: 80%;
+}
+
+.rating {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align:	center;
+}
+
+.rating li {
+  color: gold;
+	float: left;
+  padding: 0 5px;
+}
+
+.rating li {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+.rating li:before {
+  content: "\f006";
+}
+
+.rating li:hover:before {
+  content: "\f005";
 }

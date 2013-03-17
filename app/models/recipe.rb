@@ -29,6 +29,10 @@ class Recipe < ActiveRecord::Base
     Recipe.where(:category => self.category).where('NOT id = ?', self.id).page(1).per(limit)
   end
 
+  def time
+    "#{preparation_time} mins preparation<br/> #{cooking_time} mins cooking".html_safe
+  end
+
   private
   def save_ingredients
     ingredients.clear
