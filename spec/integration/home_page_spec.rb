@@ -30,7 +30,7 @@ describe 'Home page' do
       visit '/'
       page.should have_link 'Recipes'
       click_link 'Recipes'
-      current_path.should == recipes_path
+      current_path.should == root_path
     end
 
     it "should have recipes" do

@@ -1,6 +1,5 @@
 class SubscriptionsController < ApplicationController
   def create
-    # raise params.inspect
     subscription = Subscription.new params[:subscription]
     success = subscription.save
     UserMailer.welcome_email(subscription).deliver if success

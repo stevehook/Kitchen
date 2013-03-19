@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Subscription do
 
+  it { should allow_mass_assignment_of :email }
+  it { should allow_mass_assignment_of :name }
   it { should validate_presence_of :email }
   it { should_not validate_presence_of :name }
   it { should respond_to :name, :email, :created_at, :updated_at }
