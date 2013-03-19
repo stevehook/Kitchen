@@ -2,10 +2,10 @@
   <div class='container'>
     <nav id="menu">
       <ul>
-        <li><%= link_to 'Home', root_path, :'data-section' => :home %></li>
-        <li><%= link_to 'Recipes', recipes_path, :'data-section' => :recipes %></li>
-        <li><%= link_to 'Classes', "#{root_path}#classes", :'data-section' => :classes %></li>
-        <li><%= link_to 'Contact', "#{root_path}#contact", :'data-section' => :contact %></li>
+        <li><%= link_to 'Home', "#{root_path}#", :'data-section' => :home %></li>
+        <li><%= link_to 'Recipes', "#{root_path}#recipesPanel", :'data-section' => :recipes %></li>
+        <li><%= link_to 'Classes', "#{root_path}#classesPanel", :'data-section' => :classes %></li>
+        <li><%= link_to 'Contact', "#{root_path}#contactPanel", :'data-section' => :contact %></li>
         <li><%= link_to 'Blog', blog_posts_path, :'data-section' => :blog_posts %></li>
         <li class='right'>
           <% if user_signed_in? %>
