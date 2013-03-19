@@ -3,6 +3,7 @@
 $white: rgb(255,255,255);
 
 $lightgrey: rgb(244,244,244);
+$midlightgrey: rgb(228,228,228);
 $grey: rgb(128,128,128);
 $darkgrey: rgb(64,64,64);
 $extradarkgrey: rgb(32,32,32);
@@ -925,6 +926,11 @@ menu {
 
 #recipeAtAGlance {
   padding: 0 0 20px;
+}
+
+#recipeSimilar.sidePanelMenu a[href]:hover {
+  background-color: $midlightgrey;
+  color: #000;
 }
 
 .flash {

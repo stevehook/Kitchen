@@ -82,7 +82,8 @@
       <h3>You might also like to try</h3>
       <% similar_recipes.each do |similar_recipe| %>
         <%= link_to recipe_path(similar_recipe) do %>
-          <span><%= similar_recipe.title %></span>
+          <%= image_tag similar_recipe.primary_photo.image.extra_small.url %>
+          <div><%= similar_recipe.title %></div>
         <% end %>
       <% end %>
     </menu>
