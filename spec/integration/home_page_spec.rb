@@ -41,10 +41,16 @@ describe 'Home page' do
 
     it 'should have a link to the recipe show page' do
       visit '/'
-      pending
-    # Find the link 'tell me more'
-    # click
-    # verify that it takes you to the recipe show page
+      click_link 'View all'
+      current_path.should == recipes_path
+    end
+
+    it 'should allow me to search for a recipe' do
+      visit '/'
+      fill_in 'search', :with => 'tikki'
+      click_button 'search_button'
+      current_path.should == recipes_path
+      find_field('search').value.should == 'tikki'
     end
   end
 

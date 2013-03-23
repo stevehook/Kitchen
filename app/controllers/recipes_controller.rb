@@ -2,20 +2,20 @@ class RecipesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show, :search, :lookup]
 
   def index
-    # using kaminari for paging
-    page = params[:page] || 1
     # @recipes is a member variable (indicated by the '@' prefix). Rails makes member variables of a controller
     # automatically accessible from the view template that renders the response for the action.
-    @recipes = Recipe.page(page.to_i).per(3)
+    find_recipes
     return render :partial => 'recipe_list' if request.xhr?
   end
 
   def search
-    search_term = params[:search]
-    @recipes =  Recipe.joins("LEFT OUTER JOIN ingredients_recipes ON ingredients_recipes.recipe_id = recipes.id LEFT OUTER JOIN ingredients ON ingredients.id = ingredients_recipes.ingredient_id")
-      .where('ingredients.title ILIKE ? OR recipes.title ILIKE ?', "%#{search_term}%", "%#{search_term}%").uniq.page(1).per(3)
-
-    return render :partial => 'recipe_search' if request.xhr?
+    if request.xhr?
+      find_recipes
+      return render :partial => 'recipe_search'
+    else
+      search_term = params[:search]
+      redirect_to recipes_path(:params => { :search => search_term })
+    end
   end
 
   def lookup
@@ -24,7 +24,6 @@ class RecipesController < ApplicationController
     matches += Ingredient.where("title ILIKE ?","%#{search_term}%").pluck(:title)
     render :json => matches
   end
-
 
   def new
     @recipe = Recipe.new
@@ -60,5 +59,14 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect_to recipes_path
+  end
+
+  private
+
+  def find_recipes
+    page = params[:page] || 1
+    @search_term = params[:search]
+    @recipes =  Recipe.joins("LEFT OUTER JOIN ingredients_recipes ON ingredients_recipes.recipe_id = recipes.id LEFT OUTER JOIN ingredients ON ingredients.id = ingredients_recipes.ingredient_id")
+      .where('ingredients.title ILIKE ? OR recipes.title ILIKE ?', "%#{@search_term}%", "%#{@search_term}%").uniq.page(page).per(3)
   end
 end

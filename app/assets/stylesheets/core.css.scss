@@ -492,6 +492,35 @@ textarea:focus, input:focus {
   padding: 20px 0 60px 0;
   margin: 0 auto;
   width: 600px;
+
+  button {
+    min-width: 40px;
+    padding: 15px 5px;
+    cursor: pointer;
+    background-color: $sheepu6_50;
+    color: $white;
+    -moz-transition: color .2s, background-color .2s;
+    -webkit-transition: color .2s, background-color .2s;
+    -ms-transition: color .2s, background-color .2s;
+    -o-transition: color .2s, background-color .2s;
+    transition: color .2s, background-color .2s;
+  }
+
+  button:hover {
+    color: $white;
+    background-color: $sheepu6_80;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    padding: 15px 0 0;
+    font-size: 120%;
+  }
+}
+
+#parallax .recipeSearch {
+  padding: 20px 0;
 }
 
 .watermark {
@@ -825,7 +854,7 @@ span.parallaxTitleText {
   font-size: 100%;
 }
 
-input[type='submit'], input[type='button'] {
+input[type='submit'], button[type='submit'], input[type='button'] {
   font: $base_font;
   border: none;
   border-radius: none !important;
