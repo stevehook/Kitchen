@@ -84,6 +84,22 @@ $banner_height: 40px;
   /*box-sizing: border-box;*/
 /*}*/
 
+@mixin hoverBackgroundTransition {
+  -moz-transition: color .2s, background-color .2s;
+  -webkit-transition: color .2s, background-color .2s;
+  -ms-transition: color .2s, background-color .2s;
+  -o-transition: color .2s, background-color .2s;
+  transition: color .2s, background-color .2s;
+}
+
+@mixin hoverColorTransition {
+  -moz-transition: color .2s, color .2s;
+  -webkit-transition: color .2s, color .2s;
+  -ms-transition: color .2s, color .2s;
+  -o-transition: color .2s, color .2s;
+  transition: color .2s, color .2s;
+}
+
 h1 {
   color: #f00;
 }
@@ -430,11 +446,7 @@ textarea:focus, input:focus {
 	background-color: transparent;
   position: relative;
   float: right;
-  -moz-transition: color .2s, background-color .2s;
-  -webkit-transition: color .2s, background-color .2s;
-  -ms-transition: color .2s, background-color .2s;
-  -o-transition: color .2s, background-color .2s;
-  transition: color .2s, background-color .2s;
+  @include hoverBackgroundTransition;
 }
 
 // .carouselTitle {
@@ -463,11 +475,7 @@ textarea:focus, input:focus {
   vertical-align: middle;
 	cursor: pointer;
   z-index: 4;
-  -moz-transition: color .2s, background-color .2s;
-  -webkit-transition: color .2s, background-color .2s;
-  -ms-transition: color .2s, background-color .2s;
-  -o-transition: color .2s, background-color .2s;
-  transition: color .2s, background-color .2s;
+  @include hoverColorTransition;
 
   span {
     font-size: 150%;
@@ -499,11 +507,7 @@ textarea:focus, input:focus {
     cursor: pointer;
     background-color: $sheepu6_50;
     color: $white;
-    -moz-transition: color .2s, background-color .2s;
-    -webkit-transition: color .2s, background-color .2s;
-    -ms-transition: color .2s, background-color .2s;
-    -o-transition: color .2s, background-color .2s;
-    transition: color .2s, background-color .2s;
+    @include hoverColorTransition;
   }
 
   button:hover {
@@ -735,11 +739,7 @@ span.parallaxTitleText {
   height: 145px;
   padding: 10px 0 0 0;
   margin: 40px 0 10px 0;
-  -moz-transition: .2s background-color;
-  -webkit-transition: .2s background-color;
-  -ms-transition: .2s background-color;
-  -o-transition: .2s background-color;
-  transition: .2s background-color;
+  @include hoverBackgroundTransition;
   display: block;
   text-decoration: none;
 }
@@ -815,11 +815,7 @@ span.parallaxTitleText {
   color: $contactUsTitle2;
   font-size: 130%;
   font-weight: lighter;
-  -moz-transition: .2s color;
-  -webkit-transition: .2s color;
-  -ms-transition: .2s color;
-  -o-transition: .2s color;
-  transition: .2s color;
+  @include hoverColorTransition;
 }
 
 #newsletterSignUp {
@@ -867,11 +863,7 @@ input[type='submit'], button[type='submit'], input[type='button'] {
   padding: 10px;
   background-color: $salmon6;
   color: $white;
-  -moz-transition: .2s background-color;
-  -webkit-transition: .2s background-color;
-  -ms-transition: .2s background-color;
-  -o-transition: .2s background-color;
-  transition: .2s background-color;
+  @include hoverBackgroundTransition;
 }
 
 .subscribeButton:hover {

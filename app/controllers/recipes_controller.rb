@@ -2,8 +2,6 @@ class RecipesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show, :search, :lookup]
 
   def index
-    # @recipes is a member variable (indicated by the '@' prefix). Rails makes member variables of a controller
-    # automatically accessible from the view template that renders the response for the action.
     find_recipes
     return render :partial => 'recipe_list' if request.xhr?
   end
@@ -11,10 +9,11 @@ class RecipesController < ApplicationController
   def search
     if request.xhr?
       find_recipes
-      return render :partial => 'recipe_search'
+      return render :partial => (params[:page] ? 'recipe_list' : 'recipe_search')
     else
       search_term = params[:search]
-      redirect_to recipes_path(:params => { :search => search_term })
+      category = params[:category] || :any
+      redirect_to recipes_path(:params => { :search => search_term, :category => category })
     end
   end
 
@@ -64,9 +63,14 @@ class RecipesController < ApplicationController
   private
 
   def find_recipes
+    # @recipes is a member variable (indicated by the '@' prefix). Rails makes member variables of a controller
+    # automatically accessible from the view template that renders the response for the action.
     page = params[:page] || 1
     @search_term = params[:search]
+    @category = (params[:category] || :any).to_sym
     @recipes =  Recipe.joins("LEFT OUTER JOIN ingredients_recipes ON ingredients_recipes.recipe_id = recipes.id LEFT OUTER JOIN ingredients ON ingredients.id = ingredients_recipes.ingredient_id")
-      .where('ingredients.title ILIKE ? OR recipes.title ILIKE ?', "%#{@search_term}%", "%#{@search_term}%").uniq.page(page).per(3)
+      .where('ingredients.title ILIKE ? OR recipes.title ILIKE ?', "%#{@search_term}%", "%#{@search_term}%")
+      .where('recipes.category IN (?)', Recipe.category_search_values_to_list(@category))
+      .uniq.page(page).per(3)
   end
 end

@@ -2,7 +2,6 @@ class NewsletterManager
 
   def create_and_send
     Subscription.all.each do |subscription|
-      puts "Sending newsletter to #{subscription.email}..."
       ::UserMailer.newsletter(subscription, recipes, posts).deliver
     end
   end

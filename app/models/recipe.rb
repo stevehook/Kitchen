@@ -5,7 +5,7 @@ class Recipe < ActiveRecord::Base
   has_many :recipe_photos
 
   CATEGORY_VALUES = %w(vegan vegetarian non_vegetarian)
-  CATEGORY_SEARCH_VALUES = %w(all vegetarian vegan_only)
+  CATEGORY_SEARCH_VALUES = %w(any vegetarian vegan_only)
 
   validates :category, :inclusion => { :in => CATEGORY_VALUES,
     :message => "%{value} is not a valid category" }
@@ -31,6 +31,17 @@ class Recipe < ActiveRecord::Base
 
   def time
     "#{preparation_time} mins preparation<br/> #{cooking_time} mins cooking".html_safe
+  end
+
+  def self.category_search_values_to_list(search_value)
+    case search_value.to_sym
+    when :vegan_only
+      ['vegan']
+    when :vegetarian
+      ['vegan', 'vegetarian']
+    when :any
+      ['vegan', 'vegetarian', 'non_vegetarian']
+    end
   end
 
   private

@@ -16,6 +16,9 @@ $(function() {
     source: '/recipes/lookup',
     minLength: 2
   });
+  $("input[type='radio']").change(function() {
+    $(this).closest("form").submit();
+  });
 });
 
 // Plugin for photo browser on recipe#show page

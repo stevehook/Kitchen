@@ -176,4 +176,18 @@ describe Recipe do
       end
     end
   end
+
+  describe 'category_search_values_to_list' do
+    it 'vegan_only should return only vegan' do
+      Recipe.category_search_values_to_list(:vegan_only).should == %w{vegan}
+    end
+
+    it 'vegetarian should return only vegan and vegetarian' do
+      Recipe.category_search_values_to_list(:vegetarian).should == %w{vegan vegetarian}
+    end
+
+    it 'any should return only vegan, vegetarian and non_vegetarian' do
+      Recipe.category_search_values_to_list(:any).should == %w{vegan vegetarian non_vegetarian}
+    end
+  end
 end
