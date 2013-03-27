@@ -16,6 +16,7 @@
   </div>
 
   <div>
-    <%= link_to 'New recipe', new_recipe_path if user_signed_in? %>
+    <%= link_to 'New recipe', new_recipe_path, :class => :formButton if user_signed_in? %>
   </div>
+  <div class='clear'/>
 </section>
