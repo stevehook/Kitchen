@@ -88,10 +88,11 @@
       <% end %>
     </menu>
     <% end %>
-    <div>
-      <%= pin_it_button media: (@recipe.primary_photo ? @recipe.primary_photo.image.large.url : nil),
-        description: @recipe.title %>
-    </div>
+    <% if @recipe.primary_photo %>
+      <div>
+        <%= pin_it_button media: @recipe.primary_photo.image.large.url, description: @recipe.title, url: @recipe.primary_photo.image.large.url %>
+      </div>
+    <% end %>
   </div>
   <div class='clear'/>
 </div>
