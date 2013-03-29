@@ -11,6 +11,23 @@ $(function() {
   // $('.watermark').watermark();
 });
 
+// Override menu anchor links so that the page scrolls slowly to the correct panel
+$(function() {
+  $('#menu li a').click(function(e) {
+    var $this = $(this);
+    if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
+      var match = /#(.+)/.exec($this.attr('href'));
+      var $target = $('#' + match[1]);
+      var offset = $target.offset();
+      $('html, body').animate({
+        scrollTop: offset.top,
+        scrollLeft: offset.left
+      });
+      e.preventDefault();
+    }
+  });
+});
+
 $(function() {
   $('input#search').autocomplete({
     source: '/recipes/lookup',
