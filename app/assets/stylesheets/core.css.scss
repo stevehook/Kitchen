@@ -443,7 +443,7 @@ textarea:focus, input:focus {
   font-size: 150%;
 }
 
-.carouselItem .recipeMoreLink {
+.carouselItem .recipeMoreLink, .recipesMoreLink {
   display: inline-block;
   padding: 4px 6px;
   font-size: 130%;
@@ -453,6 +453,10 @@ textarea:focus, input:focus {
   position: relative;
   float: right;
   @include hoverBackgroundTransition;
+}
+
+.recipesMoreLink {
+  float: left;
 }
 
 // .carouselTitle {
@@ -488,7 +492,7 @@ textarea:focus, input:focus {
   }
 }
 
-.recipeMoreLink:hover, .carouselButton:hover {
+.recipeMoreLink:hover, .recipesMoreLink:hover, .carouselButton:hover {
 	// background-color: $orange;
   color: $white;
 	background-color: $sheepu6_80;

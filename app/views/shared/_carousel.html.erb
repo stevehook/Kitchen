@@ -10,9 +10,8 @@
             <div class='recipeSecondaryImage'><%= image_tag recipe.secondary_photo.image.small.url if recipe.secondary_photo %></div>
           </div>
           <p class='recipeSynopsis'><%= recipe.synopsis %></p>
-          <p>
-            <%= link_to 'view recipe', recipe_path(recipe), :class => 'recipeMoreLink' %>
-          </p>
+          <%= link_to 'view this recipe', recipe_path(recipe), :class => 'recipeMoreLink' %>
+          <%= link_to 'view all recipes', recipes_path, :class => 'recipesMoreLink' %>
         </div>
       </div>
     <% end %>
