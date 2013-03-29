@@ -16,6 +16,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'bluecloth', '>= 2.0.0'
 gem 'pin_it'
+gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
 # in production environments by default.
