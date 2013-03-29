@@ -78,6 +78,8 @@ $input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 $default_letter_spacing: 1px;
 $banner_height: 40px;
 
+/** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
+
 /** {*/
   /*-webkit-box-sizing: border-box;*/
   /*-moz-box-sizing: border-box;*/
@@ -165,7 +167,7 @@ iframe {
 }
 
 #header {
-  height: 160px;
+  height: 130px;
   background-color: $white;
 }
 
@@ -176,7 +178,7 @@ iframe {
   z-index: 5;
   width: 100%;
   position: absolute;
-  top: 160px;
+  top: 130px;
 }
 
 #banner.fixed {
