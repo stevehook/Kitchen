@@ -3,20 +3,23 @@ Recipe.destroy_all
 recipe1 = Recipe.create!(:title => 'Baingan ka Bharta',
                :synopsis => 'Scrumptious smoked aubergine mash made from simple ingredients, a popular choice of North India.',
                :ingredient_list => 'secret',
-               :preparation_method => 'secret')
+               :preparation_method => 'secret',
+               :category => 'vegan')
 RecipePhoto.create!(:recipe => recipe1, :title => 'Baingan ka Bharta', :image => File.open('db/pictures/baingankabharta1.jpeg'))
 RecipePhoto.create!(:recipe => recipe1, :title => 'Baingan ka Bharta', :image => File.open('db/pictures/baingankabharta2.jpeg'))
 
 recipe2 = Recipe.create!(:title => 'Dal Makhni',
                :synopsis => "Mixture of various lentils and a touch of cream - a well kept secret (or Not?) of every 'Dadiji' in a Punjabi family.",
                :ingredient_list => 'secret',
-               :preparation_method => 'secret')
+               :preparation_method => 'secret',
+               :category => 'vegetarian')
 RecipePhoto.create!(:recipe => recipe2, :title => 'Dal Makhni', :image => File.open('db/pictures/IMG_2785.jpeg'))
 
 recipe3 = Recipe.create!(:title => 'Bhindi',
                :synopsis => 'My take on Bhindi (Okra) - cooked with simple ingredients like green chillies, garlic, tomatoes and peanuts (optional).',
                :ingredient_list => 'secret',
-               :preparation_method => 'secret')
+               :preparation_method => 'secret',
+               :category => 'vegan')
 RecipePhoto.create!(:recipe => recipe3, :title => 'Bhindi', :image => File.open('db/pictures/IMG_2787.jpeg'))
 
 shepu_description =
@@ -51,7 +54,8 @@ recipe4 = Recipe.create!(:title => 'Shepu chi bhaji (Dill Sabzi)',
                :synopsis => "Made with fresh dill, garlic and green chillies, a simple and healthy Maharashtrian farmer's meal",
                :description => shepu_description,
                :ingredient_list => shepu_ingredient_list,
-               :preparation_method => shepu_preparation_method)
+               :preparation_method => shepu_preparation_method,
+               :category => 'vegan')
 RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill1.jpeg'))
 
 recipe5_description =
@@ -91,7 +95,8 @@ recipe5 = Recipe.create!(:title => 'Salmon avec sauce vierge',
                :synopsis => "Mouthwatering and healthy Salmon dish drizzled with sauce vierge and Seaweed as a delicious accompaniment to go with it.",
                :description => recipe5_description,
                :ingredient_list => recipe5_ingredient_list,
-               :preparation_method => recipe5_preparation_method)
+               :preparation_method => recipe5_preparation_method,
+               :category => 'non_vegetarian')
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmoncloseup1.jpeg'))
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/wholeplate.jpeg'))
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmonweed1.jpeg'))
