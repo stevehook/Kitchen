@@ -180,6 +180,21 @@ iframe {
   position: absolute;
   top: 130px;
   @include hoverBackgroundTransition;
+
+  .searchMenuItem {
+    .hidden {
+      display: none;
+    }
+    form, a {
+      display: inline-block;
+    }
+    input {
+      margin: 0px 0;
+      font-size: 90%;
+      padding: 5px;
+      width: 280px;
+    }
+  }
 }
 
 #banner.fixed {

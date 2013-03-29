@@ -115,6 +115,18 @@ $(function() {
           var section = $('body').data('section');
           var menuItem = $("a[data-section='" + section + "']");
           menuItem.addClass('selected');
+
+          var searchMenuItem = $('.searchMenuItem');
+          var searchBox = $('#search', searchMenuItem);
+          searchMenuItem.mouseenter(function(e) {
+            $('.hidden', searchMenuItem).show(200);
+            $('#search', searchMenuItem).focus();
+          });
+          searchBox.blur(function() {
+            setTimeout(function() {
+              $('.hidden', searchMenuItem).hide(200);
+            }, 500);
+          });
         }
       };
       this.homeMenu = self;

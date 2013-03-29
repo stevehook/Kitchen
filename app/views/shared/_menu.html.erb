@@ -7,6 +7,15 @@
         <li><%= link_to 'Classes', "#{root_path}#classesPanel", :'data-section' => :classes %></li>
         <li><%= link_to 'Contact', "#{root_path}#contactPanel", :'data-section' => :contact %></li>
         <li><%= link_to 'Blog', blog_posts_path, :'data-section' => :blog_posts %></li>
+        <li class='searchMenuItem'>
+          <%= form_tag search_recipes_path, :method => 'get' do %>
+            <%= text_field_tag 'search', nil, :placeholder => 'Search by ingredient or recipe', :class => :hidden %>
+          <% end %>
+          <%= link_to '#', :class => 'search_menu_item' do %>
+            <span class='icon-search icon'></span>
+          <% end %>
+          <%= link_to 'All Recipes', recipes_path, :class => :hidden %>
+        </li>
         <li class='right'>
           <% if user_signed_in? %>
             <%= link_to 'Logout', destroy_user_session_path, :'data-section' => :login, :method => 'delete' %>
