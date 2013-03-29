@@ -1,6 +1,6 @@
 // Set the minimum height of parallax panels to window height
 $(function() {
-  var callback = function() { console.log('resizing'); $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' }); };
+  var callback = function() { $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' }); };
   $(window).resize(callback);
   callback();
 });
