@@ -179,6 +179,7 @@ iframe {
   width: 100%;
   position: absolute;
   top: 130px;
+  @include hoverBackgroundTransition;
 }
 
 #banner.fixed {
