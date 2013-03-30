@@ -19,7 +19,7 @@ describe 'Update an existing recipe' do
 
     it 'should update the properties of an existing recipe' do
       visit recipes_path
-      click_link 'Read >>'
+      click_link 'Aloo tikki chaat'
       current_path.should == recipe_path(@recipe)
       click_link 'Edit this recipe'
       current_path.should == edit_recipe_path(@recipe)
@@ -32,7 +32,7 @@ describe 'Update an existing recipe' do
 
     it 'should not update the properties of an existing recipe when I press the Cancel button' do 
       visit recipes_path
-      click_link 'Read >>'
+      click_link 'Aloo tikki chaat'
       current_path.should == recipe_path(@recipe)
       click_link 'Edit this recipe'
       current_path.should == edit_recipe_path(@recipe)
