@@ -4,7 +4,7 @@ class BlogPost < ActiveRecord::Base
 
   has_many :blog_post_photos
 
-  scope :published, where("published_at < ?", DateTime.now)
+  scope :published, -> { where("published_at < ?", DateTime.now) }
 
   def set_publication_date
     self.published_at = DateTime.now unless self.published_at
