@@ -71,6 +71,6 @@ class RecipesController < ApplicationController
     @recipes =  Recipe.joins("LEFT OUTER JOIN ingredients_recipes ON ingredients_recipes.recipe_id = recipes.id LEFT OUTER JOIN ingredients ON ingredients.id = ingredients_recipes.ingredient_id")
       .where('ingredients.title ILIKE ? OR recipes.title ILIKE ?', "%#{@search_term}%", "%#{@search_term}%")
       .where('recipes.category IN (?)', Recipe.category_search_values_to_list(@category))
-      .uniq.page(page).per(3)
+      .uniq.page(page).per(4)
   end
 end

@@ -1,6 +1,7 @@
 <div>
-  <p class='thumb'><%= link_to recipe_path(recipe), {} { image_tag recipe.primary_photo.image.thumb.url } if recipe.primary_photo %></p>
-  <p class='title'><%= link_to recipe.title, recipe_path(recipe) %></p>
-  <p class='synopsis'><%= recipe.synopsis %></p>
-  <p class='link'><%= link_to 'Read >>', recipe_path(recipe) %></p>
+  <%= link_to recipe_path(recipe), {} { image_tag recipe.primary_photo.image.thumb.url } if recipe.primary_photo %>
+  <div class='text'>
+    <div class='title'><%= link_to recipe.title, recipe_path(recipe) %></div>
+    <div class='synopsis'><%= link_to recipe.synopsis, recipe_path(recipe) %></div>
+  </div>
 </div>

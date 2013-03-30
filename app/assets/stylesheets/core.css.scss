@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
 $white: rgb(255,255,255);
+$white80: rgba(255,255,255,0.8);
 
 $lightgrey: rgb(244,244,244);
 $midlightgrey: rgb(228,228,228);
@@ -85,6 +86,20 @@ $banner_height: 40px;
   /*-moz-box-sizing: border-box;*/
   /*box-sizing: border-box;*/
 /*}*/
+
+@mixin boxSizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin allTransition500 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 @mixin hoverBackgroundTransition {
   -moz-transition: color .2s, background-color .2s;
@@ -549,40 +564,73 @@ ul.recipeList {
 }
 
 .recipeList li {
+  @include boxSizing;
   position: relative;
-  width: 337px;
-  height: 480px;
-  margin: 0 46px 36px 0;
-  padding: 15px;
+  width: 275px;
+  height: 320px;
+  margin: 0 20px 36px 0;
+  padding: 3px;
   border: 1px solid $extralightgrey;
   float: left;
 	background-color: rgba(255, 255, 255, 0.75);
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: $maroon;
+  }
+
+  img {
+    width: 265px;
+    height: 265px;
+  }
+
+  .title {
+    margin: 8px 0 0;
+    font-size: 110%;
+    color: $maroon;
+    text-align: center;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .synopsis {
+    @include allTransition500;
+    margin: 8px 5px;
+    font-size: 90%;
+    color: #888;
+    text-align:	left;
+    opacity: 0;
+    max-height: 0px;
+
+    a {
+      color: #888;
+    }
+  }
+
+  .text {
+    @include boxSizing;
+    background-color: $white80;
+    position: absolute;
+    bottom: 0px;
+    min-width: 270px;
+    min-height: 45px;
+  }
+}
+
+.recipeList li:hover {
+  .synopsis {
+    height: auto;
+    max-height: 300px;
+    opacity: 1;
+  }
 }
 
 .recipeList li.end_of_line {
   margin: 0 0 36px 0;
-}
-
-.recipeList li .title {
-  font-size: 140%;
-  color: $maroon;
-}
-
-.recipeList li .link {
-	text-align:	right;
-  position: absolute;
-  bottom: 5px;
-  right: 20px;
-}
-
-.recipeList a {
-  text-decoration: none;
-  color: $maroon;
-}
-
-.recipeList li .synopsis {
-  font-size: 110%;
-	text-align:	left;
 }
 
 .recipeContainer {
@@ -1013,5 +1061,11 @@ menu {
 }
 
 body[data-section='recipes'] section.mainSection {
-  background-color: $champagne1;
+  background-image: url('/images/tablecloth.png');
+  background-position: 0% 0%;
+  background-repeat: repeat;
+
+  .recipeListContainer {
+    background: none;
+  }
 }
