@@ -5,6 +5,9 @@ describe 'Unsubscribe' do
     # Stubbing the external twitter API
     @tweets = ['I fancy chocolate pudding today.', 'I fancy indian veg roll today.']
     Twitter.stub(:user_timeline => @tweets.collect { |tweet| stub(:text => tweet) })
+
+    # Stub out spam filter
+    Subscription.any_instance.stub(:test_spam).and_return(true)
   end
 
   context "when visiting the unsubscribe page with a valid token" do

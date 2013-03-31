@@ -57,7 +57,6 @@ describe 'Home page' do
     it "should show subscription form with name field" do
       visit '/'
       page.should have_field 'Name'
-      # page.has_field?('Name').should be_true
     end
 
     it "should show subscription form with name field" do
@@ -67,6 +66,7 @@ describe 'Home page' do
 
     context "with valid subscription details" do
       before do
+        Subscription.any_instance.stub(:test_spam).and_return(true)
         visit '/'
         fill_in 'Email', :with => 'puppy@woof.com'
         click_button 'Subscribe'

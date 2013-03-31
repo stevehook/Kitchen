@@ -8,6 +8,8 @@
       <p class='flash notice'><%= @notice %></p>
     <% end %>
   </div>
+  <%= form.hidden_field :other %>
+  <%= form.hidden_field :initial_timestamp %>
   <div class='field'>
     <%= form.label :name, 'Name' %>
     <%= form.text_field :name %>
@@ -17,6 +19,6 @@
     <%= form.email_field :email, :required => 'true' %>
   </div>
   <div class='formActions'>
-    <%= form.submit('Subscribe', :class => 'subscribeButton') %>    
+    <%= form.submit('Subscribe', :class => 'subscribeButton') %>
   </div>
 <% end %>
