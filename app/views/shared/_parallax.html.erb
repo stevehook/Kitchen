@@ -14,15 +14,15 @@
       <%= render :partial => 'shared/carousel' %>
     </div>
   </div>
-  <div id='classesPanel' class='parallaxPanel' data-content='classes' data-background='wheat.jpg'>
-    <a id='classes'></a>
+  <div id='newsPanel' class='parallaxPanel' data-content='news' data-background='wheat.jpg'>
+    <a id='news'></a>
     <div class='container'>
-      <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.classes_panel.title') %></span></div>
-      <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.classes_panel.subtitle') %></span></div>
+      <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.news_panel.title') %></span></div>
+      <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.news_panel.subtitle') %></span></div>
       <% 3.times do |n| %>
-        <div class='classesContent'>
-          <h1><%= t("copy.home.classes_panel.class#{n}.title") %></h1>
-          <p><%= t("copy.home.classes_panel.class#{n}.text") %></p>
+        <div class='newsContent'>
+          <h1><%= t("copy.home.news_panel.news#{n}.title") %></h1>
+          <p><%= t("copy.home.news_panel.news#{n}.text") %></p>
         </div>
       <% end %>
     </div>

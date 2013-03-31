@@ -366,7 +366,7 @@ textarea:focus, input:focus {
   @include hoverBackgroundTransition;
 };
 
-.homeContent, .classesContent {
+.homeContent, .newsContent {
   float: left;
   width: 500px;
   background-color: $champagne5_80;
@@ -375,11 +375,11 @@ textarea:focus, input:focus {
   margin: 200px 0 0 50px;
 }
 
-.homeContent h1, .classesContent h1 {
+.homeContent h1, .newsContent h1 {
   color: $white;
 }
 
-.classesContent {
+.newsContent {
   margin: 100px 0 0 50px;
   width: 250px;
   font-size: 110%;
