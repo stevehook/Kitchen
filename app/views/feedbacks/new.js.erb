@@ -1,0 +1,4 @@
+var renderedForm = "<%= j render :partial => "feedbacks/#{@category}_feedback_form" %>";
+$("#<%= @category %>FormContainer").html(renderedForm);
+$("#<%= @category %>TextContainer").slideUp();
+$("#<%= @category %>FormContainer form").find('input[type=text],textarea,select').filter(':visible:first').focus();

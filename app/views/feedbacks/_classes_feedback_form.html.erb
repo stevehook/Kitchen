@@ -1,0 +1,23 @@
+<%= form_for @feedback, :remote => true do |form| %>
+  <div>
+    <!-- The errors here are only rendered for an Ajax response -->
+    <% if @error %>
+      <p class='flash errors'><%= @error %></p>
+    <% end %>
+    <% if @notice %>
+      <p class='flash notice'><%= @notice %></p>
+    <% end %>
+  </div>
+  <%= form.hidden_field :category %>
+  <div class='field'>
+    <%= form.label :name, 'Name' %>
+    <%= form.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= form.label :email, "Email <span class='mandatory'>Required</span>".html_safe %>
+    <%= form.email_field :email, :required => 'true' %>
+  </div>
+  <div class='formActions'>
+    <%= form.submit('Submit', :class => 'formButton') %>
+  </div>
+<% end %>

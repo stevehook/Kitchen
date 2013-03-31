@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130331113528) do
     t.string   "name"
     t.string   "email"
     t.string   "category"
+    t.string   "postcode"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,5 +1,5 @@
 class Feedback < ActiveRecord::Base
-  attr_accessible :name, :email, :category
+  attr_accessible :name, :email, :category, :postcode
   validates_presence_of :email
   validates_presence_of :category
   validates_uniqueness_of :email
