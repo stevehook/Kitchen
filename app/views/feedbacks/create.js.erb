@@ -1,9 +1,10 @@
 <% if @error %>
   var renderedForm = "<%= j render :partial => "feedbacks/#{@category}_feedback_form" %>";
   $("#<%= @category %>FormContainer").html(renderedForm);
+  $("#<%= @category %>FormContainer .flash").slideDown().delay(10000).slideUp(1000);
 <% else %>
   var notice = "<%= j render :partial => "feedbacks/notice" %>";
   $("#<%= @category %>FormContainer").html(notice);
+  $("#<%= @category %>FormContainer .flash").slideDown().delay(10000).slideUp(1000);
+  $("#<%= @category %>TextContainer").delay(11000).slideDown();
 <% end %>
-$("#<%= @category %>FormContainer .flash").slideDown().delay(10000).slideUp(1000);
-$("#<%= @category %>TextContainer").delay(11000).slideDown();

@@ -1,4 +1,9 @@
 var renderedForm = "<%= j render :partial => "feedbacks/#{@category}_feedback_form" %>";
-$("#<%= @category %>FormContainer").html(renderedForm);
-$("#<%= @category %>TextContainer").slideUp();
+$("#<%= @category %>TextContainer").hide();
+$("#<%= @category %>FormContainer").html(renderedForm).show();
 $("#<%= @category %>FormContainer form").find('input[type=text],textarea,select').filter(':visible:first').focus();
+$("#<%= @category %>FormContainer").on('click', '.cancelButton', function(e) {
+  $("#<%= @category %>TextContainer").show();
+  $("#<%= @category %>FormContainer").hide();
+  e.preventDefault();
+});
