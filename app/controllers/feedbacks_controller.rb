@@ -31,7 +31,7 @@ class FeedbacksController < ApplicationController
     success = feedback.save
     @category = feedback.category
     if request.xhr?
-      @feedback = success ? Subscription.new : subscription
+      @feedback = success ? Feedback.new(category: @category) : feedback
       if success
         @notice = "Thanks for your interest. We will get back to you when we are ready to launch this service."
       else
