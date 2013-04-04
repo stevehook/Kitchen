@@ -1,17 +1,19 @@
 <div id='footer'>
   <div class='container'>
     <h1 class='footerTitle'>Zanzaneet</h1>
-    <ul>
-      <li><%= link_to 'About', about_path(:about) %></li>
-    </ul>
-    <ul>
-      <li><%= link_to 'Privacy Policy', about_path(:privacy_policy) %></li>
-    </ul>
-    <ul>
-      <li><%= link_to 'Company', about_path(:company) %></li>
-    </ul>
-    <ul>
-      <li><%= link_to 'Faq', about_path(:faq) %></li>
-    </ul>
+    <nav id="menu">
+      <ul>
+        <li><%= link_to 'About', about_path(:about) %></li>
+      </ul>
+      <ul>
+        <li><%= link_to 'Privacy Policy', about_path(:privacy_policy) %></li>
+      </ul>
+      <ul>
+        <li><%= link_to 'Company', about_path(:company) %></li>
+      </ul>
+      <ul>
+        <li><%= link_to 'FAQ', about_path(:faq) %></li>
+      </ul>
+    </nav>
   </div>
 </div>

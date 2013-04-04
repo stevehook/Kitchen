@@ -227,13 +227,27 @@ iframe {
   margin: -28px 0;
 }
 
+
 #footer {
-  height: 40px;
+  height: 60px;
   bottom: 0px;
   z-index: 5;
   width: 100%;
   background: $champagne5;
   color: $white;
+
+  ul {
+    float: right;
+    font-size: 90%;
+
+  }
+
+  .footerTitle {
+    font: 150% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    color: $white;
+    float: left;
+    margin: -10px 0;
+  }
 }
 
 #menu {
