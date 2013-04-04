@@ -427,6 +427,8 @@ textarea:focus, input:focus {
 }
 
 #recipesPanel {
+  background-repeat: repeat;
+  background-size: initial;
   .carouselItem {
     background: rgba(255, 255, 255, 0.8);
   }
