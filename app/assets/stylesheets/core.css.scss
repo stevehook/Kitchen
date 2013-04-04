@@ -229,10 +229,11 @@ iframe {
 
 #footer {
   height: 40px;
-  position: fixed;
   bottom: 0px;
   z-index: 5;
-  width: 100%
+  width: 100%;
+  background: $champagne5;
+  color: $white;
 }
 
 #menu {
