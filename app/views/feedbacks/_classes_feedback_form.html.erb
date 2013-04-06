@@ -19,6 +19,10 @@
     <%= form.label :email, "Email <span class='mandatory'>Required</span>".html_safe %>
     <%= form.email_field :email, :required => 'true' %>
   </div>
+  <div class='field'>
+    <%= form.label :phone, "Phone Number" %>
+    <%= form.telephone_field :phone %>
+  </div>
   <div class='formActions'>
     <%= form.submit('Submit', :class => 'formButton') %>
     <%= form.button('Cancel', :class => 'formButton cancelButton') %>

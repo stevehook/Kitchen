@@ -344,7 +344,7 @@ textarea.extraLarge {
   min-height: 500px;
 }
 
-input[type='text'], input[type='email'], input[type='password'] {
+input[type='text'], input[type='email'], input[type='tel'], input[type='password'] {
   padding: 15px;
   width: 500px;
   letter-spacing: $default_letter_spacing;
@@ -403,7 +403,7 @@ textarea:focus, input:focus {
   padding: 20px;
   color: $white;
 
-  input[type='text'], input[type='email'] {
+  input[type='text'], input[type='email'], input[type='tel'] {
     width: 450px;
   }
 

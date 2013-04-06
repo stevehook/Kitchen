@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331113528) do
+ActiveRecord::Schema.define(:version => 20130406125946) do
 
   create_table "blog_post_photos", :force => true do |t|
     t.integer  "blog_post_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130331113528) do
     t.string   "postcode"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "phone"
   end
 
   create_table "ingredients", :force => true do |t|
