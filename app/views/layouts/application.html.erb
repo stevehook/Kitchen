@@ -9,13 +9,15 @@
   <%= render :partial => 'shared/analytics' %>
 </head>
 <body data-section="<%= params[:controller] %>">
-<%= render :partial => 'shared/header' if @show_header %>
-<%= render :partial => 'shared/menu' %>
-<section class='mainSection'>
-  <div class='content'>
-    <%= yield %>
+  <div id='innerBody'>
+    <%= render :partial => 'shared/header' if @show_header %>
+    <%= render :partial => 'shared/menu' %>
+    <section class='mainSection'>
+      <div class='content'>
+        <%= yield %>
+      </div>
+    </section>
   </div>
-</section>
+  <%= render :partial => 'shared/footer' %>
 </body>
-<%= render :partial => 'shared/footer' %>
 </html>
