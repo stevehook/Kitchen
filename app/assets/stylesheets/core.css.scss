@@ -378,7 +378,6 @@ textarea:focus, input:focus {
   color: $white;
   font-size: 120% !important;
   text-decoration: none;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -528,18 +527,18 @@ textarea:focus, input:focus {
 // }
 
 .carouselButton {
-	top: 40%;
-	position: absolute;
-	width: 55px;
-	height: 55px;
-	font-size: 150%;
-	color: $white;
-	background-color: $sheepu6_50;
+  top: 40%;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  font-size: 150%;
   color: $white;
-	line-height: 63px;
-	text-align: center;
+  background-color: $sheepu6_50;
+  color: $white;
+  line-height: 63px;
+  text-align: center;
   vertical-align: middle;
-	cursor: pointer;
+  cursor: pointer;
   z-index: 4;
   @include hoverColorTransition;
 
@@ -549,9 +548,9 @@ textarea:focus, input:focus {
 }
 
 .recipeMoreLink:hover, .recipesMoreLink:hover, .carouselButton:hover {
-	// background-color: $orange;
+  // background-color: $orange;
   color: $white;
-	background-color: $sheepu6_80;
+  background-color: $sheepu6_80;
 }
 
 .left {
@@ -741,7 +740,47 @@ ul.recipeList {
 .parallax {
 }
 
+.parallaxDownButton {
+  position: absolute;
+  bottom: 0px;
+  left: 1200px;
+  background-color: $champagne5_80;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    padding: 0 5px;
+    font-size: 250%;
+  }
+
+  .label {
+    padding: 0 5px 0 0;
+    display: none;
+  }
+}
+
+.parallaxDownButton:hover {
+  background-color: $champagne6;
+}
+
+.parallaxDownButton:hover .label {
+  display: inline;
+}
+
 .parallaxPanel {
+  position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

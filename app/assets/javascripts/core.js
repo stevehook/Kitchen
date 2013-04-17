@@ -1,6 +1,9 @@
 // Set the minimum height of parallax panels to window height
 $(function() {
-  var callback = function() { $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' }); };
+  var callback = function() {
+    $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' });
+    $('#homePanel').css({ 'min-height': (window.innerHeight - 102) + 'px' });
+  };
   $(window).resize(callback);
   callback();
 });
@@ -20,7 +23,7 @@ $(function() {
 
 // Override menu anchor links so that the page scrolls slowly to the correct panel
 $(function() {
-  $('#menu li a').click(function(e) {
+  $('#menu li a, .parallaxDownButton a').click(function(e) {
     var $this = $(this);
     if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
       var match = /#(.+)/.exec($this.attr('href'));
