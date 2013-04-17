@@ -5,6 +5,6 @@
 <% else %>
   var notice = "<%= j render :partial => "feedbacks/notice" %>";
   $("#<%= @category %>FormContainer").html(notice);
+  $("#<%= @category %>TextContainer").show();
   $("#<%= @category %>FormContainer .flash").slideDown().delay(10000).slideUp(1000);
-  $("#<%= @category %>TextContainer").delay(11000).slideDown();
 <% end %>

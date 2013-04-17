@@ -19,14 +19,11 @@ en:
         subtitle: Find out what's cooking
         news0:
           title: Home Delivery Service
-          text: 
-            - We don't rest at Zanzaneet. Making tasty vegan and vegatarian recipes is our passion and we want to fulfil the needs
-              of fussy eater like us who don't always like to eat the same meals again and again and are too busy to cook 
+          text:
+            - Making tasty vegan and vegetarian recipes is our passion and we want to fulfil the needs
+              of discerning eaters like us who don't always like to eat the same meals again and again and are sometimes too busy to cook
               interesting meals every day.
-            - Our chefs have been busy constructing and deconstructing some creative recipes to suit
-              the palate of choosy eaters, be they vegan, vegetarian, people with special dietary needs or just discerning
-              carnivores. Subscribe to our service and let us know if you would like us to deliver some of these scrumptious cooked
-              meals to your door. Don't forget to give us your postcode :)
+            - Let us know if you would like us to deliver some of our delicious cooked meals straight to your door.
         news1:
           title: Classes
           text:
