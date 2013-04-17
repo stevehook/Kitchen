@@ -10,7 +10,7 @@ describe SubscriptionsController do
       Subscription.any_instance.stub(:save) { true }
       post :create, :subscription => { :name =>  "", :email => "bob@roberts.com" }
       response.should redirect_to("#{root_path}#contact")
-      flash[:notice].should == 'Thankyou, you are now subscribed to zanzaneet.com'
+      flash[:notice].should == 'Thank you, you are now subscribed to zanzaneet.com'
     end
 
     it "redirects to '/' and sets error on unsuccessful save" do
