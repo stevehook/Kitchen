@@ -27,7 +27,7 @@
     <div class='container'>
       <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.news_panel.title') %></span></div>
       <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.news_panel.subtitle') %></span></div>
-      <div class='newsContent'>
+      <div class='newsContent firstNewsContent'>
         <h1><%= t("copy.home.news_panel.news0.title") %></h1>
         <div id='deliveryFormContainer'>
         </div>
@@ -35,7 +35,9 @@
           <% t("copy.home.news_panel.news0.text").each do |paragraph| %>
             <p><%= paragraph %></p>
           <% end %>
-          <%= link_to 'Tell me more about Home Delivery', new_feedback_path(category: :delivery), :class => 'formButton', :remote => true %>
+          <div class='buttons'>
+            <%= link_to 'Tell me more about Home Delivery', new_feedback_path(category: :delivery), :class => 'formButton', :remote => true %>
+          </div>
         </div>
       </div>
       <div class='newsContent'>
@@ -46,7 +48,9 @@
           <% t("copy.home.news_panel.news1.text").each do |paragraph| %>
             <p><%= paragraph %></p>
           <% end %>
-          <%= link_to 'Tell me more about Classes', new_feedback_path(category: :classes), :class => 'formButton', :remote => true %>
+          <div class='buttons'>
+            <%= link_to 'Tell me more about Classes', new_feedback_path(category: :classes), :class => 'formButton', :remote => true %>
+          </div>
         </div>
       </div>
     </div>

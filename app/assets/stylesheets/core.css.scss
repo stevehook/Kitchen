@@ -414,6 +414,10 @@ textarea:focus, input:focus {
     width: 450px;
   }
 
+  .buttons {
+    padding: 20px 0 0;
+  }
+
   .formButton {
     background-color: $champagne6;
   }
@@ -425,6 +429,10 @@ textarea:focus, input:focus {
   .flash {
     color: $contactUsTitle2;
   }
+}
+
+.firstNewsContent {
+  margin: 80px 50px 0 0;
 }
 
 #carousel {
