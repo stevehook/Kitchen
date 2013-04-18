@@ -709,7 +709,7 @@ ul.recipeList {
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 10px auto;
     display: inline-block;
 
     li {
@@ -719,9 +719,9 @@ ul.recipeList {
       padding: 3px 2px 2px 2px;
 
       a {
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
         display: inline-block;
       }
     }
