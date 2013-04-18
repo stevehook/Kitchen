@@ -389,7 +389,7 @@ textarea:focus, input:focus {
 .recipeContainer #search_button:hover, .formButton:hover {
   background-color: $champagne5;
   @include hoverBackgroundTransition;
-};
+}
 
 .homeContent, .newsContent {
   float: left;
@@ -686,6 +686,13 @@ ul.recipeList {
   @include boxSizing;
   background: white;
   padding: 10px 20px;
+
+  h3 {
+    padding: 8px 10px;
+    margin: 10px 0;
+    background-color: gray;
+    color: white;
+  }
 }
 
 #recipeImageContainer {
