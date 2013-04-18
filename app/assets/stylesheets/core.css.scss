@@ -159,8 +159,9 @@ h1, h2, h3, h4 {
 }
 
 .contentSidePanel {
+  @include boxSizing;
   float: left;
-  width: 300px;
+  width: 280px;
   margin: 0 0 0 40px;
 }
 
@@ -682,6 +683,7 @@ ul.recipeList {
 }
 
 .recipeContainer {
+  @include boxSizing;
   background: white;
   padding: 10px 20px;
 }
