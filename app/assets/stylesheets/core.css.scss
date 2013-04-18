@@ -761,7 +761,7 @@ ul.recipeList {
   @include boxSizing;
   position: absolute;
   bottom: 0px;
-  left: 1200px;
+  right: 200px;
   background-color: $champagne5_80;
   text-align: center;
   vertical-align: middle;
@@ -775,14 +775,13 @@ ul.recipeList {
   .left {
     float: left;
     height: 50px;
-    a {
-      text-decoration: none;
-      color: $white;
-    }
 
-    .icon {
-      padding: 0;
-      font-size: 220%;
+    .label {
+      line-height: 50px;
+      padding: 0 5px;
+      display: none;
+      text-align: middle;
+      font-size: 120%;
       color: $white;
     }
   }
@@ -791,12 +790,14 @@ ul.recipeList {
     float: right;
     height: 50px;
 
-    .label {
-      line-height: 50px;
-      padding: 0 5px;
-      display: none;
-      text-align: middle;
-      font-size: 120%;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+
+    .icon {
+      padding: 0;
+      font-size: 220%;
       color: $white;
     }
   }
