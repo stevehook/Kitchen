@@ -123,12 +123,17 @@ $(function() {
           var searchMenuItem = $('.searchMenuItem');
           var searchBox = $('#search', searchMenuItem);
           searchMenuItem.mouseenter(function(e) {
-            $('.hidden', searchMenuItem).show(200);
+            $('.hidden', searchMenuItem).animate({ opacity: 1 });
+            $('#search', searchMenuItem).focus();
+          });
+          searchMenuItem.click(function(e) {
             $('#search', searchMenuItem).focus();
           });
           searchBox.blur(function() {
             setTimeout(function() {
-              $('.hidden', searchMenuItem).hide(200);
+              if (!$('.hidden', searchMenuItem).is(':focus')) {
+                $('.hidden', searchMenuItem).animate({ opacity: 0 });
+              }
             }, 500);
           });
         }
