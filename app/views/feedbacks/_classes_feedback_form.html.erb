@@ -21,7 +21,7 @@
   </div>
   <div class='field'>
     <%= form.label :phone, "Phone Number" %>
-    ,%= form.telephone_field :phone, :pattern => '[\(]?\d{2,5}[\)]?[ ]?\d{2,10}', :title => 'Phone number format: e.g. 09992 9999999999' %>
+    <%= form.telephone_field :phone, :pattern => '[\(]?\d{2,5}[\)]?[ ]?\d{2,10}', :title => 'Phone number format: e.g. 09992 9999999999' %>
   </div>
   <div class='formActions'>
     <%= form.submit('Submit', :class => 'formButton') %>
