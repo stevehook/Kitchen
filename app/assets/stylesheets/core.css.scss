@@ -71,8 +71,9 @@ $sheepu6_50: rgba(32, 48, 8, 0.5);
 
 $maroon: rgb(89, 15, 15);
 $lightMaroon: rgb(162, 66, 66);
-$contactUsTitle1: rgb(252, 231, 146);
-$contactUsTitle2: rgb(213, 195, 153);
+
+$shrikhand1: rgb(252, 231, 146);
+$shrikhand2: rgb(213, 195, 153);
 
 $watermark: rgb(112, 111, 111);
 $base_font: lighter 13pt 'Gill Sans', 'Helvetica Neue', sans-serif;
@@ -435,7 +436,7 @@ textarea:focus, input:focus {
   }
 
   .flash {
-    color: $contactUsTitle2;
+    color: $shrikhand2;
   }
 }
 
@@ -769,7 +770,8 @@ ul.recipeList {
   position: absolute;
   bottom: 0px;
   right: 200px;
-  background-color: $champagne5_80;
+  background-color: $shrikhand1;
+  color: $champagne7;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -789,7 +791,7 @@ ul.recipeList {
       display: none;
       text-align: middle;
       font-size: 120%;
-      color: $white;
+      color: $champagne7;
     }
   }
 
@@ -799,19 +801,18 @@ ul.recipeList {
 
     a {
       text-decoration: none;
-      color: $white;
+      color: $champagne7;
     }
 
     .icon {
       padding: 0;
       font-size: 220%;
-      color: $white;
+      color: $champagne7;
     }
   }
 }
 
 .parallaxDownButton:hover {
-  background-color: $champagne6;
 }
 
 .parallaxDownButton:hover .label {
@@ -956,7 +957,7 @@ span.parallaxTitleText {
 }
 
 #social #email:hover .title, #social #twitter:hover .title {
-  color: $contactUsTitle1;
+  color: $shrikhand1;
 }
 
 #social #email img {
@@ -970,14 +971,14 @@ span.parallaxTitleText {
 }
 
 #contactPanel .title {
-  color: $contactUsTitle2;
+  color: $shrikhand2;
   font-size: 130%;
   font-weight: lighter;
   @include hoverColorTransition;
 }
 
 #newsletterSignUp {
-  color: $contactUsTitle2;
+  color: $shrikhand2;
   margin-top: 70px;
   float: left;
   padding-left: 20px;
