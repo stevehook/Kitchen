@@ -14,7 +14,7 @@
           <%= link_to '#', :class => 'search_menu_item' do %>
             <span class='icon-search icon'></span>
           <% end %>
-          <%= link_to 'All Recipes', recipes_path %>
+          <%= link_to 'All Recipes', recipes_path, :class => 'allRecipes' %>
         </li>
         <li class='right'>
           <% if user_signed_in? %>

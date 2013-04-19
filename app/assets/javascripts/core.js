@@ -28,13 +28,15 @@ $(function() {
     var $this = $(this);
     if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
       var match = /#(.+)/.exec($this.attr('href'));
-      var $target = $('#' + match[1]);
-      var offset = $target.offset();
-      $('html, body').animate({
-        scrollTop: offset.top,
-        scrollLeft: offset.left
-      });
-      e.preventDefault();
+      if (match) {
+        var $target = $('#' + match[1]);
+        var offset = $target.offset();
+        $('html, body').animate({
+          scrollTop: offset.top,
+          scrollLeft: offset.left
+        });
+        e.preventDefault();
+      }
     }
   });
 });
@@ -127,7 +129,10 @@ $(function() {
             $('#search', searchMenuItem).focus();
           });
           searchMenuItem.click(function(e) {
-            $('#search', searchMenuItem).focus();
+            searchBox.focus();
+            if (searchBox.val() !== '') {
+              searchBox.closest('form').submit();
+            }
           });
           searchBox.blur(function() {
             setTimeout(function() {
