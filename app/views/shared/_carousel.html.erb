@@ -4,7 +4,7 @@
     <% @recipes.each do |recipe| %>
       <div class='carouselItem' data-id='1'>
         <div class='content'>
-          <h2 class='recipeTitle'><%= recipe.title %></h2>
+          <h2 class='recipeTitle'><%= render :partial => 'recipes/title', :locals => { :recipe => recipe } %></h2>
           <div class='images'>
             <div class='recipeImage'><%= image_tag recipe.primary_photo.image.medium.url if recipe.primary_photo %></div>
             <div class='recipeSecondaryImage'><%= image_tag recipe.secondary_photo.image.small.url if recipe.secondary_photo %></div>

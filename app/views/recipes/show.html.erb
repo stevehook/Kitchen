@@ -1,5 +1,5 @@
 <section id="main" class='container recipeContainer'>
-  <h2><%= @recipe.title %></h2>
+  <h2><%= render :partial => 'title', :locals => { :recipe => @recipe } %></h2>
 
   <div class='contentMain'>
     <p><%= @recipe.synopsis %></p>

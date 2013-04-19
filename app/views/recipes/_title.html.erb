@@ -1,0 +1,6 @@
+<%= recipe.title %>
+<% if recipe.native_title.present? %>
+  <span class='nativeTitle'>
+    <%= "(#{recipe.native_title})" %>
+  </span>
+<% end %>

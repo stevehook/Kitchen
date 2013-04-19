@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406125946) do
+ActiveRecord::Schema.define(:version => 20130419183017) do
 
   create_table "blog_post_photos", :force => true do |t|
     t.integer  "blog_post_id"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20130406125946) do
     t.string   "synopsis",                                                 :null => false
     t.integer  "recipe_category_id"
     t.string   "category",                       :default => "vegetarian", :null => false
+    t.string   "native_title"
   end
 
   create_table "subscriptions", :force => true do |t|

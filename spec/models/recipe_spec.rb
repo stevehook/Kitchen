@@ -16,6 +16,7 @@ describe Recipe do
 
   it { should validate_presence_of :title }
   it { should_not validate_presence_of :description }
+  it { should_not validate_presence_of :native_title }
   it { should validate_presence_of :synopsis }
   it { should validate_presence_of :ingredient_list }
   it { should validate_presence_of :preparation_method }
