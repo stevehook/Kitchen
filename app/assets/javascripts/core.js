@@ -46,7 +46,6 @@ $(function() {
 $(function() {
   $('.tellMeMore').click(function() {
     $this = $(this);
-    console.log(['_trackEvent', 'TellMeMore', $this.data('feedback')]);
     _gaq.push(['_trackEvent', 'TellMeMore', $this.data('feedback')]);
   });
 });
@@ -129,6 +128,7 @@ $(function() {
       var self = {
         initialize: function() {
           var section = $('body').data('section');
+          var menu = $('#menu');
           var menuItem = $("a[data-section='" + section + "']");
           menuItem.addClass('selected');
 
@@ -151,6 +151,31 @@ $(function() {
               }
             }, 500);
           });
+          if ($('.parallaxPanel').length > 0) {
+            $(document).scroll(function(event) {
+              var panel = self.getActivePanel();
+              $("a", menu).removeClass('selected');
+              var panelId = panel[0].id;
+              if (panelId == 'homePanel') { panelId = 'header'; }
+              $("a[href='/#" + panelId + "']").addClass('selected');
+            });
+          }
+        },
+        getActivePanel: function() {
+          $window = $(window);
+          var scrollTop = $window.scrollTop();
+          var height = $window.height();
+          var $panels = $('.parallaxPanel');
+          var $activePanel = null;
+          $panels.each(function(index, panel) {
+            $panel = $(panel);
+            var offsetTop = $panel.offset().top;
+            if (offsetTop >= (scrollTop - (height/2)) && offsetTop < (scrollTop + (height/2))) {
+              $activePanel = $panel;
+              return false;
+            }
+          });
+          return $activePanel || $panels.first();
         }
       };
       this.homeMenu = self;
