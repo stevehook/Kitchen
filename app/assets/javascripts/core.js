@@ -42,6 +42,15 @@ $(function() {
   });
 });
 
+// GoogleAnalytics
+$(function() {
+  $('.tellMeMore').click(function() {
+    $this = $(this);
+    console.log(['_trackEvent', 'TellMeMore', $this.data('feedback')]);
+    _gaq.push(['_trackEvent', 'TellMeMore', $this.data('feedback')]);
+  });
+});
+
 $(function() {
   $('input#search').autocomplete({
     source: '/recipes/lookup',
