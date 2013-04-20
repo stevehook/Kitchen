@@ -63,6 +63,11 @@ $salmon7_50: rgba(105, 46, 29, 0.5);
 $salmon7_80: rgba(105, 46, 29, 0.8);
 
 // sheepu
+$sheepu4: rgba(60, 88, 10, 1);
+$sheepu5: rgba(45, 67, 10, 1);
+$sheepu6: rgba(32, 48, 8, 1);
+$sheepu7: rgba(20, 30, 1, 1);
+
 $sheepu4_80: rgba(60, 88, 10, 0.8);
 $sheepu5_80: rgba(45, 67, 10, 0.8);
 $sheepu6_80: rgba(32, 48, 8, 0.8);
@@ -177,6 +182,10 @@ h1, h2, h3, h4 {
   float: left;
   width: 280px;
   margin: 0 0 0 40px;
+
+  .icon {
+    color: $sheepu4;
+  }
 }
 
 html {
