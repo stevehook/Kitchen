@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600);
 
 $white: rgb(255,255,255);
 $white_80: rgba(255,255,255,0.8);
@@ -82,7 +83,7 @@ $shrikhand1: rgb(252, 231, 146);
 $shrikhand2: rgb(213, 195, 153);
 
 $watermark: rgb(112, 111, 111);
-$base_font: lighter 13pt 'Gill Sans', 'Helvetica Neue', sans-serif;
+$base_font: lighter 13pt 'Open Sans', 'Gill Sans', 'Helvetica Neue', sans-serif;
 $heading_font: SamarkanNormal;
 $input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 $default_letter_spacing: 1px;
@@ -327,7 +328,7 @@ iframe {
 	/*width: 100px;*/
 	text-decoration: none;
   color: $champagne0;
-	font: 110% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font: 110%;
 	padding: 10px 0 0;
 	height: 25px;
 }
