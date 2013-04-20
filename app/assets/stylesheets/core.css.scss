@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
 $white: rgb(255,255,255);
-$white80: rgba(255,255,255,0.8);
+$white_80: rgba(255,255,255,0.8);
+$white_50: rgba(255,255,255,0.5);
 
 $lightgrey: rgb(244,244,244);
 $midlightgrey: rgb(228,228,228);
@@ -679,7 +680,7 @@ ul.recipeList {
 
   .text {
     @include boxSizing;
-    background-color: $white80;
+    background-color: $white_80;
     position: absolute;
     bottom: 0px;
     min-width: 270px;
@@ -701,7 +702,7 @@ ul.recipeList {
 
 .recipeContainer {
   @include boxSizing;
-  background: white;
+  background: $white_50;
   padding: 10px 20px;
 
   h3 {
