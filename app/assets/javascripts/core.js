@@ -35,6 +35,7 @@ $(function() {
           scrollTop: offset.top,
           scrollLeft: offset.left
         });
+        _gaq.push(['_trackEvent', 'MainMenu', match[1]]);
         e.preventDefault();
       }
     }
