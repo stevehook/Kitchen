@@ -71,28 +71,47 @@ $(function() {
       var self = {
         initialize: function() {
           $('#recipePhotoImage').click(function(e) {
-            var currentSelectedListItem = $('a.filledDot', $ul).parent();
-            var nextListItem = currentSelectedListItem.next()[0] || $('li', $ul)[0];
-            $('a', nextListItem).click();
+            self.suspendTimer();
+            self.scroll();
           });
           $('a', $ul).click(function(e) {
-            // Create a copy to fade out
-            var imageCopy = $("<img id='recipeImageCopy' src='" + $('a.filledDot', $ul).data('image-url') + "'></img>");
-            $('#recipeImageContainer').append(imageCopy);
-
-            $('#recipePhotoImage').attr('src', $(this).data('image-url'));
-
-            // preventDefault to avoid scrolling to the top of the browser every time a link is clicked.
+            self.suspendTimer();
+            self.scroll($(this));
             e.preventDefault();
-            $('a', $ul).addClass('emptyDot').removeClass('filledDot');
-            $(this).addClass('filledDot');
+          });
+          self.runTimer();
+        },
+        suspendTimer: function() {
+          self.timerSuspended = true;
+        },
+        runTimer: function() {
+          setTimeout(function() {
+            if (self.timerSuspended) { return; }
+            self.scroll();
+            self.runTimer();
+          }, 5000);
+        },
+        nextItem: function() {
+          var currentSelectedListItem = $('a.filledDot', $ul).parent();
+          var nextListItem = currentSelectedListItem.next()[0] || $('li', $ul)[0];
+          return $('a', nextListItem);
+        },
+        scroll: function(nextItem) {
+          var $nextItem = nextItem || self.nextItem();
+          var imageCopy = $("<img id='recipeImageCopy' src='" + $('a.filledDot', $ul).data('image-url') + "'></img>");
+          $('#recipeImageContainer').append(imageCopy);
 
-            // Fade out the copy and delete when we are done
-            imageCopy.animate({
-              opacity: 0,
-            }, 1000, function() {
-              imageCopy.remove();
-            });
+          $('#recipePhotoImage').attr('src', $nextItem.data('image-url'));
+
+          // preventDefault to avoid scrolling to the top of the browser every time a link is clicked.
+          $('a', $ul).addClass('emptyDot').removeClass('filledDot');
+          $nextItem.addClass('filledDot');
+
+          // Fade out the copy and delete when we are done
+          imageCopy.animate({
+            opacity: 0,
+          }, 1000, function() {
+            imageCopy.remove();
           });
         }
       };
