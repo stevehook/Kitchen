@@ -227,6 +227,15 @@ iframe {
     .allRecipes {
       margin: 0 0 0 10px;
     }
+    .search_menu_item {
+      box-sizing: Border-box;
+      background-color: $shrikhand1;
+      color: $champagne7;
+      padding: 10px 5px;
+      height: 50px;
+      position: relative;
+      top: -5px;
+    }
   }
 }
 
