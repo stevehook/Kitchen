@@ -58,7 +58,7 @@
     <menu id='recipeAtAGlance' class='sidePanelMenu'>
       <h3>At a glance</h3>
       <a>
-        <span class='icon-leaf icon'></span>
+        <span class="<%= @recipe.category.to_sym == :non_vegetarian ? 'icon-tint' : 'icon-leaf' %> icon"></span>
         <span class='label'><%= @recipe.category.humanize %></span>
       </a>
       <a>
