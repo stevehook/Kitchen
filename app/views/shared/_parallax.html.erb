@@ -5,18 +5,7 @@
         <h1><%= t('copy.home.home_panel.title') %></h1>
         <p><%= t('copy.home.home_panel.text') %></p>
       </div>
-      <div class='parallaxDownButton'>
-        <a href='#recipesPanel'>
-          <div class='left'>
-            <span class='label'>show me more</span>
-          </div>
-          <div class='right'>
-            <span class='icon'>
-              <i class="icon-angle-down icon-large"></i>
-            </span>
-          </div>
-        </a>
-      </div>
+      <%= render :partial => 'down_arrow', :locals => { :panel => 'recipesPanel' } %>
     </div>
   </div>
   <div id='recipesPanel' class='parallaxPanel parallaxPanelLight' data-content='recipes' data-background='dill_wallpaper.jpg'>
@@ -25,6 +14,7 @@
       <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.recipes_panel.subtitle') %></span></div>
       <%= render :partial => 'shared/carousel' %>
     </div>
+    <%= render :partial => 'down_arrow', :locals => { :panel => 'newsPanel' } %>
   </div>
   <div id='newsPanel' class='parallaxPanel' data-content='news' data-background='wheat.jpg'>
     <a id='news'></a>
@@ -58,6 +48,7 @@
         </div>
       </div>
     </div>
+    <%= render :partial => 'down_arrow', :locals => { :panel => 'contactPanel' } %>
   </div>
   <div id='contactPanel' class='parallaxPanel' data-content='contact'>
     <a id='contact'></a>
