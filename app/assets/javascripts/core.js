@@ -34,7 +34,7 @@ $(function() {
         $('html, body').animate({
           scrollTop: offset.top,
           scrollLeft: offset.left
-        });
+        }, 1000);
         _gaq.push(['_trackEvent', 'MainMenu', match[1]]);
         e.preventDefault();
       }
