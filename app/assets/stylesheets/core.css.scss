@@ -64,6 +64,8 @@ $salmon7_50: rgba(105, 46, 29, 0.5);
 $salmon7_80: rgba(105, 46, 29, 0.8);
 
 // sheepu
+$sheepu2: rgba(96, 139, 24, 1);
+$sheepu3: rgba(74, 108, 16, 1);
 $sheepu4: rgba(60, 88, 10, 1);
 $sheepu5: rgba(45, 67, 10, 1);
 $sheepu6: rgba(32, 48, 8, 1);
@@ -185,7 +187,7 @@ h1, h2, h3, h4 {
   margin: 0 0 0 40px;
 
   .icon {
-    color: $sheepu4;
+    color: $sheepu3;
   }
 }
 
@@ -723,10 +725,14 @@ ul.recipeList {
   background: $white_50;
   padding: 10px 20px;
 
+  h2 {
+    color: $sheepu4;
+  }
+
   h3 {
     padding: 8px 10px;
     margin: 10px 0;
-    background-color: gray;
+    background-color: $sheepu5_80;
     color: white;
   }
 }
@@ -1142,7 +1148,7 @@ menu {
 .sidePanelMenu h3 {
   padding: 8px 10px;
   margin: 10px 0;
-  background-color: $grey;
+  background-color: $sheepu5_80;
   color: $white;
 }
 
