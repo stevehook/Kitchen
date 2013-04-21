@@ -152,12 +152,13 @@ $(function() {
           menuItem.addClass('selected');
 
           var searchMenuItem = $('.searchMenuItem');
+          var searchMenuIcon = $('.search_menu_item');
           var searchBox = $('#search', searchMenuItem);
-          searchMenuItem.mouseenter(function(e) {
+          searchMenuIcon.mouseenter(function(e) {
             $('.hidden', searchMenuItem).animate({ opacity: 1 });
             $('#search', searchMenuItem).focus();
           });
-          searchMenuItem.click(function(e) {
+          searchMenuIcon.click(function(e) {
             searchBox.focus();
             if (searchBox.val() !== '') {
               searchBox.closest('form').submit();
