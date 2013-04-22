@@ -1,3 +1,4 @@
+# encoding: utf-8
 Recipe.destroy_all
 
 recipe1 = Recipe.create!(:title => 'Baingan ka Bharta',
@@ -100,6 +101,95 @@ recipe5 = Recipe.create!(:title => 'Salmon avec sauce vierge',
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmoncloseup1.jpeg'))
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/wholeplate.jpeg'))
 RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmonweed1.jpeg'))
+
+
+cauli_paratha_description =
+"As a kid, I grew up in a family where breakfast was never always a bowl of cereal or a toast. My mum often treated us with tastier breakfasts that could also be packed away into a lunchbox (more colloquially called ‘Tiffin box’) to take to school. One of such savoury breakfast cum lunch delights was ‘Gobi Paratha’ which can be eaten anytime during the day.
+
+It is typically served with yoghurt or a generous spoon of ghee or butter in India, but depending on whether you want to be vegan or vegetarian, you can have a half boiled egg to dunk these lovely bites of Parathas into runny egg yolk, just like soldiers ☺  OR even serve it with pickled vegetables and keep it low calorie by leaving out the butter/ghee altogether – take your pick!
+
+This is a simple recipe that I use because I don’t like adding too many spices into it."
+
+cauli_paratha_ingredient_list = 
+"#### For dough making :
+
+* 100 - 200 gms of *whole wheat flour*
+* 1 – ½ a glass of water depending on your quantity of flour
+* ½ a teaspoon of *ajwain* or *carom seeds*
+* Salt as per your taste (optional). I tend not to put any salt here.
+
+#### For filling :
+
+* 1 -2 cups of grated *cauliflower*
+* 1 or 2 chopped *green chillies* as per your taste or none at all ☺.
+* Chopped *coriander leaves* depending on how much you like them.  I normally use 1-2 spoons of them.
+* Salt to taste.
+
+#### For rolling and light frying :
+
+* 50 – 70 gms of whole wheat flour for dusting
+* *Vegetable oil* to cook.
+
+"
+cauli_paratha_preperation_method =
+"#### Making dough :
+
+1. In a large bowl, mix flour, ajwain (carom seeds) together before adding water to the mixture in very small quantities, bit by bit to make soft dough. The best dough is kneaded with hands on a slightly greased surface to make it more palpable.
+
+1. Cover the dough with a damp cloth and let it rest for 10 minutes.
+
+#### Making filling for the dough:
+
+1. Squeeze out water/moisture from the grated cauliflower by pressing it in between your hands. Make sure the cauliflower is dry enough. Also, never use a blender or food processor to shred or grate the cauliflower. I do it manually using a grater.
+
+1. Add coriander, chillies and salt to the cauliflower and mix well.
+
+#### Making the Paratha:
+
+1. Divide the dough into 5 -  6 medium sized balls.
+
+1. Take one ball of dough and roll it into a very small sized flatbread using rolling pin. If it sticks the board, dust it with the flour.
+
+1. Take small portion of cauliflower mixture, in a slightly smaller proportion to the ball of dough and place it on top of the half rolled dough.
+
+1. Cover and seal the cauliflower mix with the dough by bringing the round edges of the half rolled dough together. Once sealed, dust your hands with flour and try to flatten it with hands.
+
+1. Now start rolling the dough with mixture again into a bigger size than earlier until the cauliflower mixture gets evenly spread on a flat surface.
+
+1. Put this rolled Paratha onto a flat hot pan (or tava).
+
+1. Once it gets cooked on one side, flip it to cook on the other side.
+
+1. Brush the top of Paratha with oil or ghee.
+
+1. Flip it again to brush the other side with oil or ghee.
+
+1. Let the Paratha cook until it's light brown on both the sides.
+
+1. Place the cooked Parathas on plate and serve it with yoghurt or butter or pickled carrots, chillies or lime etc.
+
+
+You can follow the same recipe to make 'Parathas' of all sorts, using radish or potatoes or cottage cheese as filling."
+
+cauli_paratha_recipe = Recipe.create!(:title => 'Stuffed cauliflower flatbread',
+                    :native_title => 'Gobi Paratha',
+                    :synopsis => 'Popular Indian flatbread stuffed with cauliflower, coriander and green chillies.',
+                    :preparation_time => 20,
+                    :cooking_time => 20,
+                    :description => cauli_paratha_description,
+                    :ingredient_list => cauli_paratha_ingredient_list,
+                    :preparation_method => cauli_paratha_preperation_method,
+                    :category => 'vegetarian')
+
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/cauli_paratha_primary.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/cauli_paratha_secondary.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/cauli_grating.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/dough.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/mixture.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/presseddough.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/rollit.jpeg'))
+RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/fryparatha.jpeg'))
+
 
 User.destroy_all
 User.create!(:email => 'rieethaa@zanzaneet.com', :password => 'secret', :password_confirmation => 'secret')

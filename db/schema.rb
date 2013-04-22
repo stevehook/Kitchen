@@ -52,13 +52,6 @@ ActiveRecord::Schema.define(:version => 20130419183017) do
     t.integer "ingredient_id"
   end
 
-  create_table "recipe_categories", :force => true do |t|
-    t.string   "name"
-    t.string   "asset_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "recipe_photos", :force => true do |t|
     t.integer  "recipe_id"
     t.string   "title"
@@ -90,7 +83,6 @@ ActiveRecord::Schema.define(:version => 20130419183017) do
     t.integer  "secondary_picture_file_size"
     t.datetime "secondary_picture_updated_at"
     t.string   "synopsis",                                                 :null => false
-    t.integer  "recipe_category_id"
     t.string   "category",                       :default => "vegetarian", :null => false
     t.string   "native_title"
   end
