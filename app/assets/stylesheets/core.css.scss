@@ -1125,7 +1125,7 @@ menu {
 .sidePanelMenu {
   position: relative;
   background-color: $lightgrey;
-  padding: 0 0 10px;
+
   a {
     display: block;
     margin: 3px 0;
@@ -1157,6 +1157,10 @@ menu {
     margin: 10px 0;
     background-color: $sheepu5_80;
     color: $white;
+  }
+
+  .ratingPanel {
+    padding: 0 0 10px;
   }
 }
 
