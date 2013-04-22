@@ -5,9 +5,11 @@
     <button id='search_button' type="submit" class="btn">
       <i class="icon-search icon-large"></i>
     </button>
-    <%= radio_button_tag :category, :vegan_only, @category == :vegan_only %>Vegan only
-    <%= radio_button_tag :category, :vegetarian, @category == :vegetarian %>Vegetarian
-    <%= radio_button_tag :category, :any, @category == :any %>Any
+    <div class='categoryFilter'>
+      <%= radio_button_tag :category, :vegan_only, @category == :vegan_only %>Vegan only
+      <%= radio_button_tag :category, :vegetarian, @category == :vegetarian %>Vegetarian
+      <%= radio_button_tag :category, :any, @category == :any %>Any
+    </div>
     <% end %>
   </div>
 
