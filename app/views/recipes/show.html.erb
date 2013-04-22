@@ -90,7 +90,7 @@
     <% end %>
     <% if @recipe.primary_photo %>
       <div>
-        <%= pin_it_button media: @recipe.primary_photo.image.large.url, description: @recipe.title, url: @recipe.primary_photo.image.large.url %>
+        <%= pin_it_button media: @recipe.primary_photo.image.large.url, description: @recipe.title, url: recipe_url(@recipe) %>
       </div>
     <% end %>
   </div>
