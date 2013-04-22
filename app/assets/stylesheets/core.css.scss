@@ -92,6 +92,18 @@ $input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 $default_letter_spacing: 1px;
 $banner_height: 40px;
 
+$font70: 70%;
+$font80: 80%;
+$font90: 90%;
+$font100: 100%;
+$font110: 110%;
+$font120: 120%;
+$font130: 130%;
+$font140: 140%;
+$font150: 150%;
+$font200: 200%;
+$font220: 220%;
+
 /** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
 /** {*/
@@ -231,7 +243,7 @@ iframe {
     }
     input {
       margin: 0px 0;
-      font-size: 90%;
+      font-size: $font90;
       padding: 5px;
       width: 280px;
     }
@@ -276,7 +288,7 @@ iframe {
 
   ul {
     float: right;
-    font-size: 90%;
+    font-size: $font90;
 
   }
 
@@ -353,7 +365,7 @@ label.inline {
 label > span {
   color: $mandatory;
   margin-left: 5px;
-  font-size: 70%;
+  font-size: $font70;
   font-style: italic;
 }
 
@@ -406,7 +418,7 @@ textarea:focus, input:focus {
   min-height: 24px;
   text-align: center;
   color: $white;
-  font-size: 120% !important;
+  font-size: $font120 !important;
   text-decoration: none;
   cursor: pointer;
 }
@@ -425,7 +437,7 @@ textarea:focus, input:focus {
   width: 500px;
   background-color: $champagne5_80;
   padding: 40px;
-  font-size: 140%;
+  font-size: $font140;
   margin: 200px 0 0 50px;
 }
 
@@ -436,7 +448,7 @@ textarea:focus, input:focus {
 .newsContent {
   margin: 80px 0 0 50px;
   width: 500px;
-  font-size: 120%;
+  font-size: $font120;
   padding: 20px;
   color: $white;
 
@@ -510,7 +522,7 @@ textarea:focus, input:focus {
 
 .carouselItem .recipeTitle {
   @include carouselText;
-  font-size: 200%;
+  font-size: $font200;
   margin-left: 70px;
 }
 
@@ -533,13 +545,13 @@ textarea:focus, input:focus {
 
 .carouselItem .recipeSynopsis {
   padding: 10px;
-  font-size: 150%;
+  font-size: $font150;
 }
 
 .carouselItem .recipeMoreLink, .recipesMoreLink {
   display: inline-block;
   padding: 4px 6px;
-  font-size: 130%;
+  font-size: $font130;
   text-decoration: none;
   color: $champagne5;
 	background-color: transparent;
@@ -552,24 +564,12 @@ textarea:focus, input:focus {
   float: left;
 }
 
-// .carouselTitle {
-//   @include carouselText;
-//   top: 10px;
-//   font-size: 160%;
-// }
-
-// .carouselSubtitle {
-//   @include carouselText;
-//   font-size: 100%;
-//   top: 10px;
-// }
-
 .carouselButton {
   top: 40%;
   position: absolute;
   width: 55px;
   height: 55px;
-  font-size: 150%;
+  font-size: $font150;
   color: $white;
   background-color: $sheepu6_50;
   color: $white;
@@ -581,7 +581,7 @@ textarea:focus, input:focus {
   @include hoverColorTransition;
 
   span {
-    font-size: 150%;
+    font-size: $font150;
   }
 }
 
@@ -622,7 +622,7 @@ textarea:focus, input:focus {
     color: $white;
     text-decoration: none;
     padding: 15px 0 0;
-    font-size: 120%;
+    font-size: $font120;
   }
 }
 
@@ -665,7 +665,7 @@ ul.recipeList {
 
   .title {
     margin: 8px 0 0;
-    font-size: 110%;
+    font-size: $font110;
     color: $maroon;
     text-align: center;
 
@@ -678,7 +678,7 @@ ul.recipeList {
   .synopsis {
     @include allTransition500;
     margin: 8px 5px;
-    font-size: 90%;
+    font-size: $font90;
     color: #888;
     text-align:	left;
     opacity: 0;
@@ -830,7 +830,7 @@ ul.recipeList {
       padding: 0 5px;
       display: none;
       text-align: middle;
-      font-size: 120%;
+      font-size: $font120;
       color: $champagne7;
     }
   }
@@ -846,7 +846,7 @@ ul.recipeList {
 
     .icon {
       padding: 0;
-      font-size: 220%;
+      font-size: $font220;
       color: $champagne7;
     }
   }
@@ -881,7 +881,7 @@ ul.recipeList {
 	width: 1200px;
 	margin: 8px auto;
   @include carouselText;
-  font-size: 200%;
+  font-size: $font200;
   font-weight: normal;
 }
 
@@ -889,7 +889,7 @@ ul.recipeList {
 	width: 1200px;
 	margin: 4px auto;
   @include carouselText;
-  font-size: 150%;
+  font-size: $font150;
   font-weight: normal;
 }
 
@@ -931,7 +931,7 @@ span.parallaxTitleText {
   width: 560px;
   margin-top: 70px;
   color: $white;
-  height: 400px;
+  height: 465px;
 }
 
 #social > a {
@@ -941,6 +941,10 @@ span.parallaxTitleText {
   @include hoverBackgroundTransition;
   display: block;
   text-decoration: none;
+}
+
+#social > a#twitter {
+  height: 200px;
 }
 
 #social > div.separator {
@@ -1007,12 +1011,12 @@ span.parallaxTitleText {
 
 #social #email ul {
   padding: 16px 10px;
-  font-size: 110%;
+  font-size: $font110;
 }
 
 #contactPanel .title {
   color: $shrikhand2;
-  font-size: 130%;
+  font-size: $font130;
   font-weight: lighter;
   @include hoverColorTransition;
 }
@@ -1033,7 +1037,7 @@ span.parallaxTitleText {
 
 #newsletterSignUp label {
   font-weight: lighter;
-  font-size: 110%;
+  font-size: $font110;
 }
 
 #newsletterSignUp article:first-child {
@@ -1046,7 +1050,7 @@ span.parallaxTitleText {
 
 #subscriptionFormContainer {
   color: $white;
-  font-size: 100%;
+  font-size: $font100;
 }
 
 input[type='submit'], button[type='submit'], input[type='button'] {
@@ -1057,7 +1061,7 @@ input[type='submit'], button[type='submit'], input[type='button'] {
 }
 
 .subscribeButton {
-  font-size: 110%;
+  font-size: $font110;
   margin: 0 20px 0 0;
   padding: 10px;
   background-color: $salmon6;
@@ -1188,7 +1192,7 @@ menu {
 .blogDate {
   margin: 10px 0 0 0;
   color: $grey;
-  font-size: 80%;
+  font-size: $font80;
 }
 .blogComments {
   margin: 30px 0 0;
@@ -1201,7 +1205,7 @@ menu {
 }
 
 .helpText {
-  font-size: 80%;
+  font-size: $font80;
 }
 
 .rating {
