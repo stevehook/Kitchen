@@ -276,14 +276,60 @@ iframe {
   margin: -28px 0;
 }
 
+#menu, .menu {
+  margin: 0 auto;
+	display: block;
+	height: 35px;
+  font: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align:	center;
+
+    li {
+      float: left;
+      padding: 0 15px;
+    }
+
+    li:first-child {
+      float: left;
+      padding: 0 15px 0 0;
+    }
+
+    li.right {
+      float: right;
+    }
+
+    li > a {
+      display: block;
+      /*width: 100px;*/
+      text-decoration: none;
+      color: $champagne0;
+      font: 110%;
+      padding: 10px 0 0;
+      height: 25px;
+    }
+
+    li > a:hover {
+      color: $white;
+    }
+
+    li > a.selected {
+      /*text-decoration: underline;*/
+      border-bottom: 1px solid $white;
+      color: $white;
+    }
+  }
+}
 
 #footer {
-  height: 60px;
+  height: 45px;
   bottom: 0px;
   z-index: 5;
   width: 100%;
   background: $champagne5;
-  color: $white;
   position: absolute;
 
   ul {
@@ -294,58 +340,15 @@ iframe {
 
   .footerTitle {
     font: 150% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-    color: $white;
+    color: $shrikhand1;
     float: left;
     margin: -10px 0;
   }
-}
 
-#menu {
-  margin: 0 auto;
-	display: block;
-	height: 35px;
-  font: 100%;
-}
-
-#menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align:	center;
-}
-
-#menu li {
-	float: left;
-  padding: 0 15px;
-}
-
-#menu li:first-child {
-	float: left;
-  padding: 0 15px 0 0;
-}
-
-#menu li.right {
-	float: right;
-}
-
-#menu li > a {
-	display: block;
-	/*width: 100px;*/
-	text-decoration: none;
-  color: $champagne0;
-	font: 110%;
-	padding: 10px 0 0;
-	height: 25px;
-}
-
-#menu li > a:hover {
-	color: $white;
-}
-
-#menu li > a.selected {
-  /*text-decoration: underline;*/
-  border-bottom: 1px solid $white;
-  color: $white;
+  .menu {
+    li {
+    }
+  }
 }
 
 section {

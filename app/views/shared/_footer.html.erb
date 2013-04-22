@@ -1,7 +1,9 @@
 <div id='footer'>
   <div class='container'>
-    <h1 class='footerTitle'>Zanzaneet</h1>
-    <nav id="menu">
+    <%= link_to root_path do %>
+      <h1 class='footerTitle'>Zanzaneet</h1>
+    <% end %>
+    <nav class="menu">
       <ul>
         <li><%= link_to 'About', about_path(:about) %></li>
       </ul>
