@@ -24,11 +24,10 @@ recipe3 = Recipe.create!(:title => 'Bhindi',
 RecipePhoto.create!(:recipe => recipe3, :title => 'Bhindi', :image => File.open('db/pictures/IMG_2787.jpeg'))
 
 shepu_description =
-"\"Zanzaneet\" is all about rustic home cooking with fresh and simple inredients just as it's cooked at home - with less faffing about with loads of ingredients but more emphasis given on trying to retain the distinctive flavour of each ingredient being used in the food. Whilst doing this, I like to make sure the dish comes out flavourful and spicy as it is made across India which essentially is the theme of most of my recipes - 'Zanzaneet' meaning 'spicy, vibrant yet full of flavour'. Hence the name 'Zanzaneet' of this website. Very apt to my style of cooking. 
 
-Ok, enough of digression and let's talk about this recipe from Maharashtra called 'Shepu chi bhaji'. And if I were to translate it in English literally, I would have to borrow a word from Hindi that would categorise this recipe as a 'Sabzi' which only means a dry dish made from any vegetable. No, it's NOT a curry with gravy. So with my limited vocabulary in English, I have chosen to call it 'Dill Sabzi' which is simply a dry dish of Dill without gravy.
+"This recipe is from the western part of Indian (Maharashtra state) and called 'Shepu chi bhaji' locally. If I were to translate it to English literally, I will have to borrow a word from Hindi called 'Sabzi' which means a dry dish made from any vegetable. No, it's NOT a curry. So with my limited vocabulary in English, I have chosen to call it 'Dill Sabzi' which is simply a dry dish of Dill with no gravy.
 
-Dill Sabzi is essentially a Maharashtrian farmer's meal typically served with 'Bhakri' (A flat bread made of barley or millet). Given a farmer's daughter that I am, I couldn't resist sharing this dish. For all those garlic and chilli fans like me, note that there's no hard and fast rule when it comes to using these two ingredients in food, so feel free to bend the rules and use as much garlic and chilli as you like OR as little as you like. I won't judge you although I might not invite you round for dinner at mine if you come in the latter category :P. So here you go.."
+Dill Sabzi is essentially a Maharashtrian farmer's meal, typically served with 'Bhakri' (A flat bread made out of barley or millet). Given a farmer's daughter that I am, I couldn't resist sharing this dish. For all those garlic and chilli fans like me, note that there's no hard and fast rule when it comes to using these two ingredients in food, so feel free to bend the rules and use as much garlic and chilli as you like OR as little as you like. I won't judge you although I might not invite you over dinner if you can't take the heat :P. So here you go.."
 
 shepu_ingredient_list =
 "* 2 tablespoons of *vegetable oil*
@@ -51,16 +50,19 @@ shepu_preparation_method =
 
 1. Stir the pan to mix all the contents evenly before covering it with a lid to cook it on medium flame for 10 minutes. Keep stirring in between to make sure the dill has enough moisture left and has not dried out. Keep cooking until the dill is soft, moist yet dry."
 
-recipe4 = Recipe.create!(:title => 'Shepu chi bhaji (Dill Sabzi)',
+recipe4 = Recipe.create!(:title => 'Dill Sabzi',
+               :native_title => 'Shepu chi bhaji',
                :synopsis => "Made with fresh dill, garlic and green chillies, a simple and healthy Maharashtrian farmer's meal",
+               :cooking_time => 20,
                :description => shepu_description,
                :ingredient_list => shepu_ingredient_list,
                :preparation_method => shepu_preparation_method,
                :category => 'vegan')
 RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill1.jpeg'))
+RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill_secondary.jpeg'))
 
 recipe5_description =
-"Originally from France, this dish is perfect for an evening meal with a nice bottle of wine. The sauce vierge is prepared from olive oil, tomatoe, lemon juice and torn basil. This is my take on the original recipe so I have used dill instead of basil and some smashed garlic as it suits my palette. Have a look here..."
+"This dish is perfect for an evening meal with a nice bottle of wine. The sauce vierge is prepared from olive oil, tomatoe, lemon juice and torn basil. This is my take on the original French recipe so I have used dill instead of basil and some smashed garlic as it suits my palette. See if you like it ..."
 
 recipe5_ingredient_list = 
 "#### For the Salmon :
