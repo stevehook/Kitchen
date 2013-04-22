@@ -180,21 +180,6 @@ h1, h2, h3, h4 {
   width: 850px;
 }
 
-.contentSidePanel {
-  @include boxSizing;
-  float: left;
-  width: 280px;
-  margin: 0 0 0 40px;
-
-  .icon {
-    color: $sheepu3;
-  }
-
-  .icon-tint {
-    color: #800
-  }
-}
-
 html {
   height: 100%;
   min-height: 100%;
@@ -1122,39 +1107,57 @@ menu {
   padding: 0px;
 }
 
+.contentSidePanel {
+  @include boxSizing;
+  float: left;
+  width: 280px;
+  margin: 0 0 0 40px;
+
+  .icon {
+    color: $sheepu3;
+  }
+
+  .icon-tint {
+    color: #800
+  }
+}
+
 .sidePanelMenu {
   position: relative;
   background-color: $lightgrey;
   padding: 0 0 10px;
-}
+  a {
+    display: block;
+    margin: 3px 0;
+    padding: 5px 9px;
+    text-decoration: none;
+    color: #000;
+  }
 
-.sidePanelMenu a {
-  display: block;
-  margin: 3px 0;
-  padding: 5px 9px;
-  text-decoration: none;
-  color: #000;
-}
+  a[href]:hover {
+    background-color: $champagne4;
+    color: white;
 
-.sidePanelMenu a[href]:hover {
-  background-color: $champagne4;
-  color: white;
-}
+    .icon {
+      color: white;
+    }
+  }
 
-.sidePanelMenu .icon {
-  margin: 0 5px 0 0;
-}
+  .icon {
+    margin: 0 5px 0 0;
+  }
 
-.sidePanelMenu .label {
-  position: absolute;
-  left: 40px;
-}
+  .label {
+    position: absolute;
+    left: 40px;
+  }
 
-.sidePanelMenu h3 {
-  padding: 8px 10px;
-  margin: 10px 0;
-  background-color: $sheepu5_80;
-  color: $white;
+  h3 {
+    padding: 8px 10px;
+    margin: 10px 0;
+    background-color: $sheepu5_80;
+    color: $white;
+  }
 }
 
 #recipeAtAGlance {
