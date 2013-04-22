@@ -89,7 +89,7 @@ $(function() {
             if (self.timerSuspended) { return; }
             self.scroll();
             self.runTimer();
-          }, 5000);
+          }, 4000);
         },
         nextItem: function() {
           var currentSelectedListItem = $('a.filledDot', $ul).parent();
