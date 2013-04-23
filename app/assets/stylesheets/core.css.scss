@@ -220,7 +220,7 @@ iframe {
 }
 
 #header {
-  height: 130px;
+  height: 160px;
   background-color: $white;
 }
 
@@ -231,7 +231,7 @@ iframe {
   z-index: 5;
   width: 100%;
   position: absolute;
-  top: 130px;
+  top: 160px;
   @include hoverBackgroundTransition;
 
   .searchMenuItem {
@@ -270,10 +270,19 @@ iframe {
   background: $champagne5;
 }
 
-#header .siteTitle {
-  font: 300% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-  color: $salmon3;
-  margin: -28px 0;
+#header {
+  .siteTitle {
+    font: 300% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    color: $salmon3;
+    margin: -28px 0;
+  }
+
+  img {
+    margin: 20px 0 0 -40px;
+  }
+
+  h2 {
+  }
 }
 
 #menu, .menu {
