@@ -57,5 +57,9 @@ group :test, :development do
   gem 'rb-fsevent', '~> 0.9.1'
 end
 
+group :production do
+  gem "rack-www"
+end
+
 gem "letter_opener", :group => :development
 

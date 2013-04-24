@@ -125,6 +125,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-www (1.5.0)
+      rack
     rails (3.2.13)
       actionmailer (= 3.2.13)
       actionpack (= 3.2.13)
@@ -221,6 +223,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   pin_it
+  rack-www
   rails
   rails_autolink
   rb-fsevent (~> 0.9.1)
