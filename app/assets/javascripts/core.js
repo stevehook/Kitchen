@@ -3,7 +3,7 @@ $(function() {
   var callback = function() {
     $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' });
     $('#homePanel').css({ 'min-height': (window.innerHeight - 102) + 'px' });
-    $('.recipeContainer').css({ 'min-height': (window.innerHeight) + 'px' });
+    $('.recipeContainer, .blogPostContainer').css({ 'min-height': (window.innerHeight) + 'px' });
   };
   $(window).resize(callback);
   callback();

@@ -746,13 +746,18 @@ ul.recipeList {
   margin: 0 0 36px 0;
 }
 
-.recipeContainer {
+.recipeContainer, .blogPostContainer {
   @include boxSizing;
   background: $white_50;
   padding: 10px 20px;
 
   h2 {
     color: $sheepu4;
+
+    a {
+      text-decoration: none;
+      color: $sheepu4;
+    }
   }
 
   h3 {
@@ -1205,6 +1210,38 @@ menu {
   }
 }
 
+.linksMenu {
+  color: transparent;
+
+  a {
+    @include allTransition300;
+    display: inline-block;
+    margin: 3px 0;
+    padding: 5px 9px;
+    text-decoration: none;
+    color: $champagne7;
+  }
+
+  a[href]:hover {
+    background-color: $champagne5;
+    color: white;
+
+    .icon {
+      color: white;
+    }
+  }
+
+  .icon {
+    @include allTransition300;
+    margin: 0 5px 0 0;
+    color: $sheepu5;
+  }
+
+  .label {
+  }
+
+}
+
 #recipeAtAGlance {
   padding: 0 0 20px;
 }
@@ -1281,7 +1318,7 @@ menu {
   content: "\f005";
 }
 
-body[data-section='recipes'] {
+body[data-section='recipes'], body[data-section='blog_posts'] {
   background-image: url('/images/fabric.jpg');
   background-position: 0% 0%;
   background-repeat: repeat;
