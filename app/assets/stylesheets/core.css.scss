@@ -220,7 +220,7 @@ iframe {
 }
 
 #header {
-  height: 160px;
+  height: 180px;
   background-color: $white;
 }
 
@@ -231,7 +231,7 @@ iframe {
   z-index: 5;
   width: 100%;
   position: absolute;
-  top: 160px;
+  top: 180px;
   @include hoverBackgroundTransition;
 
   .searchMenuItem {
@@ -282,8 +282,8 @@ iframe {
   }
 
   .logo {
-    width: 140px;
-    height: 140px;
+    padding: 10px 0;
+    height: 145px;
   }
 
   #punchLine {
@@ -294,7 +294,7 @@ iframe {
     font-family: 'Arial Rounded MT Bold';
     font-size: 300%;
     font-weight: bold;
-    height: 160px;
+    height: 180px;
     padding: 0 0 80px;
     color: $champagne6;
   }
