@@ -134,6 +134,14 @@ $font220: 220%;
   transition: all 0.5s;
 }
 
+@mixin allTransition1000 {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
 @mixin hoverBackgroundTransition {
   -moz-transition: color .2s, background-color .2s;
   -webkit-transition: color .2s, background-color .2s;
@@ -261,6 +269,16 @@ iframe {
       margin: 0 0 0 5px;
     }
   }
+
+  .logo {
+    @include allTransition1000;
+    position: relative;
+    left: 10px;
+    top: -5px;
+    opacity: 0.0;
+    padding: 10px 0;
+    height: 35px;
+  }
 }
 
 #banner.fixed {
@@ -268,6 +286,10 @@ iframe {
   position: fixed;
   bottom: 0px;
   background: $champagne5;
+
+  .logo {
+    opacity: 1.0;
+  }
 }
 
 #header {
@@ -282,7 +304,7 @@ iframe {
   }
 
   .logo {
-    padding: 10px 0;
+    padding: 10px 0 10px 50px;
     height: 145px;
   }
 
@@ -353,13 +375,12 @@ iframe {
   bottom: 0px;
   z-index: 5;
   width: 100%;
-  background: $champagne5;
+  background: $salmon5;
   position: absolute;
 
   ul {
     float: right;
     font-size: $font90;
-
   }
 
   .footerTitle {
@@ -372,6 +393,11 @@ iframe {
   .menu {
     li {
     }
+  }
+
+  .logo {
+    float: left;
+    height: 40px;
   }
 }
 

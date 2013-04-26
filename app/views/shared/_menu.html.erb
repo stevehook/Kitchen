@@ -2,6 +2,7 @@
   <div class='container'>
     <nav id="menu">
       <ul>
+        <li><%= image_tag 'menu_logo.png', :class => 'logo' %></li>
         <li><%= link_to 'Home', "#{root_path}#header", :'data-section' => :home %></li>
         <li><%= link_to 'Recipes', "#{root_path}#recipesPanel" %></li>
         <li><%= link_to 'News', "#{root_path}#newsPanel", :'data-section' => :news %></li>
