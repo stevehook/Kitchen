@@ -20,12 +20,12 @@
     <%= form.email_field :email, :required => 'true' %>
   </div>
   <div class='field'>
-    <%= form.label :phone, "Phone Number" %>
-    <%= form.telephone_field :phone, :pattern => '[\(]?\d{2,5}[\)]?[ ]?\d{2,10}', :title => 'Phone number format: e.g. 09992 9999999999' %>
+    <%= form.label :phone, "Phone Number (UK only)" %>
+    <%= form.telephone_field :phone, :pattern => Feedback::PHONE_REGEX, :title => 'Phone number format: e.g. 01234 567890' %>
   </div>
   <div class='field'>
     <%= form.label :postcode, 'Postcode (UK only)' %>
-    <%= form.text_field :postcode, :pattern => '\w{1,3}\d{1,3}?[ ]?\d{1,3}\w{1,3}', :title => 'Post code format: e.g. AA1 2BB' %>
+    <%= form.text_field :postcode, :pattern => Feedback::POSTCODE_REGEX, :title => 'Post code format: e.g. AA1 2BB' %>
   </div>
   <div class='formActions'>
     <%= form.submit('Submit', :class => 'formButton') %>
