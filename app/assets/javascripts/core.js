@@ -421,7 +421,7 @@ $(function() {
 
 // Plugin for parallax scrolling
 (function($) {
-  var defaults = {};
+  var defaults = { header: 180 };
   $.fn.parallax = function(options) {
     var opts = $.extend({}, defaults, options);
     return this.each(function()
@@ -438,8 +438,9 @@ $(function() {
             var $panel = $(panel);
             var background = $panel.data('background');
             if (background) {
+              var headerAdjustment = panel == panels[0] ? opts.header : 0;
               $panel.css({'background-image': "url('images/" + $panel.data('background') + "')",
-                'background-position': '0px ' + (panel.offsetTop - 130)/8 + 'px'});
+                'background-position': '0px ' + (panel.offsetTop - headerAdjustment)/8 + 'px'});
             }
           });
           // hook the scroll event
@@ -447,7 +448,8 @@ $(function() {
             var offset = $(window).scrollTop();
             var panels = $('.parallaxPanel');
             panels.each(function(index, panel) {
-              $(panel).css({'background-position': '0px ' + (panel.offsetTop - offset - 130)/8 + 'px'});
+              var headerAdjustment = panel == panels[0] ? opts.header : 0;
+              $(panel).css({'background-position': '0px ' + (panel.offsetTop - offset - headerAdjustment)/8 + 'px'});
             });
           });
         }
