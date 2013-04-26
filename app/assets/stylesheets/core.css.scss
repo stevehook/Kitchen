@@ -554,7 +554,7 @@ textarea:focus, input:focus {
 .carouselItem {
 	display: none;
   position: absolute;
-  height: 700px;
+  height: 650px;
   width: 1040px;
   margin: 25px 0 0 0;
 }
@@ -577,10 +577,16 @@ textarea:focus, input:focus {
   padding: 5px;
 }
 
+.carouselItem a {
+  text-decoration: none;
+}
+
 .carouselItem .recipeTitle {
   @include carouselText;
   font-size: $font200;
   margin-left: 70px;
+  color: $sheepu4;
+  text-decoration: none;
 }
 
 .carouselItem .images {
@@ -595,14 +601,21 @@ textarea:focus, input:focus {
 }
 
 .carouselItem .recipeSecondaryImage {
-  top: 250px;
+  top: 200px;
   left: 480px;
   position: absolute;
 }
 
 .carouselItem .recipeSynopsis {
   padding: 10px;
-  font-size: $font120;
+  font-size: $font130;
+}
+
+.recipeLinks {
+  position: absolute;
+  margin: 0 0 70px 70px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .carouselItem .recipeMoreLink, .recipesMoreLink {
@@ -614,6 +627,7 @@ textarea:focus, input:focus {
 	background-color: transparent;
   position: relative;
   float: right;
+  margin: 0 0 0 25px;
   @include hoverBackgroundTransition;
 }
 
