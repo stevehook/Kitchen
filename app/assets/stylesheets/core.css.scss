@@ -85,13 +85,6 @@ $shrikhand1: rgb(252, 231, 146);
 $shrikhand2: rgb(213, 195, 153);
 $shrikhand3: rgb(192, 176, 113);
 
-$watermark: rgb(112, 111, 111);
-$base_font: lighter 13pt 'Open Sans', 'Gill Sans', 'Helvetica Neue', sans-serif;
-$heading_font: SamarkanNormal;
-$input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
-$default_letter_spacing: 1px;
-$banner_height: 40px;
-
 $font70: 70%;
 $font80: 80%;
 $font90: 90%;
@@ -103,6 +96,50 @@ $font140: 140%;
 $font150: 150%;
 $font200: 200%;
 $font220: 220%;
+
+$watermark: rgb(112, 111, 111);
+$default_letter_spacing: 1px;
+
+/* responsive variables */
+
+$break-xs: 750px;
+$break-s: 900px;
+$break-m: 1050px;
+$break-l: 1200px;
+$break-xl: 1500px;
+
+$base_font: lighter 13pt 'Open Sans', 'Gill Sans', 'Helvetica Neue', sans-serif;
+$input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
+
+.parallaxSubtitle, .parallaxTitle, #container, .container {
+	width: 1200px;
+  @media screen and (max-width: $break-l) { width: 1050px; }
+  @media screen and (max-width: $break-m) { width: 900px; }
+  @media screen and (max-width: $break-s) { width: 750px; }
+  @media screen and (max-width: $break-xs){ width: 600px; }
+}
+
+body, input[type='submit'], button[type='submit'], input[type='button'] {
+  font: $base_font;
+
+  @media screen and (max-width: $break-xl) { font-size: 13pt; }
+  @media screen and (max-width: $break-l) { font-size: 12pt; }
+  @media screen and (max-width: $break-m) { font-size: 11pt; }
+  @media screen and (max-width: $break-s) { font-size: 10pt; }
+  @media screen and (max-width: $break-xs) { font-size: 9pt; }
+}
+
+input:not([type=submit]), textarea {
+  font: $input_font;
+
+  @media screen and (max-width: $break-xl) { font-size: 14pt; }
+  @media screen and (max-width: $break-l) { font-size: 13pt; }
+  @media screen and (max-width: $break-m) { font-size: 12pt; }
+  @media screen and (max-width: $break-s) { font-size: 11pt; }
+  @media screen and (max-width: $break-xs) { font-size: 10pt; }
+}
+
+$banner_height: 40px;
 
 /** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
@@ -158,6 +195,10 @@ $font220: 220%;
   transition: color .2s, color .2s;
 }
 
+/*@media only screen and (max-width: 1200px) {*/
+  /*font-size: */
+/*}*/
+
 h1 {
   color: #f00;
 }
@@ -175,7 +216,6 @@ h1, h2, h3, h4 {
 }
 
 #container, .container {
-	width: 1200px;
 	margin: 0 auto;
   min-height: 100%;
 }
@@ -213,7 +253,6 @@ body {
   min-height: 100%;
 	margin: 0;
 	padding: 0;
-  font: $base_font;
   letter-spacing: $default_letter_spacing;
   position: relative;
 }
@@ -254,9 +293,17 @@ iframe {
       font-size: $font90;
       padding: 5px;
       width: 280px;
+      @media screen and (max-width: $break-l) { padding: 4px; width: 250px; }
+      @media screen and (max-width: $break-m) { padding: 4px; width: 220px; }
+      @media screen and (max-width: $break-s) { padding: 3px; width: 180px; }
+      @media screen and (max-width: $break-xs){ padding: 3px; width: 150px; }
     }
     .allRecipes {
       margin: 0 0 0 30px;
+      @media screen and (max-width: $break-l) { margin: 0 0 0 25px; }
+      @media screen and (max-width: $break-m) { margin: 0 0 0 20px; }
+      @media screen and (max-width: $break-s) { margin: 0 0 0 12px; }
+      @media screen and (max-width: $break-xs){ margin: 0 0 0 8px; }
     }
     .search_menu_item {
       box-sizing: Border-box;
@@ -267,6 +314,10 @@ iframe {
       position: relative;
       top: -5px;
       margin: 0 0 0 5px;
+      @media screen and (max-width: $break-l) { margin: 0 0 0 4px; padding: 9px 4px; }
+      @media screen and (max-width: $break-m) { margin: 0 0 0 4px; padding: 8px 4px; }
+      @media screen and (max-width: $break-s) { margin: 0 0 0 3px; padding: 7px 3px; }
+      @media screen and (max-width: $break-xs){ margin: 0 0 0 3px; padding: 6px 3px; }
     }
   }
 
@@ -337,11 +388,15 @@ iframe {
     li {
       float: left;
       padding: 0 15px;
+      @media screen and (max-width: $break-l) { padding: 0 13px; }
+      @media screen and (max-width: $break-m) { padding: 0 11px; }
+      @media screen and (max-width: $break-s) { padding: 0 10px; }
+      @media screen and (max-width: $break-xs){ padding: 0 8px; }
     }
 
     li:first-child {
       float: left;
-      padding: 0 15px 0 0;
+      padding-left: 0;
     }
 
     li.right {
@@ -356,6 +411,10 @@ iframe {
       font: 110%;
       padding: 10px 0 0;
       height: 25px;
+      @media screen and (max-width: $break-l) { padding: 9px 0 0; }
+      @media screen and (max-width: $break-m) { padding: 8px 0 0; }
+      @media screen and (max-width: $break-s) { padding: 7px 0 0; }
+      @media screen and (max-width: $break-xs){ padding: 6px 0 0; }
     }
 
     li > a:hover {
@@ -423,7 +482,6 @@ label > span {
 }
 
 input:not([type=submit]), textarea {
-  font: $input_font;
   color: $darkgrey;
   border: 1px solid #CCC;
   letter-spacing: $default_letter_spacing
@@ -966,7 +1024,6 @@ ul.recipeList {
 }
 
 .parallaxTitle {
-	width: 1200px;
 	margin: 8px auto;
   @include carouselText;
   font-size: $font200;
@@ -974,7 +1031,6 @@ ul.recipeList {
 }
 
 .parallaxSubtitle {
-	width: 1200px;
 	margin: 4px auto;
   @include carouselText;
   font-size: $font150;
@@ -1142,7 +1198,6 @@ span.parallaxTitleText {
 }
 
 input[type='submit'], button[type='submit'], input[type='button'] {
-  font: $base_font;
   border: none;
   border-radius: none !important;
   letter-spacing: $default_letter_spacing;
