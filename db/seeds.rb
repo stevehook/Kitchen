@@ -1,27 +1,56 @@
 # encoding: utf-8
 Recipe.destroy_all
 
-recipe1 = Recipe.create!(:title => 'Baingan ka Bharta',
-               :synopsis => 'Scrumptious smoked aubergine mash made from simple ingredients, a popular choice of North India.',
-               :ingredient_list => 'secret',
-               :preparation_method => 'secret',
-               :category => 'vegan')
-RecipePhoto.create!(:recipe => recipe1, :title => 'Baingan ka Bharta', :image => File.open('db/pictures/baingankabharta1.jpeg'))
-RecipePhoto.create!(:recipe => recipe1, :title => 'Baingan ka Bharta', :image => File.open('db/pictures/baingankabharta2.jpeg'))
+bharta_description =
+"I love this dish because I love the flavours that blend perfectly with the smokiness of aubergines. This dish has been my all time favourite and it’s so easy to cook.
 
-recipe2 = Recipe.create!(:title => 'Dal Makhni',
-               :synopsis => "Mixture of various lentils and a touch of cream - a well kept secret (or Not?) of every 'Dadiji' in a Punjabi family.",
-               :ingredient_list => 'secret',
-               :preparation_method => 'secret',
-               :category => 'vegetarian')
-RecipePhoto.create!(:recipe => recipe2, :title => 'Dal Makhni', :image => File.open('db/pictures/IMG_2785.jpeg'))
+I tend to cook this with baby aubergines because they are packed with flavours in their seeds than the usual big size aubergines.  You can choose either.
 
-recipe3 = Recipe.create!(:title => 'Bhindi',
-               :synopsis => 'My take on Bhindi (Okra) - cooked with simple ingredients like green chillies, garlic, tomatoes and peanuts (optional).',
-               :ingredient_list => 'secret',
-               :preparation_method => 'secret',
-               :category => 'vegan')
-RecipePhoto.create!(:recipe => recipe3, :title => 'Bhindi', :image => File.open('db/pictures/IMG_2787.jpeg'))
+As said before, I like to cook with simple ingredients and here’s the recipe for it."
+
+bharta_ingredient_list =
+"* 8-12 *baby aubergines* or 1 big size *aubergine*
+* 4-6 cloves of *garlic*
+* 1 tablespoon *vegetable oil*
+* 1 teaspoon *mustard seeds*
+* 1 teaspoon *cumin seeds*
+* ½ teaspoon *turmeric powder*
+* 2-3 medium sized *shallots* or 1 big *onion*, finely chopped
+* 2-3 *green chillies*
+* 2 medium sized *tomatoes* or 1 big tomato
+* ½ inch *ginger*, chopped into thin slits (optional)
+* chopped *coriander* 
+* salt to taste"
+
+bharta_preperation_method =
+"1. Using fingers, tear off the green skin at the bottom of aubergine stalk without breaking or removing the stalk itself. Lightly grease the baby aubergines with oil from outside and roast each one of them on a medium flame of cooker until the skin gets charred. Place them on a kitchen towel to cool down for 10 mins.
+
+1. Start by peeling the charred skin of aubergines using fingers. 
+Top tip: You could make this fiddly job slightly easy by dipping your fingers into a bowl of water each time you peel the skin off the aubergine.
+
+1. Randomly chop or mash the smoked and peeled aubergines.
+
+1. Heat oil in a pan or ('Kadhai' as I tend to do). Add mustard and cumin seeds and leave them to splutter in the pan.
+
+1. Add garlic, chopped shallots, green chillies to the mixture in the pan and sauté gently till the garlic and onion get slightly cooked.
+
+1. Now add turmeric powder and mashed aubergines into the pan (or 'Kadhai'). Mix the aubergines well with the spices in the pan and cover it with a lid for 1 minute.
+
+1. Add the chopped tomatoes and optionally, ginger. Let it cook with the lid on for another 5 – 6 minutes until the aubergine and it’s stalks get tender. Serve hot with bread or chapati."
+
+bharta_recipe = Recipe.create!(:title => 'Smoked aubergine mash',
+                    :native_title => 'Baingan ka bharta',
+                    :synopsis => 'Fire roasted aubergines cooked with garlic, onions, green chillies and tomatoes. Vegan and gluten free dish',
+                    :preparation_time => 40,
+                    :cooking_time => 10,
+                    :description => bharta_description,
+                    :ingredient_list => bharta_ingredient_list,
+                    :preparation_method => bharta_preperation_method,
+                    :category => 'vegan')
+
+RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Baingan ka bharta', :image => File.open('db/pictures/baingankabharta1.jpeg'))
+RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Smoked aubergine mash', :image => File.open('db/pictures/baingankabharta2.jpeg'))
+
 
 shepu_description =
 
