@@ -567,22 +567,25 @@ textarea:focus, input:focus {
 }
 
 .newsContent {
-  margin: 80px 0 0 50px;
-  width: 500px;
+  margin: 6.67% 0 0 4.17%;
+  width: 41.67%;
   font-size: $font120;
-  padding: 20px;
+  padding: 1.67%;
   color: $white;
 
   input[type='text'], input[type='email'], input[type='tel'] {
-    width: 450px;
+    width: 90%;
   }
 
   .buttons {
-    padding: 20px 0 0;
+    padding: 1.67% 0 0;
+    @media screen and (max-width: $break_s) { font-size: 90%; }
+    @media screen and (max-width: $break_xs) { font-size: 80%; }
   }
 
   .formButton {
     background-color: $champagne6;
+    @media screen and (max-width: $break_s) { font-size: 90%; }
   }
 
   .formButton:hover {
@@ -594,12 +597,12 @@ textarea:focus, input:focus {
   }
 
   span.icon {
-    margin-right: 10px;
+    margin-right: 1%;
   }
 }
 
 .firstNewsContent {
-  margin: 80px 50px 0 0;
+  margin: 6.67% 4.17% 0 0;
 }
 
 @mixin carouselText {
