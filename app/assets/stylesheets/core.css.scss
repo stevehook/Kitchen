@@ -488,24 +488,44 @@ textarea {
 	height: 100px;
 	width: 800px;
   padding: 15px;
+  @media screen and (max-width: $break_l) { padding: 12px; width: 640px; height: 80px; }
+  @media screen and (max-width: $break_m) { padding: 10px; width: 560px; height: 70px; }
+  @media screen and (max-width: $break_s) { padding: 9px;  width: 480px; height: 60px; }
+  @media screen and (max-width: $break_xs){ padding: 7px;  width: 400px; height: 50px; }
 }
 
 textarea.medium {
   min-height: 200px;
+  @media screen and (max-width: $break_l) { min-height: 160px; }
+  @media screen and (max-width: $break_m) { min-height: 140px; }
+  @media screen and (max-width: $break_s) { min-height: 120px; }
+  @media screen and (max-width: $break_xs){ min-height: 100px; }
 }
 
 textarea.large {
   min-height: 300px;
+  @media screen and (max-width: $break_l) { min-height: 240px; }
+  @media screen and (max-width: $break_m) { min-height: 210px; }
+  @media screen and (max-width: $break_s) { min-height: 180px; }
+  @media screen and (max-width: $break_xs){ min-height: 150px; }
 }
 
 textarea.extraLarge {
   min-height: 500px;
+  @media screen and (max-width: $break_l) { min-height: 400px; }
+  @media screen and (max-width: $break_m) { min-height: 350px; }
+  @media screen and (max-width: $break_s) { min-height: 300px; }
+  @media screen and (max-width: $break_xs){ min-height: 250px; }
 }
 
 input[type='text'], input[type='email'], input[type='tel'], input[type='password'] {
   padding: 15px;
   width: 500px;
   letter-spacing: $default_letter_spacing;
+  @media screen and (max-width: $break_l) { padding: 12px; width: 400px; }
+  @media screen and (max-width: $break_m) { padding: 10px; width: 350px; }
+  @media screen and (max-width: $break_s) { padding: 9px; width: 300px; }
+  @media screen and (max-width: $break_xs){ padding: 7px; width: 250px; }
 }
 
 textarea:focus, input:focus {
@@ -514,21 +534,29 @@ textarea:focus, input:focus {
 
 .formActions {
 	padding: 17px 20px 18px 0px;
-	margin-top: 18px;
-	margin-bottom: 18px;
+	margin: 18px 0;
+  @media screen and (max-width: $break_l) { padding: 14px 16px 15px 0; margin: 15px 0; }
+  @media screen and (max-width: $break_m) { padding: 12px 14px 13px 0; margin: 13px 0; }
+  @media screen and (max-width: $break_s) { padding: 10px 12px 11px 0; margin: 12px 0; }
+  @media screen and (max-width: $break_xs){ padding: 9px  10px 10px 0; margin: 10px 0; }
 }
 
 .formButton {
   box-sizing: Border-box;
-  padding: 6px 12px;
   margin: 0;
-  line-height: 24px;
-  min-height: 24px;
   text-align: center;
   color: $white;
   font-size: $font120 !important;
   text-decoration: none;
   cursor: pointer;
+
+  padding: 6px 12px;
+  line-height: 24px;
+  min-height: 24px;
+  @media screen and (max-width: $break_l) { padding: 5px 10px; line-height: 19px; min-height: 19px; }
+  @media screen and (max-width: $break_m) { padding: 5px 9px;  line-height: 17px; min-height: 17px; }
+  @media screen and (max-width: $break_s) { padding: 4px 7px;  line-height: 14px; min-height: 14px; }
+  @media screen and (max-width: $break_xs){ padding: 3px 6px;  line-height: 12px; min-height: 12px; }
 }
 
 .recipeContainer #search_button, .formButton {
@@ -1110,7 +1138,6 @@ span.parallaxTitleText {
   }
 }
 
-
 .parallaxAnchor {
   top: -100px;
   height: 1px;
@@ -1123,9 +1150,9 @@ span.parallaxTitleText {
 
 #social {
   border-left: 1px solid $salmon6;
-  padding-left: 20px;
+  padding-left: 1.67%;
   float: right;
-  width: 560px;
+  width: 46.67%;
   margin-top: 70px;
   color: $white;
   height: 465px;
@@ -1151,13 +1178,13 @@ span.parallaxTitleText {
 
 #social > a img {
   float: left;
-  margin-top: 41px;
+  margin-top: 8%;
 }
 
 #social > a h2 {
   display: inline-block;
-  width: 370px;
-  margin: 0 0 0 5px;
+  width: 100%;
+  margin: 0 0 0 1%;
   text-decoration: none;
 }
 
@@ -1166,9 +1193,9 @@ span.parallaxTitleText {
   color: $white;
   background-color: $salmon6;
   list-style: none;
-  margin-left: 105px;
-  width: 360px;
-  padding: 10px;
+  margin-left: 22%;
+  /*width: 70%;*/
+  padding: 3%;
 }
 
 #social li {
@@ -1201,13 +1228,19 @@ span.parallaxTitleText {
   color: $shrikhand1;
 }
 
-#social #email img {
+#social #email img, #social > a img {
   float: left;
   margin-top: 21px;
+  height: 100px;
+  width: 100px;
+  @media screen and (max-width: $break_l) { height: 80px; width: 80px; margin-top: 23px; }
+  @media screen and (max-width: $break_m) { height: 70px; width: 70px; margin-top: 25px; }
+  @media screen and (max-width: $break_s) { height: 60px; width: 60px; margin-top: 28px; }
+  @media screen and (max-width: $break_xs){ height: 50px; width: 50px; margin-top: 30px; }
 }
 
 #social #email ul {
-  padding: 16px 10px;
+  padding: 1.5% 1%;
   font-size: $font110;
 }
 
@@ -1222,10 +1255,9 @@ span.parallaxTitleText {
   color: $shrikhand2;
   margin-top: 70px;
   float: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 1.67%;
   height: 400px;
-  width: 560px;
+  width: 46.67%;
 }
 
 #newsletterSignUp article {
