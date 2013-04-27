@@ -140,16 +140,16 @@ input:not([type=submit]), textarea {
 }
 
 $banner_height_xl: 50px;
-$banner_height_l: 47px;
-$banner_height_m: 44px;
-$banner_height_s: 40px;
-$banner_height_xs: 35px;
+$banner_height_l: 45px;
+$banner_height_m: 42px;
+$banner_height_s: 38px;
+$banner_height_xs: 32px;
 
 $header_height_xl: 180px;
-$header_height_l:  165px;
-$header_height_m:  150px;
-$header_height_s:  135px;
-$header_height_xs: 120px;
+$header_height_l:  160px;
+$header_height_m:  140px;
+$header_height_s:  120px;
+$header_height_xs: 100px;
 
 /** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
@@ -547,10 +547,23 @@ textarea:focus, input:focus {
   padding: 40px;
   font-size: $font140;
   margin: 200px 0 0 50px;
+
+  h1 {
+    color: $white;
+  }
+}
+
+.homeContent {
+  margin: 10% 0 0 5%;
+  max-height: 80%;
+  width: 50%;
+  @media screen and (max-width: $break_l) { padding: 32px; width: 60%; margin: 7% 0 0 5%; font-size: 97%; }
+  @media screen and (max-width: $break_m) { padding: 28px; width: 64%; margin: 6% 0 0 5%; font-size: 93%; }
+  @media screen and (max-width: $break_s) { padding: 24px; width: 67%; margin: 5% 0 0 5%; font-size: 90%; }
+  @media screen and (max-width: $break_xs){ padding: 20px; width: 70%; margin: 4% 0 0 5%; font-size: 90%; }
 }
 
 .homeContent h1, .newsContent h1 {
-  color: $white;
 }
 
 .newsContent {
@@ -952,7 +965,11 @@ ul.recipeList {
   @include boxSizing;
   position: absolute;
   bottom: 0px;
-  right: 200px;
+  right: 20%;
+  @media screen and (max-width: $break_l) { right: 18%; }
+  @media screen and (max-width: $break_m) { right: 16%; }
+  @media screen and (max-width: $break_s) { right: 14%; }
+  @media screen and (max-width: $break_xs){ right: 12%; }
   background-color: $shrikhand1;
   color: $champagne7;
   text-align: center;
@@ -964,13 +981,27 @@ ul.recipeList {
     text-decoration: none;
   }
 
-  .left {
-    float: left;
-    height: 50px;
+  .left, .right {
+    height: $banner_height_xl;
+    @media screen and (max-width: $break_l) { height: $banner_height_l;  }
+    @media screen and (max-width: $break_m) { height: $banner_height_m;  }
+    @media screen and (max-width: $break_s) { height: $banner_height_s;  }
+    @media screen and (max-width: $break_xs){ height: $banner_height_xs; }
 
     .label {
-      line-height: 50px;
+      line-height: $banner_height_xl;
       padding: 0 5px;
+      @media screen and (max-width: $break_l) { line-height: $banner_height_l;  padding: 0 4px; }
+      @media screen and (max-width: $break_m) { line-height: $banner_height_m;  padding: 0 4px; }
+      @media screen and (max-width: $break_s) { line-height: $banner_height_s;  padding: 0 3px; }
+      @media screen and (max-width: $break_xs){ line-height: $banner_height_xs; padding: 0 3px; }
+    }
+  }
+
+  .left {
+    float: left;
+
+    .label {
       display: none;
       text-align: middle;
       font-size: $font120;
@@ -980,7 +1011,6 @@ ul.recipeList {
 
   .right {
     float: right;
-    height: 50px;
 
     a {
       text-decoration: none;
