@@ -792,13 +792,13 @@ textarea:focus, input:focus {
 }
 
 .recipeSearch {
-  padding: 20px 0 60px 0;
+  padding: 3.33% 0 10% 0;
   margin: 0 auto;
-  width: 600px;
+  width: 50%;
 
   button {
-    min-width: 40px;
-    padding: 15px 5px;
+    width: 6.67%;
+    padding: 2.5% 0.833%;
     cursor: pointer;
     background-color: $sheepu6_50;
     color: $white;
@@ -818,7 +818,7 @@ textarea:focus, input:focus {
   }
 
   .categoryFilter {
-    margin: 15px 0 0 120px;
+    margin: 2.5% 0 0 20%;
   }
 }
 
@@ -840,10 +840,14 @@ ul.recipeList {
 .recipeList li {
   @include boxSizing;
   position: relative;
-  width: 275px;
+  width: 23.3%;
   height: 320px;
-  margin: 0 20px 36px 0;
-  padding: 3px;
+  @media screen and (max-width: $break_l) { height: 256px; }
+  @media screen and (max-width: $break_m) { height: 224px; }
+  @media screen and (max-width: $break_s) { height: 192px; }
+  @media screen and (max-width: $break_xs){ height: 160px; }
+  margin: 0 1.67% 3% 0;
+  padding: 0.25%;
   border: 1px solid $extralightgrey;
   float: left;
 	background-color: rgba(255, 255, 255, 0.75);
@@ -855,8 +859,8 @@ ul.recipeList {
   }
 
   img {
-    width: 265px;
-    height: 265px;
+    width: 96.36%;
+    height: 96.36%;
   }
 
   .title {
@@ -890,8 +894,8 @@ ul.recipeList {
     background-color: $white_80;
     position: absolute;
     bottom: 0px;
-    min-width: 270px;
-    min-height: 45px;
+    min-width: 98.21%;
+    min-height: 14.06%;
   }
 }
 
