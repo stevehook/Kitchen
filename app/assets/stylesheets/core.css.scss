@@ -102,44 +102,54 @@ $default_letter_spacing: 1px;
 
 /* responsive variables */
 
-$break-xs: 750px;
-$break-s: 900px;
-$break-m: 1050px;
-$break-l: 1200px;
-$break-xl: 1500px;
+$break_xs: 750px;
+$break_s: 900px;
+$break_m: 1050px;
+$break_l: 1200px;
+$break_xl: 1500px;
 
 $base_font: lighter 13pt 'Open Sans', 'Gill Sans', 'Helvetica Neue', sans-serif;
 $input_font: normal 14pt 'Droid Serif', Georgia, 'Times New Roman', serif;
 
 .parallaxSubtitle, .parallaxTitle, #container, .container {
 	width: 1200px;
-  @media screen and (max-width: $break-l) { width: 1050px; }
-  @media screen and (max-width: $break-m) { width: 900px; }
-  @media screen and (max-width: $break-s) { width: 750px; }
-  @media screen and (max-width: $break-xs){ width: 600px; }
+  @media screen and (max-width: $break_l) { width: 1050px; }
+  @media screen and (max-width: $break_m) { width: 900px; }
+  @media screen and (max-width: $break_s) { width: 750px; }
+  @media screen and (max-width: $break_xs){ width: 600px; }
 }
 
 body, input[type='submit'], button[type='submit'], input[type='button'] {
   font: $base_font;
 
-  @media screen and (max-width: $break-xl) { font-size: 13pt; }
-  @media screen and (max-width: $break-l) { font-size: 12pt; }
-  @media screen and (max-width: $break-m) { font-size: 11pt; }
-  @media screen and (max-width: $break-s) { font-size: 10pt; }
-  @media screen and (max-width: $break-xs) { font-size: 9pt; }
+  @media screen and (max-width: $break_xl) { font-size: 13pt; }
+  @media screen and (max-width: $break_l) { font-size: 12pt; }
+  @media screen and (max-width: $break_m) { font-size: 11pt; }
+  @media screen and (max-width: $break_s) { font-size: 10pt; }
+  @media screen and (max-width: $break_xs) { font-size: 9pt; }
 }
 
 input:not([type=submit]), textarea {
   font: $input_font;
 
-  @media screen and (max-width: $break-xl) { font-size: 14pt; }
-  @media screen and (max-width: $break-l) { font-size: 13pt; }
-  @media screen and (max-width: $break-m) { font-size: 12pt; }
-  @media screen and (max-width: $break-s) { font-size: 11pt; }
-  @media screen and (max-width: $break-xs) { font-size: 10pt; }
+  @media screen and (max-width: $break_xl) { font-size: 14pt; }
+  @media screen and (max-width: $break_l) { font-size: 13pt; }
+  @media screen and (max-width: $break_m) { font-size: 12pt; }
+  @media screen and (max-width: $break_s) { font-size: 11pt; }
+  @media screen and (max-width: $break_xs) { font-size: 10pt; }
 }
 
-$banner_height: 40px;
+$banner_height_xl: 50px;
+$banner_height_l: 47px;
+$banner_height_m: 44px;
+$banner_height_s: 40px;
+$banner_height_xs: 35px;
+
+$header_height_xl: 180px;
+$header_height_l:  165px;
+$header_height_m:  150px;
+$header_height_s:  135px;
+$header_height_xs: 120px;
 
 /** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
@@ -266,22 +276,24 @@ iframe {
   display: none;
 }
 
-#header {
-  height: 180px;
-  background-color: $white;
-}
-
 #banner {
+  @include boxSizing;
   padding: 5px;
   background: $champagne5_50;
-  height: $banner_height;
+  height: $banner_height_xl;
+  top: $header_height_xl;
+  overflow: hidden;
+  @media screen and (max-width: $break_l) { height: $banner_height_l;  top: $header_height_l;  }
+  @media screen and (max-width: $break_m) { height: $banner_height_m;  top: $header_height_m;  }
+  @media screen and (max-width: $break_s) { height: $banner_height_s;  top: $header_height_s;  }
+  @media screen and (max-width: $break_xs){ height: $banner_height_xs; top: $header_height_xs; }
   z-index: 5;
   width: 100%;
   position: absolute;
-  top: 180px;
   @include hoverBackgroundTransition;
 
   .searchMenuItem {
+    height: 100%;
     .hidden {
       opacity: 0;
     }
@@ -293,31 +305,31 @@ iframe {
       font-size: $font90;
       padding: 5px;
       width: 280px;
-      @media screen and (max-width: $break-l) { padding: 4px; width: 250px; }
-      @media screen and (max-width: $break-m) { padding: 4px; width: 220px; }
-      @media screen and (max-width: $break-s) { padding: 3px; width: 180px; }
-      @media screen and (max-width: $break-xs){ padding: 3px; width: 150px; }
+      @media screen and (max-width: $break_l) { padding: 4px; width: 250px; }
+      @media screen and (max-width: $break_m) { padding: 4px; width: 220px; }
+      @media screen and (max-width: $break_s) { padding: 3px; width: 180px; }
+      @media screen and (max-width: $break_xs){ padding: 3px; width: 150px; }
     }
     .allRecipes {
       margin: 0 0 0 30px;
-      @media screen and (max-width: $break-l) { margin: 0 0 0 25px; }
-      @media screen and (max-width: $break-m) { margin: 0 0 0 20px; }
-      @media screen and (max-width: $break-s) { margin: 0 0 0 12px; }
-      @media screen and (max-width: $break-xs){ margin: 0 0 0 8px; }
+      @media screen and (max-width: $break_l) { margin: 0 0 0 25px; }
+      @media screen and (max-width: $break_m) { margin: 0 0 0 20px; }
+      @media screen and (max-width: $break_s) { margin: 0 0 0 12px; }
+      @media screen and (max-width: $break_xs){ display: none; }
     }
     .search_menu_item {
       box-sizing: Border-box;
       background-color: $shrikhand1;
       color: $champagne7;
-      padding: 10px 5px;
       height: 50px;
       position: relative;
       top: -5px;
       margin: 0 0 0 5px;
-      @media screen and (max-width: $break-l) { margin: 0 0 0 4px; padding: 9px 4px; }
-      @media screen and (max-width: $break-m) { margin: 0 0 0 4px; padding: 8px 4px; }
-      @media screen and (max-width: $break-s) { margin: 0 0 0 3px; padding: 7px 3px; }
-      @media screen and (max-width: $break-xs){ margin: 0 0 0 3px; padding: 6px 3px; }
+      padding: 10px 5px;
+      @media screen and (max-width: $break_l) { margin: 0 0 0 4px; padding: 9px 4px; }
+      @media screen and (max-width: $break_m) { margin: 0 0 0 4px; padding: 9px 4px; }
+      @media screen and (max-width: $break_s) { margin: 0 0 0 3px; padding: 9px 3px; }
+      @media screen and (max-width: $break_xs){ margin: 0 0 0 3px; padding: 9px 3px; }
     }
   }
 
@@ -328,7 +340,7 @@ iframe {
     top: -5px;
     opacity: 0.0;
     padding: 10px 0;
-    height: 35px;
+    height: 87%;
   }
 }
 
@@ -343,40 +355,26 @@ iframe {
   }
 }
 
-#header {
-  background: $white;
-  .siteTitle {
-    font: 300% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-    color: $salmon3;
-    margin: -28px 0;
-  }
 
-  img {
-  }
+#header {
+  height: $header_height_xl;
+  @media screen and (max-width: $break_l) { height: $header_height_l;  }
+  @media screen and (max-width: $break_m) { height: $header_height_m;  }
+  @media screen and (max-width: $break_s) { height: $header_height_s;  }
+  @media screen and (max-width: $break_xs){ height: $header_height_xs; }
+
+  background-color: $white;
 
   .logo {
     padding: 10px 0 10px 50px;
-    height: 145px;
-  }
-
-  #punchLine {
-    position: relative;
-    top: -20px;
-    left: 20px;
-    line-height: 100px;
-    font-family: 'Arial Rounded MT Bold';
-    font-size: 300%;
-    font-weight: bold;
-    height: 180px;
-    padding: 0 0 80px;
-    color: $champagne6;
+    height: 80%;
   }
 }
 
 #menu, .menu {
   margin: 0 auto;
 	display: block;
-	height: 35px;
+	height: 100%;
   font: 100%;
 
   ul {
@@ -388,10 +386,10 @@ iframe {
     li {
       float: left;
       padding: 0 15px;
-      @media screen and (max-width: $break-l) { padding: 0 13px; }
-      @media screen and (max-width: $break-m) { padding: 0 11px; }
-      @media screen and (max-width: $break-s) { padding: 0 10px; }
-      @media screen and (max-width: $break-xs){ padding: 0 8px; }
+      @media screen and (max-width: $break_l) { padding: 0 13px; }
+      @media screen and (max-width: $break_m) { padding: 0 11px; }
+      @media screen and (max-width: $break_s) { padding: 0 10px; }
+      @media screen and (max-width: $break_xs){ padding: 0 8px; }
     }
 
     li:first-child {
@@ -405,16 +403,15 @@ iframe {
 
     li > a {
       display: block;
-      /*width: 100px;*/
       text-decoration: none;
       color: $champagne0;
       font: 110%;
       padding: 10px 0 0;
       height: 25px;
-      @media screen and (max-width: $break-l) { padding: 9px 0 0; }
-      @media screen and (max-width: $break-m) { padding: 8px 0 0; }
-      @media screen and (max-width: $break-s) { padding: 7px 0 0; }
-      @media screen and (max-width: $break-xs){ padding: 6px 0 0; }
+      @media screen and (max-width: $break_l) { padding: 9px 0 0; height: 22px; }
+      @media screen and (max-width: $break_m) { padding: 8px 0 0; height: 20px; }
+      @media screen and (max-width: $break_s) { padding: 7px 0 0; height: 18px; }
+      @media screen and (max-width: $break_xs){ padding: 6px 0 0; height: 15px; }
     }
 
     li > a:hover {

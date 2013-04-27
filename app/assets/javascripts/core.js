@@ -2,7 +2,7 @@
 $(function() {
   var callback = function() {
     $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' });
-    $('#homePanel').css({ 'min-height': (window.innerHeight - 180) + 'px' });
+    $('#homePanel').css({ 'min-height': (window.innerHeight - $('#header').height()) + 'px' });
     $('.recipeContainer, .blogPostContainer').css({ 'min-height': (window.innerHeight) + 'px' });
   };
   $(window).resize(callback);
@@ -421,7 +421,7 @@ $(function() {
 
 // Plugin for parallax scrolling
 (function($) {
-  var defaults = { header: 180 };
+  var defaults = { header: '#header' };
   $.fn.parallax = function(options) {
     var opts = $.extend({}, defaults, options);
     return this.each(function()
@@ -438,12 +438,13 @@ $(function() {
             var $panel = $(panel);
             var background = $panel.data('background');
             if (background) {
-              var headerAdjustment = panel == panels[0] ? opts.header : 0;
+              var headerAdjustment = panel == panels[0] ? $(opts.header).height() : 0;
               $panel.css({'background-image': "url('images/" + $panel.data('background') + "')",
                 'background-position': '0px ' + (panel.offsetTop - headerAdjustment)/8 + 'px'});
             }
           });
-          // hook the scroll event
+          // handle the scroll and resize events
+          //-          // hook the scroll event
           $(document).scroll(function(event) {
             var offset = $(window).scrollTop();
             var panels = $('.parallaxPanel');
