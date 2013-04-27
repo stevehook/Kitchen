@@ -646,10 +646,10 @@ textarea:focus, input:focus {
   /*The children of this container are all absolutely positioned and therefore cannot determine its height */
   /*so we need to explicitly size the height of the carousel */
   height: 800px;
-  @media screen and (max-width: $break_l) { height: 700px; }
-  @media screen and (max-width: $break_m) { height: 600px; }
-  @media screen and (max-width: $break_s) { height: 500px; }
-  @media screen and (max-width: $break_xs){ height: 430px; }
+  @media screen and (max-width: $break_l) { height: 720px; }
+  @media screen and (max-width: $break_m) { height: 640px; }
+  @media screen and (max-width: $break_s) { height: 560px; }
+  @media screen and (max-width: $break_xs){ height: 480px; }
   /*max-height: 80%;*/
   overflow: hidden;
 
@@ -710,7 +710,7 @@ textarea:focus, input:focus {
 
         .recipeSecondaryImage {
           position: absolute;
-          bottom: 0px;
+          bottom: 3%;
           right: 0px;
           width: 46.87%;
           @media screen and (max-width: $break_s) { display: none; }
