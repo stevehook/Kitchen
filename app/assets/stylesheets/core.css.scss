@@ -840,14 +840,14 @@ ul.recipeList {
 .recipeList li {
   @include boxSizing;
   position: relative;
-  width: 23.3%;
-  height: 320px;
-  @media screen and (max-width: $break_l) { height: 256px; }
-  @media screen and (max-width: $break_m) { height: 224px; }
-  @media screen and (max-width: $break_s) { height: 192px; }
-  @media screen and (max-width: $break_xs){ height: 160px; }
+  width: 23.7%;
+  height: 360px;
+  @media screen and (max-width: $break_l) { height: 288px; }
+  @media screen and (max-width: $break_m) { height: 252px; }
+  @media screen and (max-width: $break_s) { height: 216px; }
+  @media screen and (max-width: $break_xs){ height: 180px; }
   margin: 0 1.67% 3% 0;
-  padding: 0.25%;
+  padding: 0.45% 0.25%;
   border: 1px solid $extralightgrey;
   float: left;
 	background-color: rgba(255, 255, 255, 0.75);
@@ -859,8 +859,12 @@ ul.recipeList {
   }
 
   img {
-    width: 96.36%;
-    height: 96.36%;
+    width: 98%;
+    height: 274.06px;
+    @media screen and (max-width: $break_l) { height: 219.25px; }
+    @media screen and (max-width: $break_m) { height: 191.84px; }
+    @media screen and (max-width: $break_s) { height: 164.43px; }
+    @media screen and (max-width: $break_xs){ height: 137.03px; }
   }
 
   .title {
