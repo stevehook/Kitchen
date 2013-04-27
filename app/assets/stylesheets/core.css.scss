@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
 
 .contentMain {
   float: left;
-  width: 850px;
+  width: 70.8%;
 }
 
 html {
@@ -938,7 +938,12 @@ ul.recipeList {
 }
 
 #recipeImageContainer {
+  width: 100%;
   position: relative;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 #recipeImageCopy {
@@ -948,7 +953,7 @@ ul.recipeList {
 }
 
 .dotNav {
-  width: 850px;
+  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1344,8 +1349,8 @@ menu {
 .contentSidePanel {
   @include boxSizing;
   float: left;
-  width: 280px;
-  margin: 0 0 0 40px;
+  width: 23.3%;
+  margin: 0 0 0 3.333%;
 
   .icon {
     color: $sheepu3;
@@ -1363,7 +1368,7 @@ menu {
   a {
     display: block;
     margin: 3px 0;
-    padding: 5px 9px;
+    padding: 1.82% 3.28%;
     text-decoration: none;
     color: #000;
   }
@@ -1378,23 +1383,23 @@ menu {
   }
 
   .icon {
-    margin: 0 5px 0 0;
+    margin: 0 1.82% 0 0;
   }
 
   .label {
     position: absolute;
-    left: 40px;
+    left: 14.6%;
   }
 
   h3 {
-    padding: 8px 10px;
-    margin: 10px 0;
+    padding: 2.91% 3.64%;
+    margin: 3.64% 0;
     background-color: $sheepu5_80;
     color: $white;
   }
 
   .ratingPanel {
-    padding: 0 0 10px;
+    padding: 0 0 3.64%;
   }
 }
 
