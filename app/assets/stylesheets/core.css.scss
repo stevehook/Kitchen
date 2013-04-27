@@ -1020,14 +1020,13 @@ ul.recipeList {
 
 /* Parallax */
 
-.parallax {
-}
-
 .parallaxDownButton {
+  @include allTransition500;
   @include boxSizing;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   right: 20%;
+  opacity: 1;
   @media screen and (max-width: $break_l) { right: 18%; padding: 0 4px;}
   @media screen and (max-width: $break_m) { right: 16%; padding: 0 4px;}
   @media screen and (max-width: $break_s) { right: 14%; padding: 0 3px;}
@@ -1086,6 +1085,10 @@ ul.recipeList {
       color: $champagne7;
     }
   }
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .parallaxDownButton:hover {

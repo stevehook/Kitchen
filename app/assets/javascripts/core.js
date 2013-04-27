@@ -2,7 +2,7 @@
 $(function() {
   var callback = function() {
     $('.parallaxPanel').css({ 'min-height': window.innerHeight + 'px' });
-    $('#homePanel').css({ 'min-height': (window.innerHeight - $('#header').height()) + 'px' });
+    //$('#homePanel').css({ 'min-height': (window.innerHeight - $('#header').height()) + 'px' });
     $('.recipeContainer, .blogPostContainer').css({ 'min-height': (window.innerHeight) + 'px' });
   };
   $(window).resize(callback);
@@ -178,6 +178,13 @@ $(function() {
               var panelId = panel[0].id;
               if (panelId == 'homePanel') { panelId = 'header'; }
               $("a[href='/#" + panelId + "']").addClass('selected');
+              var nextPanel = panel.next('.parallaxPanel');
+              if (nextPanel.length > 0) {
+                $("div.parallaxDownButton").removeClass('hidden');
+                $("div.parallaxDownButton a").attr('href', '#' + nextPanel[0].id);
+              } else {
+                $("div.parallaxDownButton").addClass('hidden');
+              }
             });
           }
         },
