@@ -602,42 +602,6 @@ textarea:focus, input:focus {
   margin: 80px 50px 0 0;
 }
 
-#carousel {
-	/*Need to have relative position here as all the other carousel items inside this container will be relative to this?*/
-	position: relative;
-  /*The children of this container are all absolutely positioned and therefore cannot determine its height */
-  /*so we need to explicitly size the height of the carousel */
-  height: 800px;
-  overflow: hidden;
-}
-
-#carouselItems {
-  position: relative;
-  width: 1040px;
-  height: 800px;
-  left: 80px;
-  overflow: hidden;
-}
-
-.carouselItem {
-	display: none;
-  position: absolute;
-  height: 650px;
-  width: 1040px;
-  margin: 25px 0 0 0;
-}
-
-#recipesPanel {
-  .carouselItem {
-    background: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.carouselItem .content {
-  min-height: 670px;
-  width: 1000px;
-}
-
 @mixin carouselText {
   position: relative;
   left: 0px;
@@ -645,89 +609,147 @@ textarea:focus, input:focus {
   padding: 5px;
 }
 
-.carouselItem a {
-  text-decoration: none;
-}
+#carousel {
+	/*Need to have relative position here as all the other carousel items inside this container will be relative to this?*/
+	position: relative;
+  /*The children of this container are all absolutely positioned and therefore cannot determine its height */
+  /*so we need to explicitly size the height of the carousel */
+  height: 800px;
+  @media screen and (max-width: $break_l) { height: 700px; }
+  @media screen and (max-width: $break_m) { height: 600px; }
+  @media screen and (max-width: $break_s) { height: 500px; }
+  @media screen and (max-width: $break_xs){ height: 430px; }
+  /*max-height: 80%;*/
+  overflow: hidden;
 
-.carouselItem .recipeTitle {
-  @include carouselText;
-  font-size: $font200;
-  margin-left: 70px;
-  color: $sheepu4;
-  text-decoration: none;
-}
+  #carouselItems {
+    @include boxSizing;
+    position: relative;
+    width: 81%;
+    height: 100%;
+    left: 10%;
+    overflow: hidden;
 
-.carouselItem .images {
-  float: left;
-  margin-left: 70px;
-  margin-right: 40px;
-  position: relative;
-}
+    .carouselItem {
+      @include boxSizing;
+      display: none;
+      position: absolute;
+      height: 81%;
+      max-height: 100%;
+      width: 100%;
+      margin: 3.125% 0 0 0;
+      background: rgba(255, 255, 255, 0.8);
 
-.carouselItem .recipeSecondaryImage img, .carouselItem .recipeImage img {
-  /*box-shadow: 0 0 2px 2px #333;*/
-}
+      .content {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+      }
 
-.carouselItem .recipeSecondaryImage {
-  top: 200px;
-  left: 480px;
-  position: absolute;
-}
+      a {
+        text-decoration: none;
+      }
 
-.carouselItem .recipeSynopsis {
-  padding: 10px;
-  font-size: $font130;
-}
+      .recipeTitle {
+        @include carouselText;
+        font-size: $font200;
+        margin: 3% 5%;
+        color: $sheepu4;
+        text-decoration: none;
 
-.recipeLinks {
-  position: absolute;
-  margin: 0 0 70px 70px;
-  left: 0px;
-  bottom: 0px;
-}
+        a {
+          color: $sheepu4;
+        }
+      }
 
-.carouselItem .recipeMoreLink, .recipesMoreLink {
-  display: inline-block;
-  padding: 4px 6px;
-  font-size: $font130;
-  text-decoration: none;
-  color: $champagne5;
-	background-color: transparent;
-  position: relative;
-  float: right;
-  margin: 0 0 0 25px;
-  @include hoverBackgroundTransition;
-}
+      .images {
+        @include boxSizing;
+        width: 90%;
+        height: 80%;
+        float: left;
+        margin: 0 5% 0 5%;
+        position: relative;
 
-.recipesMoreLink {
-  float: left;
-}
+        .recipeImage {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 60.75%;
+        }
 
-.carouselButton {
-  top: 40%;
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  font-size: $font150;
-  color: $white;
-  background-color: $sheepu6_50;
-  color: $white;
-  line-height: 63px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  z-index: 4;
-  @include hoverColorTransition;
+        .recipeSecondaryImage {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          width: 46.87%;
+          @media screen and (max-width: $break_s) { display: none; }
+        }
 
-  span {
-    font-size: $font150;
+        .recipeSynopsis {
+          position: absolute;
+          width: 37%;
+          right: 0px;
+          font-size: $font130;
+        }
+
+        .recipeLinks {
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          margin: 5% 0;
+        }
+
+        .recipesMoreLink {
+          display: inline-block;
+          padding: 4px 6px;
+          font-size: $font130;
+          text-decoration: none;
+          color: $champagne5;
+          background-color: transparent;
+          position: relative;
+          float: right;
+          margin: 0 0 0 25px;
+          @include hoverBackgroundTransition;
+          float: left;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
   }
-}
 
-.recipeMoreLink:hover, .recipesMoreLink:hover, .carouselButton:hover {
-  // background-color: $orange;
-  color: $white;
-  background-color: $sheepu6_80;
+  .carouselButton {
+    top: 40%;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    line-height: 63px;
+    @media screen and (max-width: $break_l) { width: 44px; height: 44px; line-height: 51px; }
+    @media screen and (max-width: $break_m) { width: 39px; height: 39px; line-height: 44px; }
+    @media screen and (max-width: $break_s) { width: 33px; height: 33px; line-height: 38px; }
+    @media screen and (max-width: $break_xs){ width: 28px; height: 28px; line-height: 32px; }
+    font-size: $font150;
+    color: $white;
+    background-color: $sheepu6_50;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 4;
+    @include hoverColorTransition;
+
+    span {
+      font-size: $font150;
+    }
+  }
+
+  .recipeMoreLink:hover, .recipesMoreLink:hover, .carouselButton:hover {
+    // background-color: $orange;
+    color: $white;
+    background-color: $sheepu6_80;
+  }
 }
 
 .left {
@@ -966,10 +988,11 @@ ul.recipeList {
   position: absolute;
   bottom: 0px;
   right: 20%;
-  @media screen and (max-width: $break_l) { right: 18%; }
-  @media screen and (max-width: $break_m) { right: 16%; }
-  @media screen and (max-width: $break_s) { right: 14%; }
-  @media screen and (max-width: $break_xs){ right: 12%; }
+  @media screen and (max-width: $break_l) { right: 18%; padding: 0 4px;}
+  @media screen and (max-width: $break_m) { right: 16%; padding: 0 4px;}
+  @media screen and (max-width: $break_s) { right: 14%; padding: 0 3px;}
+  @media screen and (max-width: $break_xs){ right: 12%; padding: 0 3px;}
+
   background-color: $shrikhand1;
   color: $champagne7;
   text-align: center;
