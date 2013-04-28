@@ -1210,6 +1210,7 @@ span.parallaxTitleText {
   background-color: $salmon6;
   list-style: none;
   margin-left: 22%;
+  margin-right: 3%;
   /*width: 70%;*/
   padding: 3%;
 }
@@ -1234,6 +1235,10 @@ span.parallaxTitleText {
   width: 0px;
   height: 0px;
   content: " ";
+  @media screen and (max-width: $break_l) { top: 8px; left: -16px; border-width: 8px; }
+  @media screen and (max-width: $break_m) { top: 7px; left: -14px; border-width: 7px; }
+  @media screen and (max-width: $break_s) { top: 6px; left: -12px; border-width: 6px; }
+  @media screen and (max-width: $break_xs){ top: 5px; left: -10px; border-width: 5px; }
 }
 
 #social #email:hover, #social #twitter:hover {
@@ -1244,18 +1249,19 @@ span.parallaxTitleText {
   color: $shrikhand1;
 }
 
-#social #email img, #social > a img {
+#social > a img {
   float: left;
   margin-top: 21px;
   height: 100px;
   width: 100px;
-  @media screen and (max-width: $break_l) { height: 80px; width: 80px; margin-top: 23px; }
-  @media screen and (max-width: $break_m) { height: 70px; width: 70px; margin-top: 25px; }
-  @media screen and (max-width: $break_s) { height: 60px; width: 60px; margin-top: 28px; }
-  @media screen and (max-width: $break_xs){ height: 50px; width: 50px; margin-top: 30px; }
+  @media screen and (max-width: $break_l) { height: 80px; width: 80px; margin-top: 18px; }
+  @media screen and (max-width: $break_m) { height: 70px; width: 70px; margin-top: 15px; }
+  @media screen and (max-width: $break_s) { height: 60px; width: 60px; margin-top: 13px; }
+  @media screen and (max-width: $break_xs){ height: 50px; width: 50px; margin-top: 11px; }
 }
 
 #social #email ul {
+  margin-top: 8.5%;
   padding: 1.5% 1%;
   font-size: $font110;
 }
