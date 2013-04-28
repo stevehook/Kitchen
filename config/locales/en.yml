@@ -7,26 +7,21 @@ en:
   copy:
     home:
       home_panel1:
-        title: Eat well every day
-        text: Zanzaneet is all about our own style of home cooking. We like to
-              eat well and we like to eat healthy, but we never want to compromise on the
-              flavour. When you visit Web site we hope that you will find ideas that will
-              infect you with our love of good food and inspire you to cook some of our
-              favourite dishes.
+        title: EAT GREEN. EAT HEALTHY.
+        text: IT'S HOME COOKING USING SIMPLE AND FRESH INGREDIENTS, MOSTLY GREEN.
+
       home_panel2:
-        title: Authentic Indian cooking
-        text: Zanzaneet is a Marathi word used to describe spicy, vibrant and flavourful food.
-              Much of our inspiration is drawn from traditional Indian home
-              cooking, far removed from your local curry house. We would love to introduce
-              you to some of the authentic recipes we grew up with. But if Indian food is not
-              to your taste we have recipes from other parts of the world.
+        title: REAL INDIAN HOME COOKING,
+        text: FAR REMOVED FROM YOUR LOCAL CURRY HOUSE.
+
       home_panel3:
-        title: Finish your greens
-        text: At Zanzaneet we believe in healthy eating and green living. We
-              don’t eat meat and fish every day so you will find plenty of tasty vegetarian
-              recipes here as well as a few dishes for non-vegetarians. Whatever the
-              ingredients our food is always satisfying, every meal from the Zanzaneet
-              kitchen should be a feast for the senses.
+        title: TASTE REAL STREET FOOD FROM INDIA. 
+        text: BUT WE ALSO GET INSPIRED BY FOOD FROM OTHER PARTS OF THE WORLD.
+
+      home_panel4:
+        title: FINISH YOUR GREENS.
+        text: WE DON'T EAT MEAT OR FISH EVERYDAY BUT FEAST OUR SENSES WITH DELICIOUS VEGAN AND VEGETARIAN FOOD. 
+
       home_panel_old:
         title: Authentic Indian cooking
         text: Zanzaneet brings you recipes and tips to introduce you to real Indian cooking.
@@ -37,21 +32,23 @@ en:
         title: Recipes
         subtitle: Tasty treats for all the family...
       news_panel:
-        title: News
+        title: What's new
         subtitle: Find out what's cooking
         news0:
           title: Home Delivery Service
           text:
-            - Making tasty vegan and vegetarian recipes is our passion and we want to fulfil the needs
-              of discerning eaters like us who don't always like to eat the same meals again and again and are sometimes too busy to cook
+            - Making tasty vegan and vegetarian recipes is our passion. We want to fulfil the needs
+              of discerning eaters like us who don't like to eat same meals everytime but are too busy to cook
               interesting meals every day.
+
             - Let us know if you would like us to deliver some of our delicious cooked meals straight to your door.
         news1:
           title: Classes
           text:
             - We want to build a community of Vegan and Vegetarian foodies and help them cook these meals themselves. We are happy for
               you to visit our kitchen for a masterclass in cooking specialised meals that you will love to eat.
+
             - Let us know if you would like to learn cooking with us.
       contact_panel:
-        title: Contact
-        subtitle: Don't be shy tweet, email or call us - we love to talk about tasty grub
+        title: Say Hello
+        subtitle: Don't be shy. We're social. Tweet or email us.
