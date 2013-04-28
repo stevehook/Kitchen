@@ -1,0 +1,29 @@
+<a id='contact'></a>
+<div class='container'>
+  <div class='parallaxTitle'><span class='parallaxTitleText'><%= t('copy.home.contact_panel.title') %></span></div>
+  <div class='parallaxSubtitle'><span class='parallaxTitleText'><%= t('copy.home.contact_panel.subtitle') %></span></div>
+  <div id='newsletterSignUp'>
+    <article class='title'>Still want to hear more from us? Sign up for our monthly newsletter:</article>
+    <article id='subscriptionFormContainer'>
+      <%= render :partial => 'subscriptions/form' %>
+    </article>
+  </div>
+  <div id='social'>
+    <a id='twitter' href='http://twitter.com/zanzaneet'>
+      <h2 class='title'>Follow us on Twitter</h2>
+      <%= image_tag('twitter_logo.png', :size => '100x100', :alt => 'Recent tweets') %>
+      <ul>
+        <% @tweets.each do |tweet| %>
+          <li><%= tweet %></li>
+        <% end %>
+      </ul>
+    </a>
+    <a id='email' href='mailto:info@zanzaneet.com'>
+      <h2 class='title'>Email us</h2>
+      <%= image_tag('email_logo.png', :size => '100x100', :alt => 'Email us') %>
+      <ul>
+        <li>info@zanzaneet.com</li>
+      </ul>
+    </a>
+  </div>
+</div>
