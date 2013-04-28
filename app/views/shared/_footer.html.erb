@@ -3,15 +3,12 @@
     <%= link_to root_path do %>
       <%= image_tag 'footer_logo.png', :class => 'logo' %>
     <% end %>
+    <div class='footerCopyright'>a project by Rieethaa and Steve copyright 2013</div>
     <nav class="menu">
       <ul>
         <li><%= link_to 'About', about_path(:about) %></li>
-      </ul>
-      <ul>
         <li><%= link_to 'Privacy Policy', about_path(:privacy_policy) %></li>
-      </ul>
-      <ul>
-        <li><%= link_to 'FAQ', about_path(:faq) %></li>
+        <li><%= link_to 'FAQ', about_path(:faq) %></li></span>
       </ul>
     </nav>
   </div>
