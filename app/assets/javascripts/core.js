@@ -62,7 +62,7 @@ $(function() {
 
 // Plugin for home panel switcher on home page
 (function($) {
-  var defaults = { panels: 3 };
+  var defaults = { panels: 4 };
   $.fn.homeContent = function(options) {
     var opts = $.extend({}, defaults, options);
     return this.each(function() {

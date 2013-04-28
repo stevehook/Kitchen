@@ -7,20 +7,20 @@ en:
   copy:
     home:
       home_panel1:
-        title: EAT GREEN. EAT HEALTHY.
-        text: IT'S HOME COOKING USING SIMPLE AND FRESH INGREDIENTS, MOSTLY GREEN.
+        title: EAT WELL. EAT HEALTHY.
+        text: it's home cooking using simple and fresh ingredients
 
       home_panel2:
-        title: REAL INDIAN HOME COOKING,
-        text: FAR REMOVED FROM YOUR LOCAL CURRY HOUSE.
+        title: REAL INDIAN HOME COOKING
+        text: not like your local curry house
 
       home_panel3:
-        title: TASTE REAL STREET FOOD FROM INDIA. 
-        text: BUT WE ALSO GET INSPIRED BY FOOD FROM OTHER PARTS OF THE WORLD.
+        title: DISCOVER REAL STREET FOOD FROM INDIA
+        text: and our interpretation of dishes from other parts of the world
 
       home_panel4:
-        title: FINISH YOUR GREENS.
-        text: WE DON'T EAT MEAT OR FISH EVERYDAY BUT FEAST OUR SENSES WITH DELICIOUS VEGAN AND VEGETARIAN FOOD. 
+        title: FINISH YOUR GREENS
+        text: we are mostly vegetarian or vegan but whatever the ingredients every meal is a feast for the senses
 
       home_panel_old:
         title: Authentic Indian cooking

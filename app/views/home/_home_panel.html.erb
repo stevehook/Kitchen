@@ -1,8 +1,8 @@
 <div class='container' id='home_content'>
-  <% (1..3).each do |index| %>
+  <% (1..4).each do |index| %>
     <div id='home_content<%= index %>' class='homeContent' data-background='home_panel<%= index %>.jpeg'>
       <h1><%= t("copy.home.home_panel#{index}.title") %></h1>
-      <p><%= t("copy.home.home_panel#{index}.text") %></p>
+      <h1><%= t("copy.home.home_panel#{index}.text") %></h1>
     </div>
   <% end %>
   <div class='clear'></div>

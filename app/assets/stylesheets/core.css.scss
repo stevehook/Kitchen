@@ -94,6 +94,7 @@ $font120: 120%;
 $font130: 130%;
 $font140: 140%;
 $font150: 150%;
+$font170: 170%;
 $font200: 200%;
 $font220: 220%;
 
@@ -195,6 +196,14 @@ $header_height_xs: 75px;
   -ms-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
+}
+
+@mixin backgroundImageTransition1000 {
+  -webkit-transition: background-image 1s;
+  -moz-transition: background-image 1s;
+  -ms-transition: background-image 1s;
+  -o-transition: background-image 1s;
+  transition: background-image 1s;
 }
 
 @mixin hoverBackgroundTransition {
@@ -480,7 +489,7 @@ label.inline {
 }
 
 label > span {
-  color: $mandatory;
+  color: $shrikhand2;
   margin-left: 5px;
   font-size: $font70;
   font-style: italic;
@@ -580,13 +589,15 @@ textarea:focus, input:focus {
   @include opacityTransition1000;
   float: left;
   width: 500px;
-  background-color: $champagne5_80;
   padding: 40px;
-  font-size: $font140;
+  font-size: $font150;
   margin: 200px 0 0 50px;
 
   h1 {
+    display: inline-block;
+    background-color: $champagne5_50;
     color: $white;
+    padding: 2%;
   }
 }
 
@@ -595,7 +606,7 @@ textarea:focus, input:focus {
   position: absolute;
   margin: 10% 0 0 5%;
   max-height: 80%;
-  width: 50%;
+  width: 60%;
   @media screen and (max-width: $break_l) { padding: 32px; width: 60%; margin: 7% 0 0 5%; font-size: 97%; }
   @media screen and (max-width: $break_m) { padding: 28px; width: 64%; margin: 6% 0 0 5%; font-size: 93%; }
   @media screen and (max-width: $break_s) { padding: 24px; width: 67%; margin: 5% 0 0 5%; font-size: 90%; }
@@ -607,19 +618,27 @@ textarea:focus, input:focus {
 }
 
 #home_content2 {
-  margin: 20% 0 0 10%;
-  @media screen and (max-width: $break_l) { margin: 14% 0 0 10%; }
-  @media screen and (max-width: $break_m) { margin: 12% 0 0 10%; }
-  @media screen and (max-width: $break_s) { margin: 10% 0 0 10%; }
-  @media screen and (max-width: $break_xs){ margin:  8% 0 0 10%; }
+  margin: 11% 0 0 10%;
+  @media screen and (max-width: $break_l) { margin: 8% 0 0 10%; }
+  @media screen and (max-width: $break_m) { margin: 7% 0 0 10%; }
+  @media screen and (max-width: $break_s) { margin: 6% 0 0 10%; }
+  @media screen and (max-width: $break_xs){ margin: 5% 0 0 10%; }
 }
 
 #home_content3 {
-  margin: 30% 0 0 15%;
-  @media screen and (max-width: $break_l) { margin: 24% 0 0 15%; }
-  @media screen and (max-width: $break_m) { margin: 21% 0 0 15%; }
-  @media screen and (max-width: $break_s) { margin: 18% 0 0 15%; }
-  @media screen and (max-width: $break_xs){ margin: 15% 0 0 15%; }
+  margin: 12% 0 0 5%;
+  @media screen and (max-width: $break_l) { margin: 9% 0 0 5%; }
+  @media screen and (max-width: $break_m) { margin: 8% 0 0 5%; }
+  @media screen and (max-width: $break_s) { margin: 7% 0 0 5%; }
+  @media screen and (max-width: $break_xs){ margin: 6% 0 0 5%; }
+}
+
+#home_content4 {
+  margin: 8% 0 0 15%;
+  @media screen and (max-width: $break_l) { margin: 6% 0 0 15%; }
+  @media screen and (max-width: $break_m) { margin: 5% 0 0 15%; }
+  @media screen and (max-width: $break_s) { margin: 4% 0 0 15%; }
+  @media screen and (max-width: $break_xs){ margin: 3% 0 0 15%; }
 }
 
 .homeContent h1, .newsContent h1 {
@@ -631,6 +650,7 @@ textarea:focus, input:focus {
   font-size: $font120;
   padding: 1.67%;
   color: $white;
+  background-color: $champagne5_80;
 
   input[type='text'], input[type='email'], input[type='tel'] {
     width: 90%;
@@ -657,6 +677,11 @@ textarea:focus, input:focus {
 
   span.icon {
     margin-right: 1%;
+  }
+
+  h1 {
+    display: block;
+    background-color: transparent;
   }
 }
 
@@ -1134,7 +1159,7 @@ ul.recipeList {
 }
 
 .parallaxPanel {
-  @include allTransition1000;
+  @include backgroundImageTransition1000;
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1349,6 +1374,7 @@ input[type='submit'], button[type='submit'], input[type='button'] {
   background-color: $salmon6;
   color: $white;
   @include hoverBackgroundTransition;
+  cursor: pointer;
 }
 
 .subscribeButton:hover {
