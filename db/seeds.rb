@@ -48,9 +48,9 @@ bharta_recipe = Recipe.create!(:title => 'Smoked aubergine mash',
                     :preparation_method => bharta_preperation_method,
                     :category => 'vegan')
 
-RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Baingan ka bharta', :image => File.open('db/pictures/baingankabharta1.jpeg'))
-RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Smoked aubergine mash', :image => File.open('db/pictures/baingankabharta2.jpeg'))
-
+RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Baingan ka bharta', :image => File.open('db/pictures/bharta1.jpeg'))
+RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Smoked aubergine mash', :image => File.open('db/pictures/burntaubergine.jpeg'))
+RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Smoked aubergine mash', :image => File.open('db/pictures/bharta2.jpeg'))
 
 shepu_description =
 
