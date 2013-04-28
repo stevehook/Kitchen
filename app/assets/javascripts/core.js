@@ -17,6 +17,7 @@ $(function() {
   window.carousel = $('#carousel').carousel();
   $('.markdownInplaceEditor').markdownInplaceEditor();
   $('#parallax').parallax();
+  $('#home_content').homeContent();
   $('.dotNav ul').photoScroller();
   // $('.watermark').watermark();
 });
@@ -58,6 +59,53 @@ $(function() {
     $(this).closest("form").submit();
   });
 });
+
+// Plugin for home panel switcher on home page
+(function($) {
+  var defaults = { panels: 3 };
+  $.fn.homeContent = function(options) {
+    var opts = $.extend({}, defaults, options);
+    return this.each(function() {
+      var $this = $(this);
+      if (this.homeContent) { return false; }
+      var self = {
+        initialize: function() {
+          self.currentPanel = 1;
+          self.runTimer();
+        },
+        runTimer: function() {
+          setTimeout(function() {
+            if (self.timerSuspended) { return; }
+            self.scroll(self.nextPanel());
+            self.runTimer();
+          }, 10000);
+        },
+        nextPanel: function() {
+          if (self.currentPanel >= opts.panels) {
+            self.currentPanel = 1;
+          } else {
+            self.currentPanel = self.currentPanel + 1;
+          }
+          return self.currentPanel;
+        },
+        scroll: function(panelNumber) {
+          // show the next content panel
+          $('.homeContent').css('opacity', 0);
+          var $content = $('#home_content' + panelNumber);
+          console.log($content);
+          $content.css('opacity', 1);
+
+          // show the background image
+          console.log($content.data('background'));
+          $this.closest('.parallaxPanel').css('background-image', "url('images/" + $content.data('background') + "')");
+        }
+      };
+      this.homeContent = self;
+      self.initialize();
+    });
+    return this;
+  };
+})(jQuery);
 
 // Plugin for photo browser on recipe#show page
 (function($) {
@@ -450,7 +498,6 @@ $(function() {
             }
           });
           // handle the scroll and resize events
-          //-          // hook the scroll event
           $(document).scroll(function(event) {
             var offset = $(window).scrollTop();
             var panels = $('.parallaxPanel');

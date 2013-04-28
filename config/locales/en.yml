@@ -6,11 +6,33 @@ en:
 
   copy:
     home:
-      home_panel:
+      home_panel1:
+        title: Eat well every day
+        text: Zanzaneet is all about our own style of home cooking. We like to
+              eat well and we like to eat healthy, but we never want to compromise on the
+              flavour. When you visit Web site we hope that you will find ideas that will
+              infect you with our love of good food and inspire you to cook some of our
+              favourite dishes.
+      home_panel2:
+        title: Authentic Indian cooking
+        text: Zanzaneet is a Marathi word used to describe spicy, vibrant and flavourful food.
+              Much of our inspiration is drawn from traditional Indian home
+              cooking, far removed from your local curry house. We would love to introduce
+              you to some of the authentic recipes we grew up with. But if Indian food is not
+              to your taste we have recipes from other parts of the world.
+      home_panel3:
+        title: Finish your greens
+        text: At Zanzaneet we believe in healthy eating and green living. We
+              don’t eat meat and fish every day so you will find plenty of tasty vegetarian
+              recipes here as well as a few dishes for non-vegetarians. Whatever the
+              ingredients our food is always satisfying, every meal from the Zanzaneet
+              kitchen should be a feast for the senses.
+      home_panel_old:
         title: Authentic Indian cooking
         text: Zanzaneet brings you recipes and tips to introduce you to real Indian cooking.
               What you won't find here is recipes to reproduce the flavours of your local curry house.
               Instead we aim to show you how to bring the authentic regional Indian cooking into your home.
+
       recipes_panel:
         title: Recipes
         subtitle: Tasty treats for all the family...

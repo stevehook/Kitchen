@@ -189,6 +189,14 @@ $header_height_xs: 75px;
   transition: all 1s;
 }
 
+@mixin opacityTransition1000 {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
 @mixin hoverBackgroundTransition {
   -moz-transition: color .2s, background-color .2s;
   -webkit-transition: color .2s, background-color .2s;
@@ -569,6 +577,7 @@ textarea:focus, input:focus {
 }
 
 .homeContent, .newsContent {
+  @include opacityTransition1000;
   float: left;
   width: 500px;
   background-color: $champagne5_80;
@@ -582,6 +591,8 @@ textarea:focus, input:focus {
 }
 
 .homeContent {
+  opacity: 0;
+  position: absolute;
   margin: 10% 0 0 5%;
   max-height: 80%;
   width: 50%;
@@ -589,6 +600,26 @@ textarea:focus, input:focus {
   @media screen and (max-width: $break_m) { padding: 28px; width: 64%; margin: 6% 0 0 5%; font-size: 93%; }
   @media screen and (max-width: $break_s) { padding: 24px; width: 67%; margin: 5% 0 0 5%; font-size: 90%; }
   @media screen and (max-width: $break_xs){ padding: 20px; width: 70%; margin: 4% 0 0 5%; font-size: 90%; }
+}
+
+#home_content1 {
+  opacity: 1;
+}
+
+#home_content2 {
+  margin: 20% 0 0 10%;
+  @media screen and (max-width: $break_l) { margin: 14% 0 0 10%; }
+  @media screen and (max-width: $break_m) { margin: 12% 0 0 10%; }
+  @media screen and (max-width: $break_s) { margin: 10% 0 0 10%; }
+  @media screen and (max-width: $break_xs){ margin:  8% 0 0 10%; }
+}
+
+#home_content3 {
+  margin: 30% 0 0 15%;
+  @media screen and (max-width: $break_l) { margin: 24% 0 0 15%; }
+  @media screen and (max-width: $break_m) { margin: 21% 0 0 15%; }
+  @media screen and (max-width: $break_s) { margin: 18% 0 0 15%; }
+  @media screen and (max-width: $break_xs){ margin: 15% 0 0 15%; }
 }
 
 .homeContent h1, .newsContent h1 {
@@ -1103,6 +1134,7 @@ ul.recipeList {
 }
 
 .parallaxPanel {
+  @include allTransition1000;
   position: relative;
   background-repeat: no-repeat;
   background-attachment: fixed;
