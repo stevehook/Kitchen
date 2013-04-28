@@ -1602,8 +1602,17 @@ body[data-section='recipes'] {
 }
 
 section.mainSection {
-
   .recipeListContainer {
     background: none;
   }
 }
+
+/* Mobile specifics */
+
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+  .parallaxDownButton {
+    display: none;
+  }
+}
+
+
