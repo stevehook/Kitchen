@@ -10,13 +10,13 @@ As said before, I like to cook with simple ingredients and here’s the recipe f
 
 bharta_ingredient_list =
 "* 8-12 *baby aubergines* or 1 big size *aubergine*
-* 4-6 cloves of *garlic*
+* 4-6 cloves of *garlic*, thinly sliced
 * 1 tablespoon *vegetable oil*
 * 1 teaspoon *mustard seeds*
 * 1 teaspoon *cumin seeds*
 * ½ teaspoon *turmeric powder*
 * 2-3 medium sized *shallots* or 1 big *onion*, finely chopped
-* 2-3 *green chillies*
+* 2-3 *green chillies*, sliced
 * 2 medium sized *tomatoes* or 1 big tomato
 * ½ inch *ginger*, chopped into thin slits (optional)
 * chopped *coriander* 
@@ -32,7 +32,7 @@ Top tip: You could make this fiddly job slightly easy by dipping your fingers in
 
 1. Heat oil in a pan or ('Kadhai' as I tend to do). Add mustard and cumin seeds and leave them to splutter in the pan.
 
-1. Add garlic, chopped shallots, green chillies to the mixture in the pan and sauté gently till the garlic and onion get slightly cooked.
+1. Add chopped garlic, shallots and green chillies to the mixture in the pan and sauté gently till the garlic and onion get slightly cooked.
 
 1. Now add turmeric powder and mashed aubergines into the pan (or 'Kadhai'). Mix the aubergines well with the spices in the pan and cover it with a lid for 1 minute.
 
