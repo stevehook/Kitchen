@@ -177,6 +177,62 @@ RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflo
 RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/rollit.jpeg'))
 RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/fryparatha.jpeg'))
 
+###############################################################################################################################
+# Quinoa recipe
+
+quinoa_description = "
+Quinoa is a seed that is a staple diet in parts of South America. It has recently become popular in other parts of the world
+having been touted as a so-called superfood, and is supposed to have various health benefits. That is all fine with us,
+but we like it because it tastes good. If you have never tried it give it a go, you'll find it has a slightly nutty flavour and unusual
+texture. And if you don't like it so much or just havn't got any in the cupboard you could always try this recipe with cous cous or bulgar wheat.
+
+The peppers in this recipe are roasted over a flame to blacken the skin before allowing them to cool and peel. This process is a bit of a pain
+but it really brings out a sweetness and flavour intensity so we think its worth it. But if you don't have time then you could always stir fry them.
+
+Finally a quick word about those pomegranites, open them carefully and separate the seeds from the pith inside the fruit. If you have an apron
+then we won't judge you for wearing it, but whatever you do don't wear your favourite white t-shirt,
+we find that pomengranite juice is strangely attracted to white clothing and stains can be tricky to remove.
+"
+
+quinoa_ingredient_list = "
+* 2 large whole *red pepper*s
+* 200g *quinoa* (a mixture of white and red)
+* *olive oil* for shallow frying
+* 1 teaspoon of *cumin* seeds
+* 1/2 teaspoon of *coriander* seeds (roughly crushed in a pestle and mortar)
+* 1-6 fresh *green chillies* (according to taste) chopped
+* 1 large white *onion*
+* 200g *brocolli* cut into small florets
+* 1 fresh *pomegranite*
+* a handful of chopped fresh *coriander* leaves
+* 100g greek yoghurt
+* *salt* to taste
+"
+
+quinoa_preperation_method = "
+1. First prepare the peppers. First wash and then blacken the skins over a gas flame (you could use a kitchen blow torch if you have one).
+   The skins should be partly blackened and blistered but the flesh should not be cooked through. Place the peppers inside a polythene bag and set them aside to cool off.
+1. Boil the quinoa according to the instructions on the packet.
+1. Whilst the quinoa is cooking open the pomegranite and carefully extract the seeds. Set the seeds to one side and discard the skin and pith.
+1. In a stir-fry pan heat the oil over a medium heat.
+1. When the oil is hot add the cumin and coriander seeds and cook for a minute or until they start to brown (but be careful not to burn them).
+1. Add the onion and fry until it starts to take a little colour.
+1. Add the brocolli and stir fry over a medium-low heat for 3-4 minutes. If you prefer your brocolli well done you can add a spoon full of water and leave the lid on for a couple of minutes to generate some steam.
+1. Whilst the brocolli is cooking remove the blackened skin from the peppers and chop roughly.
+1. Add the fresh coriander, cooked peppers and drained quinoa to the pan and give it a good toss to mix it all together with the other ingredients.
+1. Serve in warm plates, add a dollop of yoghurt and sprinkle the pomengranite seeds on top. Enjoy with a glass of your preferred beverage.
+"
+
+quinoa_recipe = Recipe.create!(:title => 'Quinoa with red peppers and brocolli',
+                    :synopsis => 'Roasted red peppers, spicy stir-fried vegetables and quinoa with a pomegranite and yoghurt topping',
+                    :preparation_time => 20,
+                    :cooking_time => 20,
+                    :description => quinoa_description,
+                    :ingredient_list => quinoa_ingredient_list,
+                    :preparation_method => quinoa_preperation_method,
+                    :category => 'vegetarian')
+RecipePhoto.create!(:recipe => quinoa_recipe, :title => 'Quinoa', :image => File.open('db/pictures/quinoa.jpeg'))
+
 
 User.destroy_all
 User.create!(:email => 'rieethaa@zanzaneet.com', :password => 'secret', :password_confirmation => 'secret')
