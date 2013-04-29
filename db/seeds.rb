@@ -189,7 +189,7 @@ texture. And if you don't like it so much or just havn't got any in the cupboard
 The peppers in this recipe are roasted over a flame to blacken the skin before allowing them to cool and peel. This process is a bit of a pain
 but it really brings out a sweetness and flavour intensity so we think its worth it. But if you don't have time then you could always stir fry them.
 
-Finally a quick word about those pomegranites, open them carefully and separate the seeds from the pith inside the fruit. If you have an apron
+Finally a quick word about those pomegranates, open them carefully and separate the seeds from the pith inside the fruit. If you have an apron
 then we won't judge you for wearing it, but whatever you do don't wear your favourite white t-shirt,
 we find that pomengranite juice is strangely attracted to white clothing and stains can be tricky to remove.
 "
@@ -203,7 +203,7 @@ quinoa_ingredient_list = "
 * 1-6 fresh *green chillies* (according to taste) chopped
 * 1 large white *onion*
 * 200g *brocolli* cut into small florets
-* 1 fresh *pomegranite*
+* 1 fresh *pomegranate*
 * a handful of chopped fresh *coriander* leaves
 * 100g greek yoghurt
 * *salt* to taste
@@ -213,7 +213,7 @@ quinoa_preparation_method = "
 1. First prepare the peppers. First wash and then blacken the skins over a gas flame (you could use a kitchen blow torch if you have one).
    The skins should be partly blackened and blistered but the flesh should not be cooked through. Place the peppers inside a polythene bag and set them aside to cool off.
 1. Boil the quinoa according to the instructions on the packet.
-1. Whilst the quinoa is cooking open the pomegranite and carefully extract the seeds. Set the seeds to one side and discard the skin and pith.
+1. Whilst the quinoa is cooking open the pomegranate and carefully extract the seeds. Set the seeds to one side and discard the skin and pith.
 1. In a stir-fry pan heat the oil over a medium heat.
 1. When the oil is hot add the cumin and coriander seeds and cook for a minute or until they start to brown (but be careful not to burn them).
 1. Add the onion and fry until it starts to take a little colour.
@@ -224,7 +224,7 @@ quinoa_preparation_method = "
 "
 
 quinoa_recipe = Recipe.create!(:title => 'Quinoa with red peppers and brocolli',
-                    :synopsis => 'Roasted red peppers, spicy stir-fried vegetables and quinoa with a pomegranite and yoghurt topping',
+                    :synopsis => 'Roasted red peppers, spicy stir-fried vegetables and quinoa with a pomegranate and yoghurt topping',
                     :preparation_time => 20,
                     :cooking_time => 20,
                     :description => quinoa_description,
