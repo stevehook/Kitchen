@@ -978,7 +978,7 @@ ul.recipeList {
   margin: 0 0 36px 0;
 }
 
-.recipeContainer, .blogPostContainer {
+.recipeContainer, .blogPostContainer, .aboutContainer {
   @include boxSizing;
   background: $white_50;
   padding: 10px 20px;
@@ -1595,7 +1595,7 @@ body[data-section='blog_posts'] {
   background-repeat: repeat;
 }
 
-body[data-section='recipes'] {
+body[data-section='recipes'], body[data-section='about'] {
   background-image: url('/images/fabric.jpg');
   background-position: 0% 0%;
   background-repeat: repeat;
