@@ -90,50 +90,6 @@ recipe4 = Recipe.create!(:title => 'Dill Sabzi',
 RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill1.jpeg'))
 RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill_secondary.jpeg'))
 
-recipe5_description =
-"This dish is perfect for an evening meal with a nice bottle of wine. The sauce vierge is prepared from olive oil, tomatoe, lemon juice and torn basil. This is my take on the original French recipe so I have used dill instead of basil and some smashed garlic as it suits my palette. See if you like it ..."
-
-recipe5_ingredient_list = 
-"#### For the Salmon :
-
-* 100g *salmon* fillet, skin removed
-* 1 tbsp *olive oil*
-* salt and freshly *ground black pepper*
-
-#### For the sauce vierge :
-
-* 1 tbsp *olive oil*
-* 1 *tomato*, skin and seeds removed, cut into small dice
-* 1/2 *lemon*, juice only
-* 1/2 *lime*, juice only
-* 1 clove of smashed *garlic* (optional)
-* salt and freshly *ground black pepper*
-* handful fresh *dill* leaves and stalks, torn. I used quite a lot of it because I like it :)
-
-#### To serve :
-
-* handful steamed *seaweed*
-* oven glazed *ripe wine tomatoes* (optional)
-* roasted *potatoes*"
-
-recipe5_preparation_method = 
-"1. For the Salmon, heat the olive oil in a griddle pan and cook the salmon for 5-7 minutes or until cooked through, turning it over halfway through. Season it with little salt and ground pepper as per your taste. (NB The salmon is cooked when the flesh is opaque.)
-
- 1. For the sauce vierge, mix olive oil with chopped deseeded tomato with skin removed, lemon, lime and chopped dill leaves in a small bowl. Heat all the ingredients gently in a pan for 1-2 minutes until warmed through.
-
- 1. To serve, put the salmon onto a plate with blushed wine tomatoes, steamed seaweed and roasted potatoes. Drizzle the sauce vierge around the outside of the plate."
-
-recipe5 = Recipe.create!(:title => 'Salmon avec sauce vierge',
-               :synopsis => "Mouthwatering and healthy Salmon dish drizzled with sauce vierge and Seaweed as a delicious accompaniment to go with it.",
-               :description => recipe5_description,
-               :ingredient_list => recipe5_ingredient_list,
-               :preparation_method => recipe5_preparation_method,
-               :category => 'non_vegetarian')
-RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmoncloseup1.jpeg'))
-RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/wholeplate.jpeg'))
-RecipePhoto.create!(:recipe => recipe5, :title => 'Salmon avec sauce vierge ', :image => File.open('db/pictures/salmonweed1.jpeg'))
-
-
 cauli_paratha_description =
 "As a kid, I grew up in a family where breakfast was never always a bowl of cereal or a toast. My mum often treated us with tastier breakfasts that could also be packed away into a lunchbox (more colloquially called ‘Tiffin box’) to take to school. One of such savoury breakfast cum lunch delights was ‘Gobi Paratha’ which can be eaten anytime during the day.
 
