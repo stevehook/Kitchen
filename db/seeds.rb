@@ -4,48 +4,46 @@ Recipe.destroy_all
 bharta_description =
 "I love this dish because I love the flavours that blend perfectly with the smokiness of aubergines. This dish has been my all time favourite and it’s so easy to cook.
 
-I tend to cook this with baby aubergines because they are packed with flavours in their seeds than the usual big size aubergines.  You can choose either.
-
-As said before, I like to cook with simple ingredients and here’s the recipe for it."
+I tend to cook this with baby aubergines because they are packed with flavours in their seeds than the more common large aubergines. You can use either.
+"
 
 bharta_ingredient_list =
-"* 8-12 *baby aubergines* or 1 big size *aubergine*
-* 4-6 cloves of *garlic*, thinly sliced
+"* 8-12 *baby aubergines* or 1 large *aubergine*
+* 4-6 cloves of *garlic*, coarsely sliced
 * 1 tablespoon *vegetable oil*
 * 1 teaspoon *mustard seeds*
-* 1 teaspoon *cumin seeds*
 * ½ teaspoon *turmeric powder*
 * 2-3 medium sized *shallots* or 1 big *onion*, finely chopped
 * 2-3 *green chillies*, sliced
-* 2 medium sized *tomatoes* or 1 big tomato
-* ½ inch *ginger*, chopped into thin slits (optional)
-* chopped *coriander* 
+* 2 medium sized *tomatoes*
+* ½ inch *ginger*, chopped finely
+* chopped fresh *coriander*
 * salt to taste"
 
-bharta_preperation_method =
-"1. Using fingers, tear off the green skin at the bottom of aubergine stalk without breaking or removing the stalk itself. Lightly grease the baby aubergines with oil from outside and roast each one of them on a medium flame of cooker until the skin gets charred. Place them on a kitchen towel to cool down for 10 mins.
+bharta_preparation_method =
+"1. Using fingers, tear off the green skin at the bottom of aubergine stalk without breaking or removing the stalk itself (there is a lot of flavour in the stalks). Lightly grease the baby aubergines with oil from outside and roast each one of them on a medium flame of cooker until the skin gets charred. Place them on a kitchen towel to cool down for 10 mins.
 
-1. Start by peeling the charred skin of aubergines using fingers. 
+1. Start by peeling the charred skin of aubergines using fingers.
 Top tip: You could make this fiddly job slightly easy by dipping your fingers into a bowl of water each time you peel the skin off the aubergine.
 
-1. Randomly chop or mash the smoked and peeled aubergines.
+1. Roughly chop or mash the smoked and peeled aubergines.
 
-1. Heat oil in a pan or ('Kadhai' as I tend to do). Add mustard and cumin seeds and leave them to splutter in the pan.
+1. Heat oil in a pan or ('Kadhai' as I tend to do). Add mustard seeds and leave them to splutter in the pan.
 
-1. Add chopped garlic, shallots and green chillies to the mixture in the pan and sauté gently till the garlic and onion get slightly cooked.
+1. Add chopped garlic, shallots and green chillies to the mixture in the pan and sauté gently until the garlic and onion get slightly cooked.
 
 1. Now add turmeric powder and mashed aubergines into the pan (or 'Kadhai'). Mix the aubergines well with the spices in the pan and cover it with a lid for 1 minute.
 
-1. Add the chopped tomatoes and optionally, ginger. Let it cook with the lid on for another 5 – 6 minutes until the aubergine and it’s stalks get tender. Serve hot with bread or chapati."
+1. Add the chopped tomatoes and ginger. Let it cook with the lid on for another 4-5 minutes until the aubergine and it’s stalks become tender. Serve hot with bread or chapati."
 
 bharta_recipe = Recipe.create!(:title => 'Smoked aubergine mash',
                     :native_title => 'Baingan ka bharta',
-                    :synopsis => 'Fire roasted aubergines cooked with garlic, onions, green chillies and tomatoes. Vegan and gluten free dish',
+                    :synopsis => 'Flame roasted aubergines cooked with garlic, onions, green chillies and tomatoes. Vegan and gluten free dish',
                     :preparation_time => 40,
                     :cooking_time => 10,
                     :description => bharta_description,
                     :ingredient_list => bharta_ingredient_list,
-                    :preparation_method => bharta_preperation_method,
+                    :preparation_method => bharta_preparation_method,
                     :category => 'vegan')
 
 RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Baingan ka bharta', :image => File.open('db/pictures/bharta1.jpeg'))
@@ -54,30 +52,32 @@ RecipePhoto.create!(:recipe => bharta_recipe, :title => 'Smoked aubergine mash',
 
 shepu_description =
 
-"This recipe is from the western part of Indian (Maharashtra state) and called 'Shepu chi bhaji' locally. If I were to translate it to English literally, I will have to borrow a word from Hindi called 'Sabzi' which means a dry dish made from any vegetable. No, it's NOT a curry. So with my limited vocabulary in English, I have chosen to call it 'Dill Sabzi' which is simply a dry dish of Dill with no gravy.
+"This recipe is from the western part of India (Maharashtra state) and called 'Shepu chi bhaji' locally. It doesn't translate directly to English, I will have to borrow a word from Hindi called 'Sabzi' which means a dry dish made from any vegetable. No, it's NOT a curry. So I have chosen to call it 'Dill Sabzi' which is simply a dry dish of Dill with no gravy.
 
-Dill Sabzi is essentially a Maharashtrian farmer's meal, typically served with 'Bhakri' (A flat bread made out of barley or millet). Given a farmer's daughter that I am, I couldn't resist sharing this dish. For all those garlic and chilli fans like me, note that there's no hard and fast rule when it comes to using these two ingredients in food, so feel free to bend the rules and use as much garlic and chilli as you like OR as little as you like. I won't judge you although I might not invite you over dinner if you can't take the heat :P. So here you go.."
+Dill Sabzi is a Maharashtrian farmer's meal, typically served with 'Bhakri' (A flat bread made from barley or millet flour). As a farmer's daughter myself, I couldn't resist sharing this dish. For all those garlic and chilli fans like me, note that there's no hard and fast rule when it comes to using these two ingredients in food, so feel free to use as much or little garlic and chilli as you like. I won't judge you although I might not invite you over dinner if you can't take the heat."
 
 shepu_ingredient_list =
-"* 2 tablespoons of *vegetable oil*
-* 2 big bunches of *Dill* (you can get big bunches of Dill from any Indian grocery store)
-* 5-6 hot *green chillies* (by hot I mean Indian chillies or bird's eyes green chillies from any store)
+"
+* 1 tablespoons of *vegetable oil*
+* 3 big bunches of *Dill* (you can get big bunches of Dill from any Indian grocery store and some vegetable markets but the packets you get from supermarkets are far too small)
+* 5-6 hot *green chillies* (by hot I mean Indian chillies or bird's eyes green chillies)
 * 4-5 cloves of *garlic*
-* 3 tablespoons of *Moong Dal* (*Mung lentils*) or *Chana Dal* (*yellow split pea* lentils) as per your taste.
-* Salt as per your taste."
+* 3 tablespoons of *moong dal* (*mung lentils*) or *chana dal* (*yellow split pea* lentils)
+* Salt to taste
+"
 
 shepu_preparation_method =
-"1. Sort each bunch of Dill leaving the bigger stem aside but picking the leaves and delicate stalk. Collect the leafy parts with their delicate stalks in a bowl. This is 'sorting' the dill i.e seperating gritty and chunky stems from the tasty leaves and stalks.
+"1. Sort each bunch of Dill leaving the thicker stems aside but picking the leaves and delicate stalks collecting them in a bowl. This is 'sorting' the dill i.e seperating gritty and chunky stems from the tasty leaves and stalks (and is the perfect job to delegate to your sous chef).
 
-1. Coarsely chop the collected stalks with leaves and put them a bowl and pour some cold water in it to wash out all the grit. I generally pour the water down the drain and repeat the process twice but leave the water in bowl the last time.
+1. Coarsely chop the collected leaves and stalks, and put them in a bowl. Pour some cold water into the bowl and wash out all the grit. I generally pour the water down the drain and repeat the process twice but leave the water in bowl the last time.
 
 1. Chop some green chillies and garlic.
 
-1. Pour some oil in a frying pan. After the oil gets hot, put the chillies and garlic into it.
+1. Pour some oil in a frying pan. When the oil is hot, add the chillies and garlic and fry until the garlic starts to brown.
 
-1. Collect the chopped dill from the bowl containing water and start adding it into the frying pan until all the dill is filtered from the bowl. I know filtering the dill from a bowl of water could get messy, so if you want you can use colander or sieve. Also note that the quantity of dill might appear huge in the frying pan but it will shrink down to a very small portion as it cooks. I suggest using a bigger sized pan for cooking dill.
+1. Drain the chopped dill and add it to the frying pan. The quantity of dill might appear huge in the frying pan but it will shrink down to a very small portion as it cooks. I suggest using a bigger sized pan for cooking dill.
 
-1. Stir the pan to mix all the contents evenly before covering it with a lid to cook it on medium flame for 10 minutes. Keep stirring in between to make sure the dill has enough moisture left and has not dried out. Keep cooking until the dill is soft, moist yet dry."
+1. Stir the pan to mix the contents evenly before covering it with a lid to cook it on medium flame for 10 minutes. Keep stirring and make sure the dill does not dry out. Keep cooking until the dill is soft, moist but not wet."
 
 recipe4 = Recipe.create!(:title => 'Dill Sabzi',
                :native_title => 'Shepu chi bhaji',
@@ -91,39 +91,39 @@ RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.o
 RecipePhoto.create!(:recipe => recipe4, :title => 'Dill Sabzi', :image => File.open('db/pictures/dill_secondary.jpeg'))
 
 cauli_paratha_description =
-"As a kid, I grew up in a family where breakfast was never always a bowl of cereal or a toast. My mum often treated us with tastier breakfasts that could also be packed away into a lunchbox (more colloquially called ‘Tiffin box’) to take to school. One of such savoury breakfast cum lunch delights was ‘Gobi Paratha’ which can be eaten anytime during the day.
+"As a kid, I grew up in a family where breakfast was never just a bowl of cereal or a toast. My mum often treated us to tastier breakfasts that could also be packed away into a lunchbox (more colloquially called ‘Tiffin box’) to take to school. One such savoury breakfast/lunch delights was ‘Gobi Paratha’ which can be eaten anytime of day.
 
-It is typically served with yoghurt or a generous spoon of ghee or butter in India, but depending on whether you want to be vegan or vegetarian, you can have a half boiled egg to dunk these lovely bites of Parathas into runny egg yolk, just like soldiers ☺  OR even serve it with pickled vegetables and keep it low calorie by leaving out the butter/ghee altogether – take your pick!
+It is typically served with yoghurt or a generous spoon of ghee or butter in India, but depending on whether you want to be vegan or vegetarian, you can even dunk these lovely bites of Parathas into runny egg yolk, just like soldiers ☺  or even serve it with pickled vegetables and keep it low calorie by leaving out the butter/ghee altogether – take your pick!
 
 This is a simple recipe that I use because I don’t like adding too many spices into it."
 
-cauli_paratha_ingredient_list = 
+cauli_paratha_ingredient_list =
 "#### For dough making :
 
-* 100 - 200 gms of *whole wheat flour*
-* 1 – ½ a glass of water depending on your quantity of flour
+* 100-150 gms of *whole wheat flour*
+* ½-1 glass of water
 * ½ a teaspoon of *ajwain* or *carom seeds*
 * Salt as per your taste (optional). I tend not to put any salt here.
 
 #### For filling :
 
-* 1 -2 cups of grated *cauliflower*
-* 1 or 2 chopped *green chillies* as per your taste or none at all ☺.
+* 50g of grated *cauliflower*
+* 1 or 2 chopped *green chillies* as per your taste or none at all ☺
 * Chopped *coriander leaves* depending on how much you like them.  I normally use 1-2 spoons of them.
 * Salt to taste.
 
 #### For rolling and light frying :
 
-* 50 – 70 gms of whole wheat flour for dusting
-* *Vegetable oil* to cook.
+* some whole wheat flour for dusting
+* a little *Vegetable oil*
 
 "
-cauli_paratha_preperation_method =
+cauli_paratha_preparation_method =
 "#### Making dough :
 
-1. In a large bowl, mix flour, ajwain (carom seeds) together before adding water to the mixture in very small quantities, bit by bit to make soft dough. The best dough is kneaded with hands on a slightly greased surface to make it more palpable.
+1. In a large bowl, mix flour, ajwain (carom seeds) together before adding water to the mixture in very small quantities, bit by bit to make soft dough. The best dough is kneaded with hands on a slightly greased surface until it becomes smooth and elastic.
 
-1. Cover the dough with a damp cloth and let it rest for 10 minutes.
+1. Cover the dough with a damp cloth and let it rest for 30 minutes in the fridge.
 
 #### Making filling for the dough:
 
@@ -133,7 +133,7 @@ cauli_paratha_preperation_method =
 
 #### Making the Paratha:
 
-1. Divide the dough into 5 -  6 medium sized balls.
+1. Divide the dough into 4-5 golf-ball sized balls.
 
 1. Take one ball of dough and roll it into a very small sized flatbread using rolling pin. If it sticks the board, dust it with the flour.
 
@@ -165,7 +165,7 @@ cauli_paratha_recipe = Recipe.create!(:title => 'Stuffed cauliflower flatbread',
                     :cooking_time => 20,
                     :description => cauli_paratha_description,
                     :ingredient_list => cauli_paratha_ingredient_list,
-                    :preparation_method => cauli_paratha_preperation_method,
+                    :preparation_method => cauli_paratha_preparation_method,
                     :category => 'vegetarian')
 
 RecipePhoto.create!(:recipe => cauli_paratha_recipe, :title => 'Stuffed cauliflower flatbread', :image => File.open('db/pictures/cauli_paratha_primary.jpeg'))
@@ -209,7 +209,7 @@ quinoa_ingredient_list = "
 * *salt* to taste
 "
 
-quinoa_preperation_method = "
+quinoa_preparation_method = "
 1. First prepare the peppers. First wash and then blacken the skins over a gas flame (you could use a kitchen blow torch if you have one).
    The skins should be partly blackened and blistered but the flesh should not be cooked through. Place the peppers inside a polythene bag and set them aside to cool off.
 1. Boil the quinoa according to the instructions on the packet.
@@ -229,7 +229,7 @@ quinoa_recipe = Recipe.create!(:title => 'Quinoa with red peppers and brocolli',
                     :cooking_time => 20,
                     :description => quinoa_description,
                     :ingredient_list => quinoa_ingredient_list,
-                    :preparation_method => quinoa_preperation_method,
+                    :preparation_method => quinoa_preparation_method,
                     :category => 'vegetarian')
 RecipePhoto.create!(:recipe => quinoa_recipe, :title => 'Quinoa', :image => File.open('db/pictures/quinoa.jpeg'))
 

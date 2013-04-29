@@ -38,17 +38,16 @@ en:
           title: Home Delivery Service
           text:
             - Making tasty vegan and vegetarian recipes is our passion. We want to fulfil the needs
-              of discerning eaters like us who don't like to eat same meals everytime but are too busy to cook
-              interesting meals every day.
+              of discerning eaters like us who don't like to eat the same meals everyday but are sometimes too busy to cook for themselves.
 
             - Let us know if you would like us to deliver some of our delicious cooked meals straight to your door.
         news1:
           title: Classes
           text:
-            - We want to build a community of Vegan and Vegetarian foodies and help them cook these meals themselves. We are happy for
-              you to visit our kitchen for a masterclass in cooking specialised meals that you will love to eat.
+            - We want to build a community of vegan and vegetarian foodies and help them cook these meals themselves. We are happy for
+              you to visit our kitchen for a masterclass in cooking traditional Indian meals that you will love to eat.
 
-            - Let us know if you would like to learn cooking with us.
+            - Let us know if you would like to learn with us.
       contact_panel:
         title: Say Hello
         subtitle: Don't be shy. We're social. Tweet or email us.
@@ -57,6 +56,8 @@ en:
       - q: Can I post a recipe on my blog that I adapted from you?
         a: Yes, but only if you link it back to the original recipe on zanzaneet.com and credit this site for the original source of recipe. It would be also nice to email us about your blog so we can check it out too :)
       - q: I tried your recipe but it turned out to be different to the way you described in on your website. What went wrong?
-        a: We take no responsibility of the final taste or look of your recipe even though you followed it from our website, simply because it depends on various factors like the equipment and ingredients used. If you’ve tweaked the recipe or ingredients it will turn out a little differently. The recipes given on the website are only a guide and only reflect our personal experience of cooking them. Use them at your discreation.
+        a: We are confident that if you follow our instructions and source good ingredients our recipes will turn out well but you are responsible for the execution. Various factors like equipment and ingredients will influence the end result. Our recipes are a guide only and whether you like them or not is always going to depend to some degree on your personal preferences.
       - q: I have a question regarding a recipe. What is the best way of reaching you?
-        a: For recipe related question, email them to info@zanzaneet.com. All comments, both good and bad are welcome, including mistakes, please email them to the above address.
+        a: For recipe related questions, email them to info@zanzaneet.com. All comments, both good and bad are welcome, including mistakes.
+      - q: Can I use the photographs of your recipes on my own website?
+        a: Any content on this website, including website design, text or photographs should not be reproduced or re-published. It is not okay to reproduce the content in any form, even if you accredit to zanzaneet.com
