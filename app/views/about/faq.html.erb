@@ -1,6 +1,13 @@
 <section id="main" class="container">
   <h2>Frequently asked questions</h2>
-  <div class='contentMain'>
-    FAQ goes here
+  <div class='contentMain contentFaq'>
+    <ul>
+      <% t('copy.faqs').each do |faq| %>
+        <li>
+          <span>Q: </span><div class='question'><%= faq['q'] %></div>
+          <span>A: </span><div class='answer'><%= faq['a'] %></div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </section>

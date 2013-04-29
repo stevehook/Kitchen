@@ -1607,6 +1607,29 @@ section.mainSection {
   }
 }
 
+.contentFaq {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0 0 1%;
+      margin: 0 0 3%;
+      border-bottom: 1px solid $lightgrey;
+
+      span {
+        float: left;
+        width: 5%;
+      }
+
+      div {
+        margin: 0 0 0 6%;
+      }
+    }
+  }
+}
+
 /* Mobile specifics */
 
 @media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {

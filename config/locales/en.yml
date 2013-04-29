@@ -52,3 +52,11 @@ en:
       contact_panel:
         title: Say Hello
         subtitle: Don't be shy. We're social. Tweet or email us.
+
+    faqs:
+      - q: Can I post a recipe on my blog that I adapted from you?
+        a: Yes, but only if you link it back to the original recipe on zanzaneet.com and credit this site for the original source of recipe. It would be also nice to email us about your blog so we can check it out too :)
+      - q: I tried your recipe but it turned out to be different to the way you described in on your website. What went wrong?
+        a: We take no responsibility of the final taste or look of your recipe even though you followed it from our website, simply because it depends on various factors like the equipment and ingredients used. If you’ve tweaked the recipe or ingredients it will turn out a little differently. The recipes given on the website are only a guide and only reflect our personal experience of cooking them. Use them at your discreation.
+      - q: I have a question regarding a recipe. What is the best way of reaching you?
+        a: For recipe related question, email them to info@zanzaneet.com. All comments, both good and bad are welcome, including mistakes, please email them to the above address.
