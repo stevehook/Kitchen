@@ -103,4 +103,43 @@ describe 'Home page' do
       end
     end
   end
+
+  describe "footer" do
+    before do
+      visit '/'
+    end
+
+    it 'displays FAQ link' do
+      within '#footer' do
+        page.should have_link 'FAQ', :href => about_path(:faq)
+      end
+    end
+
+    it 'displays Privacy policy link' do
+      within '#footer' do
+        page.should have_link 'Privacy Policy', :href => about_path(:privacy_policy)
+      end
+    end
+
+    it 'displays About link' do
+      within '#footer' do
+        page.should have_link 'About', :href => about_path(:about)
+      end
+    end
+
+    it 'FAQ link displays FAQ page' do
+      click_link 'FAQ'
+      current_path.should == about_path(:faq)
+    end
+
+    it 'Privacy Policy link displays Privacy Policy page' do
+      click_link 'Privacy Policy'
+      current_path.should == about_path(:privacy_policy)
+    end
+
+    it 'About link displays About page' do
+      click_link 'About'
+      current_path.should == about_path(:about)
+    end
+  end
 end

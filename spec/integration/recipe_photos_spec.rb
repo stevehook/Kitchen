@@ -29,7 +29,7 @@ describe 'Recipe photos' do
       it "should create a new photo when I fill out the form and submit it" do
         visit new_recipe_recipe_photo_path(@recipe)
         fill_in 'Title', :with => 'tasty recipe'
-        attach_file('Image file', 'db/pictures/test1.jpeg')
+        attach_file('Image file', 'db/pictures/test.jpeg')
         click_button 'Save'
         current_path.should == edit_recipe_path(@recipe)
 
@@ -62,11 +62,11 @@ describe 'Recipe photos' do
           visit edit_recipe_path(@recipe)
           page.should have_link 'New Photo'
         end
-        
+
         it 'should have edit links for each photo' do
           visit edit_recipe_path(@recipe)
           @photos.each do |photo|
-            page.should have_link 'Edit', :href => edit_recipe_recipe_photo_path(@recipe, photo) 
+            page.should have_link 'Edit', :href => edit_recipe_recipe_photo_path(@recipe, photo)
           end
         end
 
@@ -79,7 +79,6 @@ describe 'Recipe photos' do
           @recipe.reload
           current_path.should == edit_recipe_path(@recipe)
           @recipe.recipe_photos.select{|photo| photo.image.current_path =~ /test1\.jpeg/}.should have(1).items
-          # @recipe.recipe_photos.should include(:image => File.open('db/pictures/test1.jpg'))
         end
 
         it "should remove a photo from the recipe when the delete link is clicked" do
@@ -91,5 +90,5 @@ describe 'Recipe photos' do
       end
     end
 
-  end  
+  end
 end
