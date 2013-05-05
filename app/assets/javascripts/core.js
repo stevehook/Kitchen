@@ -92,11 +92,9 @@ $(function() {
           // show the next content panel
           $('.homeContent').css('opacity', 0);
           var $content = $('#home_content' + panelNumber);
-          console.log($content);
           $content.css('opacity', 1);
 
           // show the background image
-          console.log($content.data('background'));
           $this.closest('.parallaxPanel').css('background-image', "url('images/" + $content.data('background') + "')");
         }
       };
@@ -244,7 +242,11 @@ $(function() {
           $panels.each(function(index, panel) {
             $panel = $(panel);
             var offsetTop = $panel.offset().top;
-            if (offsetTop >= (scrollTop - (height/2)) && offsetTop < (scrollTop + (height/2))) {
+            var offsetHeight = $panel.height();
+            var topMargin = Math.max(0, offsetTop - scrollTop);
+            var bottomMargin = Math.max(0, (scrollTop + height) - (offsetTop + offsetHeight));
+            if ((offsetTop >= (scrollTop - (height/2)) && offsetTop < (scrollTop + (height/2))) ||
+                (topMargin + bottomMargin) < height/2) {
               $activePanel = $panel;
               return false;
             }
