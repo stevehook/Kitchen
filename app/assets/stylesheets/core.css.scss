@@ -450,34 +450,41 @@ iframe {
   width: 100%;
   background: $salmon5;
   position: absolute;
+  overflow: hidden;
 
-  ul {
-    float: right;
-    font-size: $font90;
-  }
+  .container {
+    position: relative;
 
-  .footerTitle {
-    font: 150% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-    color: $shrikhand1;
-    float: left;
-    margin: -10px 0;
-  }
-
-  .footerCopyright {
-    padding: 10px 20px 0;
-    float: left;
-    height: 30px;
-    color: $white;
-  }
-
-  .menu {
-    li {
+    ul {
+      float: right;
+      font-size: $font90;
     }
-  }
 
-  .logo {
-    float: left;
-    height: 40px;
+    .footerTitle {
+      font: 150% SamarkanNormal, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+      color: $shrikhand1;
+      float: left;
+      margin: -10px 0;
+    }
+
+    .footerCopyright {
+      padding: 10px 20px 0;
+      float: left;
+      height: 30px;
+      color: $white;
+    }
+
+    .menu {
+      position: absolute;
+      right: 10px;
+      li {
+      }
+    }
+
+    .logo {
+      float: left;
+      height: 40px;
+    }
   }
 }
 
