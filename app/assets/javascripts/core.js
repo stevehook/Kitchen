@@ -24,8 +24,9 @@ $(function() {
 
 // Override menu anchor links so that the page scrolls slowly to the correct panel
 $(function() {
-  $('#menu li a, .parallaxDownButton a').click(function(e) {
+  $('#menu li a, #mobile_popup li a, .parallaxDownButton a').on('click', '#innerBody', function(e) {
     var $this = $(this);
+    console.log($this.attr('href'));
     if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
       var match = /#(.+)/.exec($this.attr('href'));
       if (match) {
@@ -193,7 +194,7 @@ $(function() {
         initialize: function() {
           var section = $('body').data('section');
           var menu = $('#menu');
-          var menuItem = $("a[data-section='" + section + "']");
+          var menuItem = $("a[data-section='" + section + "']", menu);
           menuItem.addClass('selected');
 
           var searchMenuItem = $('.searchMenuItem');
@@ -222,7 +223,7 @@ $(function() {
               $("a", menu).removeClass('selected');
               var panelId = panel[0].id;
               if (panelId == 'homePanel') { panelId = 'header'; }
-              $("a[href='/#" + panelId + "']").addClass('selected');
+              $("a[href='/#" + panelId + "']", menu).addClass('selected');
               var nextPanel = panel.next('.parallaxPanel');
               if (nextPanel.length > 0) {
                 $("div.parallaxDownButton").removeClass('hidden');
@@ -232,6 +233,9 @@ $(function() {
               }
             });
           }
+          var mobileMenu = $('#mobile_menu');
+          $('.icon-reorder', mobileMenu).click(self.toggleMobileMenu);
+          $('.icon-search', mobileMenu).click(self.toggleMobileSearch);
         },
         getActivePanel: function() {
           $window = $(window);
@@ -252,6 +256,23 @@ $(function() {
             }
           });
           return $activePanel || $panels.first();
+        },
+        toggleMobileMenu: function(event) {
+          var mobilePopup = $('#mobile_popup');
+          if (mobilePopup.html() == '') {
+            var menu = $('#menu');
+            var list = $('<ul></ul>');
+            var listItems = $('li.mobile', menu);
+            list.append(listItems.clone());
+            $('a', list).removeClass('selected');
+            mobilePopup.append(list);
+            $('a', list).click(function() { mobilePopup.hide(); });
+          } else {
+            mobilePopup.toggle();
+          }
+          event.preventDefault();
+        },
+        toggleMobileSearch: function() {
         }
       };
       this.homeMenu = self;

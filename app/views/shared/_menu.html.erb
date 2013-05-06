@@ -3,11 +3,11 @@
     <nav id="menu">
       <ul>
         <li><%= image_tag 'menu_logo.png', :class => 'logo' %></li>
-        <li><%= link_to 'Home', "#{root_path}#header", :'data-section' => :home %></li>
-        <li><%= link_to 'Recipes', "#{root_path}#recipesPanel" %></li>
-        <li><%= link_to 'News', "#{root_path}#newsPanel", :'data-section' => :news %></li>
-        <li><%= link_to 'Contact', "#{root_path}#contactPanel", :'data-section' => :contact %></li>
-        <li><%= link_to 'Blog', blog_posts_path, :'data-section' => :blog_posts %></li>
+        <li class='mobile'><%= link_to 'Home', "#{root_path}#header", :'data-section' => :home %></li>
+        <li class='mobile'><%= link_to 'Recipes', "#{root_path}#recipesPanel" %></li>
+        <li class='mobile'><%= link_to 'News', "#{root_path}#newsPanel", :'data-section' => :news %></li>
+        <li class='mobile'><%= link_to 'Contact', "#{root_path}#contactPanel", :'data-section' => :contact %></li>
+        <li class='mobile'><%= link_to 'Blog', blog_posts_path, :'data-section' => :blog_posts %></li>
         <li class='searchMenuItem'>
           <%= form_tag search_recipes_path, :method => 'get' do %>
             <%= text_field_tag 'search', nil, :placeholder => 'Search by ingredient or recipe', :class => :hidden %>
@@ -25,6 +25,21 @@
           <% end %>
         </li>
       </ul>
+    </nav>
+    <nav id="mobile_menu">
+      <%= link_to root_path do %>
+        <%= image_tag 'footer_logo.png', :class => 'logo' %>
+      <% end %>
+      <ul>
+        <li>
+          <a class='icon icon-search' href='#'></a>
+        </li>
+        <li>
+          <a class='icon icon-reorder' href='#'></a>
+        </li>
+      </ul>
+      <div id="mobile_popup"></div>
+      <div id="mobile_search"></div>
     </nav>
     <% if flash[:notice] %>
       <p class='notice'><%= flash[:notice] %></p>

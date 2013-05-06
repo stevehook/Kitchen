@@ -1,0 +1,48 @@
+@import "core.css.scss";
+
+#banner {
+  overflow: visible;
+}
+
+@media screen and (max-width: $break_xs) {
+  #header, #menu {
+    display: none;
+  }
+
+  #mobile_menu {
+    display: block;
+
+    ul {
+      float: right;
+    }
+
+    a.icon {
+      color: $white;
+      font-size: 160%;
+    }
+
+    .logo {
+      margin-top: -5px;
+      float: left;
+      height: 30px;
+      opacity: 1.0;
+    }
+
+    #mobile_popup {
+      position: absolute;
+      top: 50px;
+      display: block;
+      background: $champagne5_50;
+      width: 100%;
+
+      ul {
+        float: none;
+        text-align:	left;
+
+        li {
+          float: none;
+        }
+      }
+    }
+  }
+}
