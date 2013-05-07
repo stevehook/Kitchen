@@ -1017,7 +1017,8 @@ ul.recipeList {
 }
 
 .blogPostContainer {
-  background: $white;
+  padding-left: 1.8% !important;
+  padding-right: 1.5% !important;
 
   menu {
     background-color: transparent;
@@ -1610,7 +1611,7 @@ menu {
 }
 
 body[data-section='blog_posts'] {
-  background-image: url('/images/fabric_sheepu.jpg');
+  background-image: url('/images/fabric.jpg');
   background-position: 0% 0%;
   background-repeat: repeat;
 }
