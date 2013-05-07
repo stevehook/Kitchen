@@ -1552,7 +1552,12 @@ menu {
   border-bottom: #ddd 1px solid;
 }
 
-.blogContent {}
+.blogContent {
+  img {
+    width: 97%;
+  }
+}
+
 .blogDate {
   margin: 10px 0 0 0;
   color: $grey;
