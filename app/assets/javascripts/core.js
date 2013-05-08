@@ -336,13 +336,13 @@ $(function() {
             if (!self.isAnimating) {
               // de-activate the buttons whilst the animation is in progress
               self.isAnimating = true;
-              self.showPrevious();
+              self.showNext();
             }
           });
           $("<a class='carouselButton right'><span class='icon-angle-right icon'></span></a>").appendTo($this).click(function(){
             if (!self.isAnimating) {
               self.isAnimating = true;
-              self.showNext();
+              self.showPrevious();
             }
           });
           $(document).keydown(self.handleKey);
@@ -353,10 +353,10 @@ $(function() {
             //Find out what key was pressed
             // if its the left key/right key move the carousel otherwise do nothing
             if (e.which == 37) {
-              self.ifNotAnimating(self.showPrevious);
+              self.ifNotAnimating(self.showNext);
               return false;
             } else if (e.which == 39) {
-              self.ifNotAnimating(self.showNext);
+              self.ifNotAnimating(self.showPrevious);
               return false;
             }
           }
