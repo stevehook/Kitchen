@@ -4,7 +4,7 @@
   overflow: visible;
 }
 
-@media screen and (max-device-width: 480px), screen and (max-width: $break_xs) {
+@media #{$s}, #{$xs} {
   #menu {
     display: none;
   }
@@ -43,11 +43,8 @@
       background: $champagne5_80;
       padding: 1% 0 2.5%;
 
-      width: 1200px;
-      @media screen and (max-width: $break_l) { width: 1050px; }
-      @media screen and (max-width: $break_m) { width: 900px; }
-      @media screen and (max-width: $break_s) { width: 750px; }
-      @media screen and (max-width: $break_xs){ width: 600px; }
+      @media #{$s} { width: 750px; }
+      @media #{$xs} { width: 600px; }
 
       ul {
         float: none;
