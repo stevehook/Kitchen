@@ -39,7 +39,16 @@
         </li>
       </ul>
       <div id="mobile_popup"></div>
-      <div id="mobile_search"></div>
+      <div id="mobile_search">
+        <%= form_tag search_recipes_path, :method => 'get', :class => 'search_form' do %>
+          <div class='search_combo'>
+            <%= text_field_tag 'mobile_search_text', nil, :placeholder => 'Search by ingredient or recipe', :name => 'search' %>
+            <button id='search_button' type="submit" class="btn">
+              <i class="icon-search icon-large"></i>
+            </button>
+          </div>
+        <% end %>
+      </div>
     </nav>
     <% if flash[:notice] %>
       <p class='notice'><%= flash[:notice] %></p>

@@ -4,7 +4,7 @@
   overflow: visible;
 }
 
-@media screen and (max-width: $break_xs) {
+@media screen and (max-device-width: 480px), screen and (max-width: $break_xs) {
   #menu {
     display: none;
   }
@@ -36,7 +36,7 @@
       opacity: 1.0;
     }
 
-    #mobile_popup {
+    #mobile_popup, #mobile_search {
       position: absolute;
       top: 50px;
       display: none;
@@ -55,6 +55,27 @@
 
         li {
           float: none;
+        }
+      }
+    }
+
+    #mobile_search {
+      padding: 2.5% 0 2.5%;
+
+      div.search_combo {
+        width: 90%;
+        margin: 0 auto;
+        color: $white;
+
+        #mobile_search_text {
+          width: 90%;
+        }
+
+        button {
+          position: relative;
+          left: 0px;
+          background: transparent;
+          color: $white;
         }
       }
     }

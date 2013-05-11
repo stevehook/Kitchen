@@ -256,6 +256,7 @@ $(function() {
           return $activePanel || $panels.first();
         },
         toggleMobileMenu: function(event) {
+          $('#mobile_search').hide();
           var mobilePopup = $('#mobile_popup');
           if (mobilePopup.html() == '') {
             var menu = $('#menu');
@@ -272,6 +273,9 @@ $(function() {
           event.preventDefault();
         },
         toggleMobileSearch: function() {
+          $('#mobile_popup').hide();
+          var searchPopup = $('#mobile_search');
+          searchPopup.toggle();
         }
       };
       this.homeMenu = self;
