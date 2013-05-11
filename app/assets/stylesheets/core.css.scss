@@ -134,8 +134,8 @@ body, input[type='submit'], button[type='submit'], input[type='button'] {
   @media screen and (max-width: $break_xl) { font-size: 13pt; }
   @media #{$l} { font-size: 12pt; }
   @media #{$m} { font-size: 11pt; }
-  @media #{$s} { font-size: 10pt; }
-  @media #{$xs} { font-size: 9pt; }
+  @media #{$s} { font-size: 12pt; }
+  @media #{$xs} { font-size: 16pt; }
 }
 
 input:not([type=submit]), textarea {
@@ -144,8 +144,8 @@ input:not([type=submit]), textarea {
   @media screen and (max-width: $break_xl) { font-size: 14pt; }
   @media #{$l} { font-size: 13pt; }
   @media #{$m} { font-size: 12pt; }
-  @media #{$s} { font-size: 11pt; }
-  @media #{$xs} { font-size: 10pt; }
+  @media #{$s} { font-size: 12pt; }
+  @media #{$xs} { font-size: 16pt; }
 }
 
 $banner_height_xl: 50px;
@@ -897,6 +897,7 @@ textarea:focus, input:focus {
 
 #parallax .recipeSearch {
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .watermark {

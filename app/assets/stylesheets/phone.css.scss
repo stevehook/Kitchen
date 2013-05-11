@@ -5,6 +5,9 @@
 }
 
 @media #{$s}, #{$xs} {
+  body {
+  }
+
   #menu {
     display: none;
   }
