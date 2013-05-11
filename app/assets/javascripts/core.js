@@ -19,14 +19,12 @@ $(function() {
   $('#parallax').parallax();
   $('#home_content').homeContent();
   $('.dotNav ul').photoScroller();
-  // $('.watermark').watermark();
 });
 
 // Override menu anchor links so that the page scrolls slowly to the correct panel
 $(function() {
-  $('#menu li a, #mobile_popup li a, .parallaxDownButton a').on('click', '#innerBody', function(e) {
+  $('#innerBody').on('click', '#menu li a, #mobile_popup li a, .parallaxDownButton a', function(e) {
     var $this = $(this);
-    console.log($this.attr('href'));
     if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
       var match = /#(.+)/.exec($this.attr('href'));
       if (match) {
@@ -267,6 +265,7 @@ $(function() {
             $('a', list).removeClass('selected');
             mobilePopup.append(list);
             $('a', list).click(function() { mobilePopup.hide(); });
+            mobilePopup.show();
           } else {
             mobilePopup.toggle();
           }

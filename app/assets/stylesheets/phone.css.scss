@@ -5,8 +5,16 @@
 }
 
 @media screen and (max-width: $break_xs) {
-  #header, #menu {
+  #menu {
     display: none;
+  }
+
+  #header {
+    height: 0px;
+  }
+
+  #banner {
+    top: 0px;
   }
 
   #mobile_menu {
@@ -31,9 +39,15 @@
     #mobile_popup {
       position: absolute;
       top: 50px;
-      display: block;
-      background: $champagne5_50;
-      width: 100%;
+      display: none;
+      background: $champagne5_80;
+      padding: 1% 0 2.5%;
+
+      width: 1200px;
+      @media screen and (max-width: $break_l) { width: 1050px; }
+      @media screen and (max-width: $break_m) { width: 900px; }
+      @media screen and (max-width: $break_s) { width: 750px; }
+      @media screen and (max-width: $break_xs){ width: 600px; }
 
       ul {
         float: none;
