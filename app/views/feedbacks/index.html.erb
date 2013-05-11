@@ -1,0 +1,29 @@
+<section id="main" class="container blogPostContainer">
+  <h2>Feedback</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Category</td>
+        <td>Phone</td>
+        <td>Postcode</td>
+        <td>Contact at</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @feedbacks.each do |feedback| %>
+        <tr>
+          <td><%= feedback.name %></td>
+          <td><%= feedback.email %></td>
+          <td><%= feedback.category %></td>
+          <td><%= feedback.phone %></td>
+          <td><%= feedback.postcode %></td>
+          <td><%= feedback.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+
+

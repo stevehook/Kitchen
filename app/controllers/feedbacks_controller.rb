@@ -1,4 +1,6 @@
 class FeedbacksController < ApplicationController
+  before_filter :authenticate_user!, :only => [:index]
+
   def new
     @category = params[:category]
     @feedback = Feedback.new(category: @category)
@@ -17,6 +19,10 @@ class FeedbacksController < ApplicationController
         @error = "There was a problem recording your feedback. #{@feedback.errors.full_messages.join(', ')}."
       end
     end
+  end
+
+  def index
+    @feedbacks = Feedback.order('created_at ASC')
   end
 end
 

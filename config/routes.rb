@@ -17,7 +17,7 @@ Kitchen::Application.routes.draw do
   resources :about, :only => [:show]
   resources :subscriptions, :only => [:create, :show, :destroy, :index]
 
-  resources :feedbacks, :only => [:new, :create] do
+  resources :feedbacks, :only => [:new, :create, :index] do
   end
 
   root :to => 'home#index'
