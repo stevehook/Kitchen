@@ -85,7 +85,7 @@ $shrikhand1: rgb(252, 231, 146);
 $shrikhand2: rgb(213, 195, 153);
 $shrikhand3: rgb(192, 176, 113);
 
-$link_colour: #005689;
+$link_colour: $sheepu3;
 
 $font70: 70%;
 $font80: 80%;
@@ -991,6 +991,15 @@ ul.recipeList {
   @include boxSizing;
   background: $white_50;
   padding: 10px 20px;
+
+  a {
+    text-decoration: none;
+    color: $link_colour;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 
   h2 {
     color: $sheepu4;
