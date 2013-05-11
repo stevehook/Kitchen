@@ -1,0 +1,22 @@
+<section id="main" class="container blogPostContainer">
+  <h2>Subscriptions</h2>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Subscribed at</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @subscriptions.each do |subscription| %>
+        <tr>
+          <td><%= subscription.name %></td>
+          <td><%= subscription.email %></td>
+          <td><%= subscription.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+

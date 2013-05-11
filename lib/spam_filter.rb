@@ -14,8 +14,6 @@ module SpamFilter
   end
 
   def test_spam
-    puts '******************* testing spam **********************'
-    puts "#{link_detected} #{form_submitted_to_fast} #{hidden_field_present} #{timestamp_missing} "
     spam = (
       link_detected ||
       form_submitted_to_fast ||

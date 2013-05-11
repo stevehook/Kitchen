@@ -1,4 +1,6 @@
 class SubscriptionsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:index]
+
   def create
     subscription = Subscription.new params[:subscription]
     success = subscription.save
@@ -33,5 +35,9 @@ class SubscriptionsController < ApplicationController
     else
       render :show
     end
+  end
+
+  def index
+    @subscriptions = Subscription.order('created_at ASC')
   end
 end

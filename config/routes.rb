@@ -15,7 +15,7 @@ Kitchen::Application.routes.draw do
 
   resources :classes
   resources :about, :only => [:show]
-  resources :subscriptions, :only => [:create, :show, :destroy]
+  resources :subscriptions, :only => [:create, :show, :destroy, :index]
 
   resources :feedbacks, :only => [:new, :create] do
   end
