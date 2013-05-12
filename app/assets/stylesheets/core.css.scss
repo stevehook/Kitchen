@@ -592,15 +592,6 @@ textarea:focus, input:focus {
   @media screen and (max-width: $break_xs){ padding: 3px 6px;  line-height: 12px; min-height: 12px; }
 }
 
-.recipeContainer #search_button, .formButton {
-  background-color: $champagne4;
-}
-
-.recipeContainer #search_button:hover, .formButton:hover {
-  background-color: $champagne5;
-  @include hoverBackgroundTransition;
-}
-
 .homeContent, .newsContent {
   @include opacityTransition1000;
   float: left;
@@ -997,8 +988,14 @@ ul.recipeList {
     color: $link_colour;
   }
 
-  a:hover {
-    text-decoration: underline;
+  #search_button, .formButton {
+    color: $white;
+    background-color: $champagne4;
+  }
+
+  #search_button:hover, .formButton:hover {
+    background-color: $champagne5;
+    @include hoverBackgroundTransition;
   }
 
   h2 {
