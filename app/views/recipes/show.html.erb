@@ -70,10 +70,10 @@
         <span class='label'><%= @recipe.time %></span>
       </a>
     </menu>
-    <menu id='recipeRating' class='sidePanelMenu'>
-      <h3>Rating</h3>
-      <%= render :partial => 'rating' %>
-    </menu>
+    <%#<menu id='recipeRating' class='sidePanelMenu'>%>
+      <%#<h3>Rating</h3>%>
+      <%#<%= render :partial => 'rating' %>%>
+    <%#</menu>%>
     <%
       similar_recipes = @recipe.similar_recipes
       if similar_recipes.present?
