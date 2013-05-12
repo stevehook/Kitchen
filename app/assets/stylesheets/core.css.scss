@@ -1560,9 +1560,9 @@ menu {
   border-bottom: #ddd 1px solid;
 }
 
-.blogContent {
+.blogContent, .aboutContainer {
   p {
-    font-weight: normal;
+    font-weight: 300;
 
     a {
       text-decoration: none;
