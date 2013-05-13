@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419183017) do
+ActiveRecord::Schema.define(:version => 20130513181612) do
 
   create_table "blog_post_photos", :force => true do |t|
     t.integer  "blog_post_id"
@@ -23,12 +23,14 @@ ActiveRecord::Schema.define(:version => 20130419183017) do
 
   create_table "blog_posts", :force => true do |t|
     t.string   "title"
-    t.string   "slug"
+    t.string   "slug",         :null => false
     t.text     "content"
     t.datetime "published_at"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  add_index "blog_posts", ["slug"], :name => "index_blog_posts_on_slug", :unique => true
 
   create_table "feedbacks", :force => true do |t|
     t.string   "name"
@@ -50,6 +52,13 @@ ActiveRecord::Schema.define(:version => 20130419183017) do
   create_table "ingredients_recipes", :id => false, :force => true do |t|
     t.integer "recipe_id"
     t.integer "ingredient_id"
+  end
+
+  create_table "recipe_categories", :force => true do |t|
+    t.string   "name"
+    t.string   "asset_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "recipe_photos", :force => true do |t|
@@ -83,9 +92,13 @@ ActiveRecord::Schema.define(:version => 20130419183017) do
     t.integer  "secondary_picture_file_size"
     t.datetime "secondary_picture_updated_at"
     t.string   "synopsis",                                                 :null => false
+    t.integer  "recipe_category_id"
     t.string   "category",                       :default => "vegetarian", :null => false
     t.string   "native_title"
+    t.string   "slug",                                                     :null => false
   end
+
+  add_index "recipes", ["slug"], :name => "index_recipes_on_slug", :unique => true
 
   create_table "subscriptions", :force => true do |t|
     t.string   "name"

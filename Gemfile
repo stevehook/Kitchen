@@ -17,6 +17,7 @@ gem 'kaminari'
 gem 'bluecloth', '>= 2.0.0'
 gem 'pin_it'
 gem 'newrelic_rpm'
+gem 'friendly_id'
 
 # Gems used only for assets and not required
 # in production environments by default.

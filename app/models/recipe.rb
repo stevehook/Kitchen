@@ -4,6 +4,9 @@ class Recipe < ActiveRecord::Base
   has_and_belongs_to_many :ingredients
   has_many :recipe_photos
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   CATEGORY_VALUES = %w(vegan vegetarian non_vegetarian)
   CATEGORY_SEARCH_VALUES = %w(any vegetarian vegan_only)
 
