@@ -20,6 +20,26 @@
     top: 0px;
   }
 
+  .contentMain {
+    width: auto;
+    float: none;
+  }
+
+  .contentSidePanel {
+    width: auto;
+    float: none;
+    margin: 0;
+
+    .sidePanelMenu {
+      background: none;
+
+      h3 {
+        padding: 8px 10px;
+        margin: 10px 0;
+      }
+    }
+  }
+
   #mobile_menu {
     display: block;
 
