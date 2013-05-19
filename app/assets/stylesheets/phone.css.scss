@@ -20,6 +20,24 @@
     top: 0px;
   }
 
+  .recipeSearch {
+    width: 95%;
+
+    input#search {
+      width: 85%;
+      font-size: 120%;
+      padding: 10px;
+    }
+
+    div.categoryFilter {
+      font-size: 120%;
+    }
+
+    .categoryFilter {
+      margin: 2.5% 0 0 5%;
+    }
+  }
+
   .recipeList {
     li {
       float: none;
