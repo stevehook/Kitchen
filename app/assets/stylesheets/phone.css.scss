@@ -20,6 +20,26 @@
     top: 0px;
   }
 
+  .recipeList {
+    li {
+      float: none;
+      width: auto;
+      height: auto;
+
+      img {
+        height: auto;
+      }
+
+      .synopsis {
+        opacity: 1;
+        max-height: none;
+        a {
+          color: #222;
+        }
+      }
+    }
+  }
+
   .contentMain {
     width: auto;
     float: none;
