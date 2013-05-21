@@ -513,25 +513,36 @@ $(function() {
           self.container = $this;
           // find the panels
           var panels = $('.parallaxPanel', $this);
-          // set the background images for each panel
-          panels.each(function(index, panel) {
-            var $panel = $(panel);
-            var background = $panel.data('background');
-            if (background) {
-              var headerAdjustment = panel == panels[0] ? $(opts.header).height() : 0;
-              $panel.css({'background-image': "url('images/" + $panel.data('background') + "')",
-                'background-position': '0px ' + (panel.offsetTop - headerAdjustment)/8 + 'px'});
-            }
-          });
-          // handle the scroll and resize events
-          $(document).scroll(function(event) {
-            var offset = $(window).scrollTop();
-            var panels = $('.parallaxPanel');
+
+          if (panels.css('background-attachment') === 'fixed') {
+            // set the background images for each panel
             panels.each(function(index, panel) {
-              var headerAdjustment = panel == panels[0] ? opts.header : 0;
-              $(panel).css({'background-position': '0px ' + (panel.offsetTop - offset - headerAdjustment)/8 + 'px'});
+              var $panel = $(panel);
+              var background = $panel.data('background');
+              if (background) {
+                var headerAdjustment = panel == panels[0] ? $(opts.header).height() : 0;
+                $panel.css({'background-image': "url('images/" + $panel.data('background') + "')",
+                  'background-position': '0px ' + (panel.offsetTop - headerAdjustment)/8 + 'px'});
+              }
             });
-          });
+            // handle the scroll and resize events
+            $(document).scroll(function(event) {
+              var offset = $(window).scrollTop();
+              var panels = $('.parallaxPanel');
+              panels.each(function(index, panel) {
+                var headerAdjustment = panel == panels[0] ? opts.header : 0;
+                $(panel).css({'background-position': '0px ' + (panel.offsetTop - offset - headerAdjustment)/8 + 'px'});
+              });
+            });
+          } else {
+            panels.each(function(index, panel) {
+              var $panel = $(panel);
+              var background = $panel.data('background');
+              if (background) {
+                $panel.css({'background-image': "url('images/" + $panel.data('background') + "')"});
+              }
+            });
+          }
         }
       };
       this.parallax = self;
