@@ -11,6 +11,12 @@
     }
   }
 
+  .container {
+    @media #{$s} { width: 95%; }
+    @media #{$xs} { width: 95%; }
+    overflow: hidden;
+  }
+
   #menu {
     display: none;
   }
