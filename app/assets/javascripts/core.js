@@ -234,6 +234,7 @@ $(function() {
           var mobileMenu = $('#mobile_menu');
           $('.icon-reorder', mobileMenu).click(self.toggleMobileMenu);
           $('.icon-search', mobileMenu).click(self.toggleMobileSearch);
+          $('#mobile_search_text').blur(function() { setTimeout(function() { self.toggleMobileSearch(undefined, true) }, 200)});
         },
         getActivePanel: function() {
           $window = $(window);
@@ -270,13 +271,17 @@ $(function() {
           } else {
             mobilePopup.toggle();
           }
-          event.preventDefault();
+          if (event) { event.preventDefault(); }
         },
-        toggleMobileSearch: function() {
+        toggleMobileSearch: function(event, hideOnly) {
           $('#mobile_popup').hide();
           var searchPopup = $('#mobile_search');
-          searchPopup.toggle();
-          $('#mobile_search_text').focus();
+          if (hideOnly) {
+            searchPopup.hide();
+          } else {
+            searchPopup.toggle();
+            if (searchPopup.is(':visible')) { $('#mobile_search_text').focus(); }
+          }
         }
       };
       this.homeMenu = self;
