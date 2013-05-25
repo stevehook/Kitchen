@@ -217,9 +217,9 @@
       display: none;
       background: $champagne5_80;
       padding: 1% 0 2.5%;
-
-      @media #{$s} { width: 750px; }
-      @media #{$xs} { width: 600px; }
+      width: 90%;
+      font-size: $font170;
+      font-weight: normal;
 
       ul {
         float: none;
@@ -227,6 +227,11 @@
 
         li {
           float: none;
+          height: auto;
+
+          a {
+            height: auto;
+          }
         }
       }
     }
