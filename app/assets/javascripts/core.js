@@ -1,3 +1,8 @@
+// Consistent test for mobile devices
+Modernizr.isMobile = function() {
+  return Modernizr.mq('only all and (max-device-width: 800px)');
+}
+
 // Set the minimum height of parallax panels to window height
 $(function() {
   var callback = function() {
@@ -23,7 +28,7 @@ $(function() {
 
 // Override menu anchor links so that the page scrolls slowly to the correct panel
 $(function() {
-  $('#innerBody').on('click', '#menu li a, #mobile_popup li a, .parallaxDownButton a', function(e) {
+  $('#innerBody').on('click', '#menu li a, .parallaxDownButton a', function(e) {
     var $this = $(this);
     if (/#/.test($this.attr('href')) && window.location.pathname === '/') {
       var match = /#(.+)/.exec($this.attr('href'));
@@ -166,9 +171,8 @@ $(function() {
   };
 })(jQuery);
 
-
 $(function() {
-  if (!Modernizr.mq('only all and (max-device-width: 800px)')) {
+  if (!Modernizr.isMobile()) {
     var $banner = $('#banner');
     var bannerOffset = $banner[0].offsetTop;
     var callback = function(event) {
@@ -218,7 +222,7 @@ $(function() {
               }
             }, 500);
           });
-          if ($('.parallaxPanel').length > 0) {
+          if (!Modernizr.isMobile() && $('.parallaxPanel').length > 0) {
             $(document).scroll(function(event) {
               var panel = self.getActivePanel();
               $("a", menu).removeClass('selected');
