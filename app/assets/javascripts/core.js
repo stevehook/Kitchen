@@ -276,6 +276,7 @@ $(function() {
           $('#mobile_popup').hide();
           var searchPopup = $('#mobile_search');
           searchPopup.toggle();
+          $('#mobile_search_text').focus();
         }
       };
       this.homeMenu = self;
