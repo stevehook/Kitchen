@@ -1,6 +1,197 @@
 @import "core.css.scss";
 
+@media #{$s}, #{$xs} {
+
+  #banner {
+    overflow: visible;
+    top: 0px;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  body {
+    .parallaxPanel {
+      background-attachment: scroll;
+    }
+  }
+
+  .container {
+    @media #{$s} { width: 95%; }
+    @media #{$xs} { width: 95%; }
+    overflow: hidden;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #header {
+    height: 0px;
+  }
+
+  #banner {
+    top: 0px;
+  }
+
+  .recipeSearch {
+    width: 95%;
+
+    input#search {
+      width: 85%;
+      font-size: 120%;
+      padding: 10px;
+    }
+
+    div.categoryFilter {
+      font-size: 120%;
+    }
+
+    .categoryFilter {
+      margin: 2.5% 0 0 5%;
+    }
+  }
+
+  .contentMain {
+    width: auto;
+    float: none;
+  }
+
+  .contentSidePanel {
+    width: auto;
+    float: none;
+    margin: 0;
+
+    .sidePanelMenu {
+      background: none;
+
+      h3 {
+        padding: 8px 10px;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  #mobile_menu {
+    display: block;
+
+    ul {
+      float: right;
+    }
+
+    a.icon {
+      color: $white;
+      font-size: 160%;
+    }
+
+    .logo {
+      margin-top: -5px;
+      float: left;
+      height: 30px;
+      opacity: 1.0;
+    }
+
+    #mobile_popup, #mobile_search {
+      position: absolute;
+      top: 50px;
+      display: none;
+      background: $champagne5_80;
+      padding: 1% 0 2.5%;
+      width: 98%;
+      font-size: $font170;
+      font-weight: normal;
+      left: 1%;
+
+      ul {
+        float: none;
+        text-align:	left;
+
+        li {
+          float: none;
+          height: auto;
+
+          a {
+            height: auto;
+          }
+        }
+      }
+    }
+
+    #mobile_search {
+      padding: 2.5% 0 2.5%;
+
+      div.search_combo {
+        margin: 0 auto;
+        color: $white;
+        white-space: nowrap;
+        width: 95%;
+
+        #mobile_search_text {
+          width: 90%;
+
+          @media #{$xs} {
+            width: 75%;
+          }
+        }
+
+        button {
+          position: relative;
+          left: 0px;
+          background: transparent;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media #{$s} {
+  div#recipeListContainer {
+    padding: 0 0 0 2%;
+  }
+
+  .recipeList {
+
+    li {
+      width: 48%;
+      height: auto;
+
+      img {
+        height: auto;
+      }
+
+      .synopsis {
+        opacity: 1;
+        max-height: none;
+        a {
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
 @media #{$xs} {
+
+  .recipeList {
+    li {
+      float: none;
+      width: auto;
+      height: auto;
+
+      img {
+        height: auto;
+      }
+
+      .synopsis {
+        opacity: 1;
+        max-height: none;
+        a {
+          color: #222;
+        }
+      }
+    }
+  }
+
   .hideOnPhones {
     display: none;
   }
@@ -101,170 +292,6 @@
 
     .right {
       right: 0px
-    }
-  }
-}
-
-@media #{$s}, #{$xs} {
-
-  #banner {
-    overflow: visible;
-    top: 0px;
-    position: fixed;
-    bottom: 0px;
-  }
-
-  body {
-    .parallaxPanel {
-      background-attachment: scroll;
-    }
-  }
-
-  .container {
-    @media #{$s} { width: 95%; }
-    @media #{$xs} { width: 95%; }
-    overflow: hidden;
-  }
-
-  #menu {
-    display: none;
-  }
-
-  #header {
-    height: 0px;
-  }
-
-  #banner {
-    top: 0px;
-  }
-
-  .recipeSearch {
-    width: 95%;
-
-    input#search {
-      width: 85%;
-      font-size: 120%;
-      padding: 10px;
-    }
-
-    div.categoryFilter {
-      font-size: 120%;
-    }
-
-    .categoryFilter {
-      margin: 2.5% 0 0 5%;
-    }
-  }
-
-  .recipeList {
-    li {
-      float: none;
-      width: auto;
-      height: auto;
-
-      img {
-        height: auto;
-      }
-
-      .synopsis {
-        opacity: 1;
-        max-height: none;
-        a {
-          color: #222;
-        }
-      }
-    }
-  }
-
-  .contentMain {
-    width: auto;
-    float: none;
-  }
-
-  .contentSidePanel {
-    width: auto;
-    float: none;
-    margin: 0;
-
-    .sidePanelMenu {
-      background: none;
-
-      h3 {
-        padding: 8px 10px;
-        margin: 10px 0;
-      }
-    }
-  }
-
-  #mobile_menu {
-    display: block;
-
-    ul {
-      float: right;
-    }
-
-    a.icon {
-      color: $white;
-      font-size: 160%;
-    }
-
-    .logo {
-      margin-top: -5px;
-      float: left;
-      height: 30px;
-      opacity: 1.0;
-    }
-
-    #mobile_popup, #mobile_search {
-      position: absolute;
-      top: 50px;
-      display: none;
-      background: $champagne5_80;
-      padding: 1% 0 2.5%;
-      width: 98%;
-      font-size: $font170;
-      font-weight: normal;
-      left: 1%;
-
-      ul {
-        float: none;
-        text-align:	left;
-
-        li {
-          float: none;
-          height: auto;
-
-          a {
-            height: auto;
-          }
-        }
-      }
-    }
-
-    #mobile_search {
-      padding: 2.5% 0 2.5%;
-
-      div.search_combo {
-        margin: 0 auto;
-        color: $white;
-        white-space: nowrap;
-        width: 95%;
-
-        #mobile_search_text {
-          width: 90%;
-
-          @media #{$xs} {
-            width: 75%;
-          }
-        }
-
-        button {
-          position: relative;
-          left: 0px;
-          background: transparent;
-          color: $white;
-        }
-      }
     }
   }
 }
