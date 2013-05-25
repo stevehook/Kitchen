@@ -166,8 +166,9 @@ $(function() {
   };
 })(jQuery);
 
+
 $(function() {
-  if (!Moderizr.mq('max-device-width: 800px')) {
+  if (!Modernizr.mq('only all and (max-device-width: 800px)')) {
     var $banner = $('#banner');
     var bannerOffset = $banner[0].offsetTop;
     var callback = function(event) {
