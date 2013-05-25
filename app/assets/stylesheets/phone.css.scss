@@ -5,6 +5,10 @@
 }
 
 @media #{$xs} {
+  .hideOnPhones {
+    display: none;
+  }
+
   .newsContent {
     float: none;
     width: auto;
