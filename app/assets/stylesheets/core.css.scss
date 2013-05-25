@@ -135,7 +135,7 @@ body, input[type='submit'], button[type='submit'], input[type='button'] {
   @media #{$l} { font-size: 12pt; }
   @media #{$m} { font-size: 11pt; }
   @media #{$s} { font-size: 12pt; }
-  @media #{$xs} { font-size: 16pt; }
+  @media #{$xs} { font-size: 11pt; }
 }
 
 input:not([type=submit]), textarea {
