@@ -1,9 +1,5 @@
 @import "core.css.scss";
 
-#banner {
-  overflow: visible;
-}
-
 @media #{$xs} {
   .hideOnPhones {
     display: none;
@@ -110,6 +106,14 @@
 }
 
 @media #{$s}, #{$xs} {
+
+  #banner {
+    overflow: visible;
+    top: 0px;
+    position: fixed;
+    bottom: 0px;
+  }
+
   body {
     .parallaxPanel {
       background-attachment: scroll;

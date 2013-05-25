@@ -167,18 +167,20 @@ $(function() {
 })(jQuery);
 
 $(function() {
-  var $banner = $('#banner');
-  var bannerOffset = $banner[0].offsetTop;
-  var callback = function(event) {
-    var offset = $(window).scrollTop();
-    if ($('#header').length == 0 || offset > bannerOffset) {
-      $banner.addClass('fixed');
-    } else {
-      $banner.removeClass('fixed');
+  if (!Moderizr.mq('max-device-width: 800px')) {
+    var $banner = $('#banner');
+    var bannerOffset = $banner[0].offsetTop;
+    var callback = function(event) {
+      var offset = $(window).scrollTop();
+      if ($('#header').length == 0 || offset > bannerOffset) {
+        $banner.addClass('fixed');
+      } else {
+        $banner.removeClass('fixed');
+      }
     }
+    $(document).scroll(callback);
+    callback();
   }
-  $(document).scroll(callback);
-  callback();
 });
 
 // Plugin for menu

@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require pin_it
+//= require modernizr
 //= require_tree .
