@@ -4,6 +4,17 @@
   overflow: visible;
 }
 
+
+@media #{$xs} {
+  .newsContent {
+    float: none;
+    width: auto;
+    padding: 10px;
+    font-size: $font120;
+    margin: 30px 5px;
+  }
+}
+
 @media #{$s}, #{$xs} {
   body {
     .parallaxPanel {
