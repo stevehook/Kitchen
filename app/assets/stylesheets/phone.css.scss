@@ -217,9 +217,10 @@
       display: none;
       background: $champagne5_80;
       padding: 1% 0 2.5%;
-      width: 90%;
+      width: 98%;
       font-size: $font170;
       font-weight: normal;
+      left: 1%;
 
       ul {
         float: none;
@@ -240,12 +241,21 @@
       padding: 2.5% 0 2.5%;
 
       div.search_combo {
-        width: 90%;
         margin: 0 auto;
         color: $white;
+        white-space: nowrap;
+        width: 95%;
+
+        /*@media #{$xs} {*/
+          /*width: 85%;*/
+        /*}*/
 
         #mobile_search_text {
           width: 90%;
+
+          @media #{$xs} {
+            width: 75%;
+          }
         }
 
         button {
