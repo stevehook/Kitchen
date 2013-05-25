@@ -294,4 +294,26 @@
       right: 0px
     }
   }
+
+  .recipeSearch {
+    width: 99%;
+
+    input#search {
+      width: 80%;
+      font-size: 120%;
+      padding: 10px;
+    }
+
+    div.categoryFilter {
+      font-size: 100%;
+    }
+
+    .categoryFilter {
+      margin: 2.5% 0;
+    }
+
+    button {
+      width: 10%;
+    }
+  }
 }
