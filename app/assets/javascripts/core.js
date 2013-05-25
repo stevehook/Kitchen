@@ -235,6 +235,7 @@ $(function() {
           $('.icon-reorder', mobileMenu).click(self.toggleMobileMenu);
           $('.icon-search', mobileMenu).click(self.toggleMobileSearch);
           $('#mobile_search_text').blur(function() { setTimeout(function() { self.toggleMobileSearch(undefined, true) }, 200)});
+          $('.icon-reorder').blur(function() { setTimeout(function() { self.toggleMobileMenu(undefined, true) }, 200)});
         },
         getActivePanel: function() {
           $window = $(window);
@@ -256,7 +257,7 @@ $(function() {
           });
           return $activePanel || $panels.first();
         },
-        toggleMobileMenu: function(event) {
+        toggleMobileMenu: function(event, hideOnly) {
           $('#mobile_search').hide();
           var mobilePopup = $('#mobile_popup');
           if (mobilePopup.html() == '') {
@@ -268,8 +269,14 @@ $(function() {
             mobilePopup.append(list);
             $('a', list).click(function() { mobilePopup.hide(); });
             mobilePopup.show();
+            $('.icon-reorder').focus();
           } else {
-            mobilePopup.toggle();
+            if (hideOnly) {
+              mobilePopup.hide();
+            } else {
+              mobilePopup.toggle();
+              if (mobilePopup.is(':visible')) { $('.icon-reorder').focus(); }
+            }
           }
           if (event) { event.preventDefault(); }
         },
