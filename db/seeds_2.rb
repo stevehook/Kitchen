@@ -60,5 +60,4 @@ risotto_recipe = Recipe.create!(:title => 'Risotto with peas, brocolli, asparagu
                     :category => 'non_vegetarian')
 RecipePhoto.create!(:recipe => risotto_recipe, :title => 'risotto', :image => File.open('db/pictures/risotto1.jpeg'))
 RecipePhoto.create!(:recipe => risotto_recipe, :title => 'risotto', :image => File.open('db/pictures/risotto2.jpeg'))
-RecipePhoto.create!(:recipe => risotto_recipe, :title => 'risotto', :image => File.open('db/pictures/risotto3.jpeg'))
 
