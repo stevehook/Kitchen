@@ -1704,4 +1704,8 @@ section.mainSection {
   }
 }
 
-
+@media #{$s}, #{$m}, #{$l}, #{$xl} {
+  .onlyShowOnPhones {
+    display: none;
+  }
+}
