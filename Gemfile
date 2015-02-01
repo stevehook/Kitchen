@@ -20,6 +20,8 @@ gem 'pin_it'
 gem 'newrelic_rpm'
 gem 'friendly_id'
 
+gem 'rails_12factor'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
