@@ -5,7 +5,6 @@
         <li><%= image_tag 'menu_logo.png', :class => 'logo' %></li>
         <li class='mobile'><%= link_to 'Home', "#{root_path}#header", :'data-section' => :home %></li>
         <li class='mobile'><%= link_to 'Recipes', "#{root_path}#recipesPanel" %></li>
-        <li class='mobile'><%= link_to 'News', "#{root_path}#newsPanel", :'data-section' => :news %></li>
         <li class='mobile'><%= link_to 'Contact', "#{root_path}#contactPanel", :'data-section' => :contact %></li>
         <li class='mobile'><%= link_to 'Blog', blog_posts_path, :'data-section' => :blog_posts %></li>
         <li class='searchMenuItem'>
